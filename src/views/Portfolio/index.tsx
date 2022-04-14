@@ -11,7 +11,7 @@ import tokens from 'config/constants/tokens'
 import useTokenBalance, { FetchStatus, useGetBnbBalance } from 'hooks/useTokenBalance'
 import { getFullDisplayBalance, formatBigNumber } from 'utils/formatBalance'
 import { getBscScanLink } from 'utils'
-import { MoralisProvider, useERC20Balances } from "react-moralis";
+import { useERC20Balances } from "react-moralis";
 
 import Page from '../Page'
 
