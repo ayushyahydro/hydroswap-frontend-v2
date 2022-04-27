@@ -5,14 +5,13 @@ import {
   Td,
   Card,
   Flex,
-  BnbUsdtPairTokenIcon,
   Heading,
   useMatchBreakpoints,
   ProfileAvatar,
   ArrowBackIcon,
   Text,
   ArrowForwardIcon,
-} from 'briws-uikit'
+} from 'briws-uikit' // BnbUsdtPairTokenIcon,
 import styled from 'styled-components'
 import { Link } from 'react-router-dom'
 import { useGetCollections } from 'state/nftMarket/hooks'
@@ -157,7 +156,7 @@ const Collectible = () => {
                     <Td>
                       <Flex alignItems="center">
                         {volume}
-                        <BnbUsdtPairTokenIcon ml="8px" />
+                        {/* <BnbUsdtPairTokenIcon ml="8px" /> */}
                       </Flex>
                     </Td>
                     {!isMobile && (

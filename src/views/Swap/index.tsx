@@ -1,18 +1,7 @@
 import React, { useCallback, useEffect, useMemo, useState } from 'react'
 import styled from 'styled-components'
 import { CurrencyAmount, JSBI, Token, Trade } from '@pancakeswap/sdk'
-import {
-  Button,
-  Text,
-  ArrowDownIcon,
-  Box,
-  useModal,
-  Flex,
-  IconButton,
-  BottomDrawer,
-  useMatchBreakpoints,
-  ArrowUpDownIcon,
-} from 'briws-uikit'
+import { Button, Text, ArrowDownIcon, Box, useModal, Flex, IconButton, useMatchBreakpoints } from 'briws-uikit'
 import { useIsTransactionUnsupported } from 'hooks/Trades'
 import UnsupportedCurrencyFooter from 'components/UnsupportedCurrencyFooter'
 import Footer from 'components/Menu/Footer'
@@ -71,15 +60,19 @@ const Label = styled(Text)`
 
 const SwitchIconButton = styled(IconButton)`
   box-shadow: inset 0px -2px 0px rgba(0, 0, 0, 0.1);
+
   .icon-up-down {
     display: none;
   }
+
   &:hover {
     background-color: ${({ theme }) => theme.colors.primary};
+
     .icon-down {
       display: none;
       fill: white;
     }
+
     .icon-up-down {
       display: block;
       fill: white;
@@ -369,23 +362,23 @@ export default function Swap({ history }: RouteComponentProps) {
             currentSwapPrice={singleTokenPrice}
           />
         )}
-        <BottomDrawer
-          content={
-            <PriceChartContainer
-              inputCurrencyId={inputCurrencyId}
-              inputCurrency={currencies[Field.INPUT]}
-              outputCurrencyId={outputCurrencyId}
-              outputCurrency={currencies[Field.OUTPUT]}
-              isChartExpanded={isChartExpanded}
-              setIsChartExpanded={setIsChartExpanded}
-              isChartDisplayed={isChartDisplayed}
-              currentSwapPrice={singleTokenPrice}
-              isMobile
-            />
-          }
-          isOpen={isChartDisplayed}
-          setIsOpen={setIsChartDisplayed}
-        />
+        {/* <BottomDrawer
+                    content={
+                        <PriceChartContainer
+                            inputCurrencyId={inputCurrencyId}
+                            inputCurrency={currencies[Field.INPUT]}
+                            outputCurrencyId={outputCurrencyId}
+                            outputCurrency={currencies[Field.OUTPUT]}
+                            isChartExpanded={isChartExpanded}
+                            setIsChartExpanded={setIsChartExpanded}
+                            isChartDisplayed={isChartDisplayed}
+                            currentSwapPrice={singleTokenPrice}
+                            isMobile
+                        />
+                    }
+                    isOpen={isChartDisplayed}
+                    setIsOpen={setIsChartDisplayed}
+                /> */}
         <Flex flexDirection="column">
           <StyledSwapContainer $isChartExpanded={isChartExpanded}>
             <StyledInputCurrencyWrapper mt={isChartExpanded ? '24px' : '0'}>
@@ -426,10 +419,10 @@ export default function Swap({ history }: RouteComponentProps) {
                             className="icon-down"
                             color={currencies[Field.INPUT] && currencies[Field.OUTPUT] ? 'primary' : 'text'}
                           />
-                          <ArrowUpDownIcon
-                            className="icon-up-down"
-                            color={currencies[Field.INPUT] && currencies[Field.OUTPUT] ? 'primary' : 'text'}
-                          />
+                          {/* <ArrowUpDownIcon
+                                                        className="icon-up-down"
+                                                        color={currencies[Field.INPUT] && currencies[Field.OUTPUT] ? 'primary' : 'text'}
+                                                    /> */}
                         </SwitchIconButton>
                         {recipient === null && !showWrap && isExpertMode ? (
                           <Button variant="text" id="add-recipient-button" onClick={() => onChangeRecipient('')}>

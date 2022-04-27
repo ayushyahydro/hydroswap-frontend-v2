@@ -1,16 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import {
-  ChartIcon,
-  Flex,
-  Heading,
-  HistoryIcon,
-  IconButton,
-  NotificationDot,
-  Text,
-  useModal,
-  ChartDisableIcon,
-} from 'briws-uikit'
+import { ChartIcon, Flex, Heading, IconButton, NotificationDot, Text, useModal } from 'briws-uikit' // HistoryIcon, ChartDisableIcon,
 import TransactionsModal from 'components/App/Transactions/TransactionsModal'
 import GlobalSettings from 'components/Menu/GlobalSettings'
 import { useExpertModeManager } from 'state/user/hooks'
@@ -46,7 +36,7 @@ const CurrencyInputHeader: React.FC<Props> = ({ title, subtitle, setIsChartDispl
       <Flex width="100%" alignItems="flex-start" justifyContent="space-between">
         {setIsChartDisplayed && (
           <ColoredIconButton onClick={toggleChartDisplayed} variant="text" scale="sm">
-            {isChartDisplayed ? <ChartDisableIcon color="textSubtle" /> : <ChartIcon width="24px" color="textSubtle" />}
+            {/* {isChartDisplayed ? <ChartDisableIcon color="textSubtle" /> : <ChartIcon width="24px" color="textSubtle" />} */}
           </ColoredIconButton>
         )}
         <Flex flexDirection="column" alignItems="center">
@@ -64,7 +54,7 @@ const CurrencyInputHeader: React.FC<Props> = ({ title, subtitle, setIsChartDispl
             <GlobalSettings color="textSubtle" mr="0" />
           </NotificationDot>
           <IconButton onClick={onPresentTransactionsModal} variant="text" scale="sm">
-            <HistoryIcon color="textSubtle" width="24px" />
+            {/* <HistoryIcon color="textSubtle" width="24px" /> */}
           </IconButton>
         </Flex>
       </Flex>

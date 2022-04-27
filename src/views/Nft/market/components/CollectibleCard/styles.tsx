@@ -4,14 +4,13 @@ import {
   BinanceIcon,
   Box,
   BoxProps,
-  CameraIcon,
   Flex,
   FlexProps,
   SellIcon,
   Text,
   WalletFilledIcon,
   Skeleton,
-} from 'briws-uikit'
+} from 'briws-uikit' // CameraIcon,
 import { Price } from '@pancakeswap/sdk'
 import { useTranslation } from 'contexts/Localization'
 import { multiplyPriceByAmount } from 'utils/prices'
@@ -91,7 +90,7 @@ export const ProfileNftTag: React.FC<NftTagProps> = (props) => {
   const { t } = useTranslation()
 
   return (
-    <NftTag icon={<CameraIcon mr="4px" width="16px" color="textSubtle" />} color="textSubtle" {...props}>
+    <NftTag icon={/* <CameraIcon mr="4px" width="16px" color="textSubtle" /> */} color="textSubtle" {...props}>
       {t('Profile')}
     </NftTag>
   )

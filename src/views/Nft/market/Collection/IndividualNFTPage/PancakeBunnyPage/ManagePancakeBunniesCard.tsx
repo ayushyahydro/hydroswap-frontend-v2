@@ -1,18 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import {
-  Box,
-  Flex,
-  Grid,
-  Text,
-  CogIcon,
-  SellIcon,
-  WalletFilledIcon,
-  CameraIcon,
-  BinanceIcon,
-  Skeleton,
-  useModal,
-} from 'briws-uikit'
+import { Box, Flex, Text, CogIcon, BinanceIcon, Skeleton, useModal } from 'briws-uikit' // Grid, CameraIcon, SellIcon, WalletFilledIcon,
 import { useWeb3React } from '@web3-react/core'
 import { useUserNfts } from 'state/nftMarket/hooks'
 import { NftLocation, NftToken, UserNftInitializationState } from 'state/nftMarket/types'
@@ -65,7 +53,7 @@ const CollectibleRow: React.FC<CollectibleRowProps> = ({ nft, lowestPrice }) => 
       onClick={nft.location === NftLocation.PROFILE ? onPresentProfileNftModal : onPresentModal}
     >
       <SmallRoundedImage src={nft.image.thumbnail} width={64} height={64} mx="16px" />
-      <Grid gridTemplateColumns="1fr 1fr">
+      {/* <Grid gridTemplateColumns="1fr 1fr">
         <Text bold>{nft.name}</Text>
         <Text fontSize="12px" color="textSubtle" textAlign="right">
           {nft.collectionName}
@@ -96,7 +84,7 @@ const CollectibleRow: React.FC<CollectibleRowProps> = ({ nft, lowestPrice }) => 
             {t('Not on sale')}
           </Text>
         )}
-      </Grid>
+      </Grid> */}
     </CollectibleRowContainer>
   )
 }
@@ -112,12 +100,12 @@ const CollectiblesByLocation: React.FC<CollectiblesByLocationProps> = ({ locatio
   const IconComponent = LocationIcons[location]
   return (
     <Flex flexDirection="column">
-      <Grid gridTemplateColumns="32px 1fr" px="16px" pb="8px">
+      {/* <Grid gridTemplateColumns="32px 1fr" px="16px" pb="8px">
         <IconComponent color={LocationColors[location]} width="24px" height="24px" />
         <Text display="inline" bold color={LocationColors[location]}>
           {t(location)}
         </Text>
-      </Grid>
+      </Grid> */}
       <ScrollableContainer>
         {nfts.map((nft) => (
           <CollectibleRow key={nft.tokenId} nft={nft} lowestPrice={lowestPrice} />
