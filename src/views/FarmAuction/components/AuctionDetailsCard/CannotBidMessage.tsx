@@ -1,5 +1,5 @@
 import React from 'react'
-import { Text, Flex, HelpIcon, useTooltip } from 'hydroswap-uikit'
+import { Text, Flex, HelpIcon, useTooltip } from 'briws-uikit'
 import { useTranslation } from 'contexts/Localization'
 
 const CannotBidMessage: React.FC = () => {

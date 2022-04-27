@@ -1,5 +1,5 @@
 import React from 'react'
-import { Td, Text } from 'hydroswap-uikit'
+import { Td, Text } from 'briws-uikit'
 import { PredictionUser } from 'state/types'
 import ResultAvatar from './ResultAvatar'
 import { NetWinnings } from './styles'

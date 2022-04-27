@@ -1,5 +1,5 @@
 import React from 'react'
-import { Flex, IconButton, CogIcon, useModal } from 'hydroswap-uikit'
+import { Flex, IconButton, CogIcon, useModal } from 'briws-uikit'
 import SettingsModal from './SettingsModal'
 
 type Props = {

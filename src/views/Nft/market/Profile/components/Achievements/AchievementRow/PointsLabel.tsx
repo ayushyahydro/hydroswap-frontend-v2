@@ -1,5 +1,5 @@
 import React from 'react'
-import { Flex, FlexProps, PrizeIcon, Text } from 'hydroswap-uikit'
+import { Flex, FlexProps, PrizeIcon, Text } from 'briws-uikit'
 import { useTranslation } from 'contexts/Localization'
 
 interface PointsLabelProps extends FlexProps {

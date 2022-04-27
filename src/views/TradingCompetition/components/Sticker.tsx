@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { Flex } from 'hydroswap-uikit'
+import { Flex } from 'briws-uikit'
 
 interface StickerProps {
   backgroundColor?: string

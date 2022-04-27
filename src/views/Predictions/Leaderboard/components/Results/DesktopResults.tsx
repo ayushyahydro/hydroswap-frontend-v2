@@ -1,5 +1,5 @@
 import React from 'react'
-import { Card, Table, Th } from 'hydroswap-uikit'
+import { Card, Table, Th } from 'briws-uikit'
 import { PredictionUser } from 'state/types'
 import Container from 'components/Layout/Container'
 import { useTranslation } from 'contexts/Localization'

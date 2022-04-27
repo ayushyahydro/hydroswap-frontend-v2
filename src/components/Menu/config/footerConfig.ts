@@ -1,4 +1,4 @@
-import { FooterLinkType } from 'hydroswap-uikit'
+import { FooterLinkType } from 'briws-uikit'
 import { ContextApi } from 'contexts/Localization/types'
 
 export const footerLinks: (t: ContextApi['t']) => FooterLinkType[] = (t) => [

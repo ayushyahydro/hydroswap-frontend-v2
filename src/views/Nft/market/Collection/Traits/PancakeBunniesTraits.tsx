@@ -1,5 +1,5 @@
 import React, { useEffect, useMemo, useState } from 'react'
-import { Skeleton, Table, Td, Th, Flex, ArrowUpIcon, ArrowDownIcon } from 'hydroswap-uikit'
+import { Skeleton, Table, Td, Th, Flex, ArrowUpIcon, ArrowDownIcon } from 'briws-uikit'
 import { useHistory } from 'react-router'
 import times from 'lodash/times'
 import sum from 'lodash/sum'

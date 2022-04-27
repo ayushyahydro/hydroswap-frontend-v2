@@ -1,4 +1,4 @@
-import { EventStatus, StepStatus } from 'hydroswap-uikit'
+import { EventStatus, StepStatus } from 'briws-uikit'
 import { SaleStatusEnum } from 'views/PancakeSquad/types'
 import { getEventStepStatus, getEventStepStatusType } from 'views/PancakeSquad/utils'
 

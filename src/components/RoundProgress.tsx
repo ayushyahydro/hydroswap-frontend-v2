@@ -1,5 +1,5 @@
 import React from 'react'
-import { Progress, ProgressProps } from 'hydroswap-uikit'
+import { Progress, ProgressProps } from 'briws-uikit'
 
 interface RoundProgressProps extends ProgressProps {
   lockTimestamp: number

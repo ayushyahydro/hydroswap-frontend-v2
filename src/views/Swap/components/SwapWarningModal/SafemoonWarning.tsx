@@ -1,6 +1,6 @@
 import React from 'react'
 import { useTranslation } from 'contexts/Localization'
-import { Text } from 'hydroswap-uikit'
+import { Text } from 'briws-uikit'
 
 const SafemoonWarning = () => {
   const { t } = useTranslation()

@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { AutoRenewIcon, Card, CardHeader, ChevronDownIcon, Flex, Heading, Button, ChevronUpIcon } from 'hydroswap-uikit'
+import { AutoRenewIcon, Card, CardHeader, ChevronDownIcon, Flex, Heading, Button, ChevronUpIcon } from 'briws-uikit'
 import { useWeb3React } from '@web3-react/core'
 import orderBy from 'lodash/orderBy'
 import { useTranslation } from 'contexts/Localization'

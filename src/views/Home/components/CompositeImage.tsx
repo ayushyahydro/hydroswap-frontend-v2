@@ -1,6 +1,6 @@
 import React from 'react'
 import styled, { keyframes } from 'styled-components'
-import { Box } from 'hydroswap-uikit'
+import { Box } from 'briws-uikit'
 
 const floatingAnim = (x: string, y: string) => keyframes`
   from {

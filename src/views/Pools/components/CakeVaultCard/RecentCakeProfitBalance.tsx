@@ -1,5 +1,5 @@
 import React from 'react'
-import { Text, TooltipText, useTooltip } from 'hydroswap-uikit'
+import { Text, TooltipText, useTooltip } from 'briws-uikit'
 import { useTranslation } from 'contexts/Localization'
 import Balance from 'components/Balance'
 

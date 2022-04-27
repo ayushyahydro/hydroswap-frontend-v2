@@ -1,5 +1,5 @@
 import React from 'react'
-import { Box } from 'hydroswap-uikit'
+import { Box } from 'briws-uikit'
 import { PredictionUser } from 'state/types'
 import MobileRow from './MobileRow'
 

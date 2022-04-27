@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import { Flex, Heading } from 'hydroswap-uikit'
+import { Flex, Heading } from 'briws-uikit'
 import { useTranslation } from 'contexts/Localization'
 
 export interface TimerProps {

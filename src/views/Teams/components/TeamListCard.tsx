@@ -1,7 +1,7 @@
 import React from 'react'
 import styled, { DefaultTheme } from 'styled-components'
 import { Link } from 'react-router-dom'
-import { Button, Card, CommunityIcon, Flex, Heading, PrizeIcon, Text } from 'hydroswap-uikit'
+import { Button, Card, CommunityIcon, Flex, Heading, PrizeIcon, Text } from 'briws-uikit'
 import { useTranslation } from 'contexts/Localization'
 import { Team } from 'config/constants/types'
 

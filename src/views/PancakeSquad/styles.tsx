@@ -1,4 +1,4 @@
-import { Box, Flex } from 'hydroswap-uikit'
+import { Box, Flex } from 'briws-uikit'
 import styled from 'styled-components'
 
 export const StyledSquadContainer = styled(Box)`

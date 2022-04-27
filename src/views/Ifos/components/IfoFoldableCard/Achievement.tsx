@@ -12,7 +12,7 @@ import {
   TwitterIcon,
   Link,
   TelegramIcon,
-} from 'hydroswap-uikit'
+} from 'briws-uikit'
 import tokens from 'config/constants/tokens'
 import { useTranslation } from 'contexts/Localization'
 import { PublicIfoData } from 'views/Ifos/types'

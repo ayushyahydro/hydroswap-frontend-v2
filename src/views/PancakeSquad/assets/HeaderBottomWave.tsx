@@ -1,4 +1,4 @@
-import { Svg, SvgProps } from 'hydroswap-uikit'
+import { Svg, SvgProps } from 'briws-uikit'
 import * as React from 'react'
 
 const Icon: React.FC<SvgProps & { isDark: boolean }> = ({ isDark, ...props }) => {

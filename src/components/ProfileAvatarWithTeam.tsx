@@ -1,5 +1,5 @@
 import React from 'react'
-import { NoProfileAvatarIcon } from 'hydroswap-uikit'
+import { NoProfileAvatarIcon } from 'briws-uikit'
 import { Profile } from 'state/types'
 import styled from 'styled-components'
 

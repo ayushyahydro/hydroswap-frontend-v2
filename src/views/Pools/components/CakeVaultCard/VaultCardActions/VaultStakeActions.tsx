@@ -1,5 +1,5 @@
 import React from 'react'
-import { Flex, Button, useModal, Skeleton } from 'hydroswap-uikit'
+import { Flex, Button, useModal, Skeleton } from 'briws-uikit'
 import BigNumber from 'bignumber.js'
 import { useTranslation } from 'contexts/Localization'
 import { DeserializedPool } from 'state/types'

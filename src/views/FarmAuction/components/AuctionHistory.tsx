@@ -7,12 +7,12 @@ import {
   Input,
   ArrowBackIcon,
   ArrowForwardIcon,
-  ArrowLastIcon,
+  // ArrowLastIcon,
   IconButton,
   BunnyPlaceholderIcon,
   Spinner,
   useMatchBreakpoints,
-} from 'hydroswap-uikit'
+} from 'briws-uikit'
 import { useTranslation } from 'contexts/Localization'
 import useAuctionHistory from '../hooks/useAuctionHistory'
 import AuctionLeaderboardTable from './AuctionLeaderboard/AuctionLeaderboardTable'
@@ -150,7 +150,7 @@ const AuctionHistory: React.FC<AuctionHistoryProps> = ({ mostRecentClosedAuction
             scale="sm"
             onClick={() => handleArrowPress(mostRecentClosedAuctionId)}
           >
-            <ArrowLastIcon />
+            {/*<ArrowLastIcon />*/}
           </StyledIconButton>
         </Flex>
         {isLargerScreen && (

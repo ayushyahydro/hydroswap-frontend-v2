@@ -1,4 +1,4 @@
-import { ErrorIcon, Text } from 'hydroswap-uikit'
+import { ErrorIcon, Text } from 'briws-uikit'
 import { AutoColumn } from 'components/Layout/Column'
 import React from 'react'
 import styled, { css } from 'styled-components'

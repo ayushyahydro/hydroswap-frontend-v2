@@ -1,5 +1,5 @@
 import { Currency } from '@pancakeswap/sdk'
-import { Box, BunnyPlaceholderIcon, Flex, Text } from 'hydroswap-uikit'
+import { Box, BunnyPlaceholderIcon, Flex, Text } from 'briws-uikit'
 import TradingView, { TradingViewLabel, useTradingViewEvent } from 'components/TradingView'
 import { useTranslation } from 'contexts/Localization'
 import useDebounce from 'hooks/useDebounce'

@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import styled from 'styled-components'
-import { Flex, Text, Skeleton, Button, ArrowForwardIcon, Heading } from 'hydroswap-uikit'
+import { Flex, Text, Skeleton, Button, ArrowForwardIcon, Heading } from 'briws-uikit'
 import { Link } from 'react-router-dom'
 import { useTranslation } from 'contexts/Localization'
 import { formatLocalisedCompactNumber } from 'utils/formatBalance'

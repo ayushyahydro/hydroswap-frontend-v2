@@ -1,4 +1,4 @@
-import { SubMenuItems } from 'hydroswap-uikit'
+import { SubMenuItems } from 'briws-uikit'
 import styled from 'styled-components'
 
 const BaseSubMenu = styled(SubMenuItems)`

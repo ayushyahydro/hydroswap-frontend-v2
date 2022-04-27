@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import { Flex } from 'hydroswap-uikit'
+import { Flex } from 'briws-uikit'
 import PrizesText from './PrizesText'
 import PrizesCard from './PrizesCard'
 

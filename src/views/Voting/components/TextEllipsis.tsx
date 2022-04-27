@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { Text } from 'hydroswap-uikit'
+import { Text } from 'briws-uikit'
 
 const TextEllipsis = styled(Text)`
   overflow: hidden;

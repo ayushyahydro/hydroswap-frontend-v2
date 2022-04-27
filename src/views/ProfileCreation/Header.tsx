@@ -1,6 +1,6 @@
 import React, { useContext } from 'react'
 import styled from 'styled-components'
-import { Breadcrumbs, Heading, Text, Link, Button } from 'hydroswap-uikit'
+import { Breadcrumbs, Heading, Text, Link, Button } from 'briws-uikit'
 import { useTranslation } from 'contexts/Localization'
 import { nftsBaseUrl } from 'views/Nft/market/constants'
 import { ProfileCreationContext } from './contexts/ProfileCreationProvider'

@@ -1,5 +1,5 @@
 import React from 'react'
-import { Flex, Box, Text, Button } from 'hydroswap-uikit'
+import { Flex, Box, Text, Button } from 'briws-uikit'
 import { useTranslation } from 'contexts/Localization'
 import { Divider } from '../shared/styles'
 

@@ -11,7 +11,7 @@ import {
   useTooltip,
   LinkExternal,
   Link,
-} from 'hydroswap-uikit'
+} from 'briws-uikit'
 import BigNumber from 'bignumber.js'
 import Balance from 'components/Balance'
 import { TokenPairImage } from 'components/TokenImage'

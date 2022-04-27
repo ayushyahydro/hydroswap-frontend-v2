@@ -1,4 +1,4 @@
-import { Heading } from 'hydroswap-uikit'
+import { Heading } from 'briws-uikit'
 import styled, { DefaultTheme } from 'styled-components'
 
 const H1SizeStyles = (theme: DefaultTheme) => `

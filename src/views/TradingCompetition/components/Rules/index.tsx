@@ -1,5 +1,5 @@
 import React from 'react'
-import { Flex, Text } from 'hydroswap-uikit'
+import { Flex, Text } from 'briws-uikit'
 import styled from 'styled-components'
 import { useTranslation } from 'contexts/Localization'
 import RulesCard from './RulesCard'

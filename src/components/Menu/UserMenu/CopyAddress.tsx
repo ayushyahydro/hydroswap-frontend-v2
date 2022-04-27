@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { Box, CopyIcon, Flex, FlexProps, IconButton } from 'hydroswap-uikit'
+import { Box, CopyIcon, Flex, FlexProps, IconButton } from 'briws-uikit'
 import styled from 'styled-components'
 import { useTranslation } from 'contexts/Localization'
 

@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import { Text, Button, HelpIcon, Link } from 'hydroswap-uikit'
+import { Text, Button, HelpIcon, Link } from 'briws-uikit'
 import { useTranslation } from 'contexts/Localization'
 
 const ButtonText = styled(Text)`

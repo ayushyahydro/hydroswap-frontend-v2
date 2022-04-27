@@ -1,5 +1,5 @@
 import React from 'react'
-import { Flex, Text, Button, Spinner } from 'hydroswap-uikit'
+import { Flex, Text, Button, Spinner } from 'briws-uikit'
 import { useTranslation } from 'contexts/Localization'
 
 interface ConfirmStageProps {

@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { Flex, ExpandableLabel, CardFooter } from 'hydroswap-uikit'
+import { Flex, ExpandableLabel, CardFooter } from 'briws-uikit'
 import { useTranslation } from 'contexts/Localization'
 import { LotteryRound } from 'state/types'
 import FooterExpanded from './FooterExpanded'

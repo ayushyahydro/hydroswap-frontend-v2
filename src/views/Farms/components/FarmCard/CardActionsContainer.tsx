@@ -1,4 +1,4 @@
-import { Button, Flex, Text } from 'hydroswap-uikit'
+import { Button, Flex, Text } from 'briws-uikit'
 import BigNumber from 'bignumber.js'
 import ConnectWalletButton from 'components/ConnectWalletButton'
 import { useTranslation } from 'contexts/Localization'

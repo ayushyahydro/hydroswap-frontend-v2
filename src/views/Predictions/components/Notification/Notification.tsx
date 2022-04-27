@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import { Card, CardBody, Heading } from 'hydroswap-uikit'
+import { Card, CardBody, Heading } from 'briws-uikit'
 
 interface NotificationProps {
   title: string

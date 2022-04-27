@@ -1,5 +1,5 @@
 import React from 'react'
-import { Box, Card, Text } from 'hydroswap-uikit'
+import { Box, Card, Text } from 'briws-uikit'
 import { useTranslation } from 'contexts/Localization'
 import PreviousBetsTable from '../PreviousBetsTable'
 

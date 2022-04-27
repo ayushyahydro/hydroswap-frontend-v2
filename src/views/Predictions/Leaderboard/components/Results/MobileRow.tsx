@@ -1,5 +1,5 @@
 import React from 'react'
-import { Box, Text } from 'hydroswap-uikit'
+import { Box, Text } from 'briws-uikit'
 import { PredictionUser } from 'state/types'
 import styled from 'styled-components'
 import { useTranslation } from 'contexts/Localization'

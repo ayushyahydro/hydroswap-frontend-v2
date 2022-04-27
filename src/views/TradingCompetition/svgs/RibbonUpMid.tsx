@@ -1,5 +1,5 @@
 import React from 'react'
-import { Svg, SvgProps } from 'hydroswap-uikit'
+import { Svg, SvgProps } from 'briws-uikit'
 
 const RibbonUpMid: React.FC<SvgProps> = (props) => {
   return (

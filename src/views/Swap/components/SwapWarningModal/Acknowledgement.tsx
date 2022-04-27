@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { useTranslation } from 'contexts/Localization'
-import { Text, Flex, Checkbox, Button } from 'hydroswap-uikit'
+import { Text, Flex, Checkbox, Button } from 'briws-uikit'
 
 interface AcknowledgementProps {
   handleContinueClick: () => void

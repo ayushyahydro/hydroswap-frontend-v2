@@ -1,5 +1,5 @@
 import React from 'react'
-import { Heading } from 'hydroswap-uikit'
+import { Heading } from 'briws-uikit'
 import { useTranslation } from 'contexts/Localization'
 import PageHeader from 'components/PageHeader'
 import Crumbs from './Crumbs'

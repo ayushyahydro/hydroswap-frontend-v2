@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { Text, Flex } from 'hydroswap-uikit'
+import { Text, Flex } from 'briws-uikit'
 
 export const ClickableColumnHeader = styled(Text)`
   cursor: pointer;

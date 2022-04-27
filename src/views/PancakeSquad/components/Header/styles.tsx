@@ -1,4 +1,4 @@
-import { Box, Flex, lightColors, Text } from 'hydroswap-uikit'
+import { Box, Flex, lightColors, Text } from 'briws-uikit'
 import styled from 'styled-components'
 
 export const StyledSquadHeaderContainer = styled(Flex)`

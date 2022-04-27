@@ -1,5 +1,5 @@
 import React from 'react'
-import { Box, Flex, Text, NftIcon } from 'hydroswap-uikit'
+import { Box, Flex, Text, NftIcon } from 'briws-uikit'
 import { useTranslation } from 'contexts/Localization'
 import { NftAttribute } from 'state/nftMarket/types'
 import ExpandableCard from './ExpandableCard'

@@ -1,4 +1,4 @@
-import { Flex, Text } from 'hydroswap-uikit'
+import { Flex, Text } from 'briws-uikit'
 import { useTranslation } from 'contexts/Localization'
 import React from 'react'
 import { StyledPriceChart } from './styles'

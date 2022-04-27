@@ -1,4 +1,4 @@
-import { MenuItemsType, DropdownMenuItemType } from 'hydroswap-uikit'
+import { MenuItemsType, DropdownMenuItemType } from 'briws-uikit'
 import { ContextApi } from 'contexts/Localization/types'
 import { nftsBaseUrl } from 'views/Nft/market/constants'
 

@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import { ChevronDownIcon, useMatchBreakpoints } from 'hydroswap-uikit'
+import { ChevronDownIcon, useMatchBreakpoints } from 'briws-uikit'
 import { useTranslation } from 'contexts/Localization'
 
 interface DetailsProps {

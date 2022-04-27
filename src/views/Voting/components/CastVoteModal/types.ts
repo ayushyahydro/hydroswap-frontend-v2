@@ -1,4 +1,4 @@
-import { InjectedModalProps } from 'hydroswap-uikit'
+import { InjectedModalProps } from 'briws-uikit'
 
 export enum ConfirmVoteView {
   MAIN = 'main',

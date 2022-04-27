@@ -1,4 +1,4 @@
-import { SubMenuItems } from 'hydroswap-uikit'
+import { SubMenuItems } from 'briws-uikit'
 import Container from 'components/Layout/Container'
 import { useTranslation } from 'contexts/Localization'
 import React from 'react'

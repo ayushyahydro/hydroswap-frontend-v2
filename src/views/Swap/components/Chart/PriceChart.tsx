@@ -9,7 +9,7 @@ import {
   TradingViewIcon,
   LineGraphIcon,
   useMatchBreakpoints,
-} from 'hydroswap-uikit'
+} from 'briws-uikit'
 import { CurrencyLogo, DoubleCurrencyLogo } from 'components/Logo'
 import { useTranslation } from 'contexts/Localization'
 import React from 'react'

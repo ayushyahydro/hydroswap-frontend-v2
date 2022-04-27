@@ -1,5 +1,5 @@
 import React from 'react'
-import { Progress, ProgressProps } from 'hydroswap-uikit'
+import { Progress, ProgressProps } from 'briws-uikit'
 import { useBlock } from 'state/block/hooks'
 
 interface BlockProgressProps extends ProgressProps {

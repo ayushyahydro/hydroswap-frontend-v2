@@ -1,5 +1,5 @@
 import React from 'react'
-import { Text } from 'hydroswap-uikit'
+import { Text } from 'briws-uikit'
 import { ContextApi } from 'contexts/Localization/types'
 
 type FAQsType = {

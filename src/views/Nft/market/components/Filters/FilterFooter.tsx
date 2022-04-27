@@ -1,5 +1,5 @@
 import React from 'react'
-import { Grid, GridProps } from 'hydroswap-uikit'
+import { Grid, GridProps } from 'briws-uikit'
 
 const FilterFooter: React.FC<GridProps> = ({ children, ...props }) => (
   <Grid

@@ -1,5 +1,5 @@
 import React from 'react'
-import { Flex } from 'hydroswap-uikit'
+import { Flex } from 'briws-uikit'
 import styled from 'styled-components'
 
 const Wrapper = styled(Flex)`

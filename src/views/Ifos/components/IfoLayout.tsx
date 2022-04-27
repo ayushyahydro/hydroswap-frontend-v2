@@ -1,4 +1,4 @@
-import { Box } from 'hydroswap-uikit'
+import { Box } from 'briws-uikit'
 import styled from 'styled-components'
 
 const IfoLayout = styled(Box)`

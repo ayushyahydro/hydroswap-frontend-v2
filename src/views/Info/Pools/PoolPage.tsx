@@ -16,7 +16,7 @@ import {
   ButtonMenuItem,
   HelpIcon,
   useTooltip,
-} from 'hydroswap-uikit'
+} from 'briws-uikit'
 import styled from 'styled-components'
 import Page from 'components/Layout/Page'
 import { getBscScanLink } from 'utils'

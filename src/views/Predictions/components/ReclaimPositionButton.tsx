@@ -1,5 +1,5 @@
 import React, { ReactNode, useState } from 'react'
-import { AutoRenewIcon, Button, ButtonProps } from 'hydroswap-uikit'
+import { AutoRenewIcon, Button, ButtonProps } from 'briws-uikit'
 import { useTranslation } from 'contexts/Localization'
 import { usePredictionsContract } from 'hooks/useContract'
 import useToast from 'hooks/useToast'

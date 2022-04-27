@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { Box } from 'hydroswap-uikit'
+import { Box } from 'briws-uikit'
 
 const Row = styled(Box)<{
   width?: string

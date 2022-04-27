@@ -1,5 +1,5 @@
 import React from 'react'
-import { Box, Skeleton } from 'hydroswap-uikit'
+import { Box, Skeleton } from 'briws-uikit'
 import styled from 'styled-components'
 import { LeaderboardDataItem } from '../../../types'
 import GridItem from './GridItem'

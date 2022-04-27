@@ -1,5 +1,5 @@
 import React from 'react'
-import { Text, Flex, Message, Box, HelpIcon } from 'hydroswap-uikit'
+import { Text, Flex, Message, Box, HelpIcon } from 'briws-uikit'
 import { Auction, ConnectedBidder } from 'config/constants/types'
 import { useTranslation } from 'contexts/Localization'
 

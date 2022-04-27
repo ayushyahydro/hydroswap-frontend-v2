@@ -1,5 +1,5 @@
 import React from 'react'
-import { Card, CardBody, Text, WaitIcon } from 'hydroswap-uikit'
+import { Card, CardBody, Text, WaitIcon } from 'briws-uikit'
 import { useTranslation } from 'contexts/Localization'
 import { NodeRound, BetPosition } from 'state/types'
 import useTheme from 'hooks/useTheme'

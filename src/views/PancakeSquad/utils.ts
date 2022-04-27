@@ -1,4 +1,4 @@
-import { EventStatus } from 'hydroswap-uikit'
+import { EventStatus } from 'briws-uikit'
 import { ContextApi } from 'contexts/Localization/types'
 import formatTimePeriod from 'utils/formatTimePeriod'
 import getTimePeriods from 'utils/getTimePeriods'

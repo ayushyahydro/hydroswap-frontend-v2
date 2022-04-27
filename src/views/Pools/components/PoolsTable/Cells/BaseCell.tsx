@@ -1,4 +1,4 @@
-import { Flex, Text } from 'hydroswap-uikit'
+import { Flex, Text } from 'briws-uikit'
 import styled from 'styled-components'
 
 const BaseCell = styled(Flex)`

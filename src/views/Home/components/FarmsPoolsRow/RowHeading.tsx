@@ -1,5 +1,5 @@
 import React from 'react'
-import { Heading, TextProps } from 'hydroswap-uikit'
+import { Heading, TextProps } from 'briws-uikit'
 import useTheme from 'hooks/useTheme'
 
 interface HeadingProps extends TextProps {

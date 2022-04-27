@@ -14,7 +14,7 @@ import {
   useMatchBreakpoints,
   Skeleton,
   Heading,
-} from 'hydroswap-uikit'
+} from 'briws-uikit'
 import { useGetProfileAvatar } from 'state/profile/hooks'
 import useTheme from 'hooks/useTheme'
 import styled from 'styled-components'

@@ -1,5 +1,5 @@
 import React from 'react'
-import { Svg, SvgProps } from 'hydroswap-uikit'
+import { Svg, SvgProps } from 'briws-uikit'
 
 const BarChartLoaderSVG: React.FC<SvgProps> = (props) => {
   return (

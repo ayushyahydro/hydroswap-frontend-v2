@@ -1,5 +1,5 @@
 import React from 'react'
-import { AutoRenewIcon, Flex, Heading } from 'hydroswap-uikit'
+import { AutoRenewIcon, Flex, Heading } from 'briws-uikit'
 import orderBy from 'lodash/orderBy'
 import { useTeams } from 'state/teams/hooks'
 import Page from 'components/Layout/Page'

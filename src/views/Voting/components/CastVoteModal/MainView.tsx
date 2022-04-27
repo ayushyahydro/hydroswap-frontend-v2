@@ -1,5 +1,5 @@
 import React from 'react'
-import { IconButton, Text, Skeleton, Button, AutoRenewIcon, ChevronRightIcon } from 'hydroswap-uikit'
+import { IconButton, Text, Skeleton, Button, AutoRenewIcon, ChevronRightIcon } from 'briws-uikit'
 import { useTranslation } from 'contexts/Localization'
 import { formatNumber } from 'utils/formatBalance'
 import TextEllipsis from '../TextEllipsis'

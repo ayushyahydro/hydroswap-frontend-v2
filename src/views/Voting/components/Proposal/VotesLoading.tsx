@@ -1,5 +1,5 @@
 import React from 'react'
-import { Box, Flex, Skeleton } from 'hydroswap-uikit'
+import { Box, Flex, Skeleton } from 'briws-uikit'
 import times from 'lodash/times'
 import styled from 'styled-components'
 
