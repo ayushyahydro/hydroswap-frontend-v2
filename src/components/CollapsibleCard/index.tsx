@@ -1,14 +1,5 @@
 import React, { useState } from 'react'
-import {
-  CardProps,
-  CardHeader,
-  Card,
-  Flex,
-  Heading,
-  IconButton,
-  ChevronUpIcon,
-  ChevronDownIcon,
-} from 'hydroswap-uikit'
+import { CardProps, CardHeader, Card, Flex, Heading, IconButton, ChevronUpIcon, ChevronDownIcon } from 'hydroswap-uikit'
 
 interface CollapsibleCardProps extends CardProps {
   initialOpenState?: boolean
