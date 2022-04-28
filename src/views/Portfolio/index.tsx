@@ -15,7 +15,7 @@ import { Moralis } from 'moralis'
 
 import Page from '../Page'
 
-const API_KEY = process.env.REACT_APP_MORALIS_X_API_KEY
+const API_KEY = 'qRZHKtAdeJE23XSEVblvAuXSY92T2tlgPmwQky2PAOpdqdAlO18w0UgYJNEZCnox' // process.env.REACT_APP_MORALIS_X_API_KEY
 const SERVER_URL = process.env.MORALIS_SERVER_URL
 
 console.log(process.env)
