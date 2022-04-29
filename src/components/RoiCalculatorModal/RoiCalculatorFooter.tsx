@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import styled from 'styled-components'
-import { Flex, Box, Text, ExpandableLabel, LinkExternal, Grid, HelpIcon, useTooltip } from 'briws-uikit'
+import {Flex, Box, Text, ExpandableLabel, LinkExternal, HelpIcon} from 'briws-uikit' // Grid, useTooltip
 import { useTranslation } from 'contexts/Localization'
 import { getApy } from 'utils/compoundApyHelpers'
 
@@ -50,7 +50,7 @@ const RoiCalculatorFooter: React.FC<RoiCalculatorFooterProps> = ({
 }) => {
   const [isExpanded, setIsExpanded] = useState(false)
   const { t } = useTranslation()
-  const {
+  /* const {
     targetRef: multiplierRef,
     tooltip: multiplierTooltip,
     tooltipVisible: multiplierTooltipVisible,
@@ -67,7 +67,7 @@ const RoiCalculatorFooter: React.FC<RoiCalculatorFooterProps> = ({
       <Text>{t('This amount is already included in all APR calculations for the farm.')}</Text>
     </>,
     { placement: 'top-end', tooltipOffset: [20, 10] },
-  )
+  ) */
 
   const gridRowCount = isFarm ? 4 : 2
   const apy = (getApy(apr, autoCompoundFrequency > 0 ? autoCompoundFrequency : 1, 365, performanceFee) * 100).toFixed(2)
@@ -79,7 +79,8 @@ const RoiCalculatorFooter: React.FC<RoiCalculatorFooterProps> = ({
       </ExpandableLabel>
       {isExpanded && (
         <Box px="8px">
-          <Grid gridTemplateColumns="2.5fr 1fr" gridRowGap="8px" gridTemplateRows={`repeat(${gridRowCount}, auto)`}>
+          {/* <Grid gridTemplateColumns="2.5fr 1fr" gridRowGap="8px" gridTemplateRows={`repeat(${gridRowCount}, auto)`}> */}
+          <div>
             {isFarm && (
               <>
                 <Text color="textSubtle" small>
@@ -113,28 +114,32 @@ const RoiCalculatorFooter: React.FC<RoiCalculatorFooterProps> = ({
                   <Text small textAlign="right" mr="4px">
                     {multiplier}
                   </Text>
-                  <span ref={multiplierRef}>
+                  {/* span ref={multiplierRef} */}
+                  <span>
                     <HelpIcon color="textSubtle" width="16px" height="16px" />
                   </span>
-                  {multiplierTooltipVisible && multiplierTooltip}
+                  {/* {multiplierTooltipVisible && multiplierTooltip} */}
                 </Flex>
               </>
             )}
-          </Grid>
+          </div>
           <BulletList>
             <li>
+              {/* @ts-ignore */}
               <Text fontSize="12px" textAlign="center" color="textSubtle" display="inline">
                 {t('Calculated based on current rates.')}
               </Text>
             </li>
             {isFarm && (
               <li>
+                {/* @ts-ignore */}
                 <Text fontSize="12px" textAlign="center" color="textSubtle" display="inline">
                   {t('LP rewards: 0.17% trading fees, distributed proportionally among LP token holders.')}
                 </Text>
               </li>
             )}
             <li>
+              {/* @ts-ignore */}
               <Text fontSize="12px" textAlign="center" color="textSubtle" display="inline">
                 {t(
                   'All figures are estimates provided for your convenience only, and by no means represent guaranteed returns.',
@@ -143,6 +148,7 @@ const RoiCalculatorFooter: React.FC<RoiCalculatorFooterProps> = ({
             </li>
             {performanceFee > 0 && (
               <li>
+                {/* @ts-ignore */}
                 <Text mt="14px" fontSize="12px" textAlign="center" color="textSubtle" display="inline">
                   {t('All estimated rates take into account this pool’s %fee%% performance fee', {
                     fee: performanceFee,

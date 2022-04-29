@@ -1,5 +1,5 @@
-import { Card, CardBody, Flex, Heading, Image, ProfileAvatar } from 'briws-uikit'
-import React from 'react'
+import { Card, CardBody, Flex, Heading, Image } from 'briws-uikit' // ProfileAvatar
+import React, {ReactNode} from 'react'
 import { Link } from 'react-router-dom'
 import styled, { css } from 'styled-components'
 
@@ -9,9 +9,10 @@ interface HotCollectionCardProps {
   collectionName: string
   url?: string
   disabled?: boolean
+  children: ReactNode
 }
 
-export const CollectionAvatar = styled(ProfileAvatar)`
+export const CollectionAvatar = styled.div` // ProfileAvatar
   left: 0;
   position: absolute;
   top: -32px;
@@ -66,7 +67,7 @@ const HotCollectionCard: React.FC<HotCollectionCardProps> = ({
         py="8px"
         flexDirection="column"
       >
-        <CollectionAvatar src={avatarSrc} width={96} height={96} />
+        <CollectionAvatar /> {/* src={avatarSrc} width={96} height={96} */}
         <Heading color={disabled ? 'textDisabled' : 'body'} as="h3" mb={children ? '8px' : '0'}>
           {collectionName}
         </Heading>

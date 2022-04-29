@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import { Heading, Flex, Button, Grid, ChevronRightIcon } from 'briws-uikit'
+import { Heading, Flex, Button, ChevronRightIcon } from 'briws-uikit' // Grid,
 import { useTranslation } from 'contexts/Localization'
 import { Link } from 'react-router-dom'
 import { NftToken } from 'state/nftMarket/types'
@@ -53,11 +53,14 @@ const Newest: React.FC = () => {
         </Button>
       </Flex>
       {nfts ? (
+        /*
         <Grid
           gridRowGap="24px"
           gridColumnGap="16px"
           gridTemplateColumns={['1fr', 'repeat(2, 1fr)', 'repeat(2, 1fr)', 'repeat(4, 1fr)']}
         >
+        */
+        <div>
           {nfts.map((nft) => {
             const isPBCollection = nft.collectionAddress.toLowerCase() === pancakeBunniesAddress.toLowerCase()
             const currentAskPrice =
@@ -70,7 +73,7 @@ const Newest: React.FC = () => {
               />
             )
           })}
-        </Grid>
+        </div>
       ) : (
         <GridPlaceholder numItems={8} />
       )}

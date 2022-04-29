@@ -1,6 +1,6 @@
 import React from 'react'
 import orderBy from 'lodash/orderBy'
-import { Button, ChevronRightIcon, Flex, Grid, Heading, Text } from 'briws-uikit'
+import { Button, ChevronRightIcon, Flex, Heading, Text } from 'briws-uikit' // , Grid
 import { Link } from 'react-router-dom'
 import { useGetCollections } from 'state/nftMarket/hooks'
 import { nftsBaseUrl } from 'views/Nft/market/constants'
@@ -21,6 +21,7 @@ const Collections = () => {
   return (
     <>
       <Flex alignItems="center" justifyContent="space-between" mb="32px">
+          {/* @ts-ignore */}
         <Heading as="h3" scale="lg">
           {t('Hot Collections')}
         </Heading>
@@ -34,7 +35,8 @@ const Collections = () => {
           {t('View All')}
         </Button>
       </Flex>
-      <Grid gridGap="16px" gridTemplateColumns={['1fr', '1fr', 'repeat(2, 1fr)', 'repeat(3, 1fr)']} mb="64px">
+      {/* <Grid gridGap="16px" gridTemplateColumns={['1fr', '1fr', 'repeat(2, 1fr)', 'repeat(3, 1fr)']} mb="64px"> */}
+      <div>
         {orderedCollections.slice(0, 6).map((collection) => {
           return (
             <HotCollectionCard
@@ -53,7 +55,7 @@ const Collections = () => {
             </HotCollectionCard>
           )
         })}
-      </Grid>
+      </div>
     </>
   )
 }

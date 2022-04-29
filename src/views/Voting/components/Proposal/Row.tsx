@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { Grid, Box } from 'briws-uikit'
+import { Box } from 'briws-uikit' // Grid
 
 export const AddressColumn = styled(Box).attrs({ alignItems: 'center' })`
   grid-area: address;
@@ -15,7 +15,7 @@ export const VotingPowerColumn = styled(Box)`
   grid-area: vote;
 `
 
-const Row = styled(Grid)`
+const Row = styled.div` /* Grid */
   border-bottom: 1px solid ${({ theme }) => theme.colors.cardBorder};
   grid-gap: 8px;
   grid-template-areas:

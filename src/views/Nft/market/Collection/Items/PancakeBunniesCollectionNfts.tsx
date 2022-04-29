@@ -1,5 +1,5 @@
 import React from 'react'
-import { Grid } from 'briws-uikit'
+// import { Grid } from 'briws-uikit'
 import orderBy from 'lodash/orderBy'
 import { Collection } from 'state/nftMarket/types'
 import { CollectibleLinkCard } from '../../components/CollectibleCard'
@@ -27,15 +27,16 @@ const PancakeBunniesCollectionNfts: React.FC<CollectionNftsProps> = ({ collectio
 
   return (
     <>
-      <Grid
+      {/* <Grid
         gridGap="16px"
         gridTemplateColumns={['1fr', null, 'repeat(3, 1fr)', null, 'repeat(4, 1fr)']}
         alignItems="start"
-      >
+      > */}
+        <div>
         {sortedNfts.map((nft) => {
           return <CollectibleLinkCard key={`${nft.tokenId}-${nft.collectionName}`} nft={nft} />
         })}
-      </Grid>
+        </div>
     </>
   )
 }

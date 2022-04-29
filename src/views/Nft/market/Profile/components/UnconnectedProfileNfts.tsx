@@ -1,5 +1,5 @@
 import React from 'react'
-import { Grid, Text, Flex } from 'briws-uikit'
+import { Text, Flex } from 'briws-uikit' // Grid,
 import { NftToken } from 'state/nftMarket/types'
 import { useTranslation } from 'contexts/Localization'
 import { CollectibleLinkCard } from '../../components/CollectibleCard'
@@ -21,11 +21,12 @@ const UserNfts: React.FC<{ nfts: NftToken[]; isLoading: boolean }> = ({ nfts, is
         </Flex>
       ) : // User has NFTs and data has been fetched
       nfts.length > 0 ? (
-        <Grid
+        /* <Grid
           gridGap="16px"
           gridTemplateColumns={['1fr', 'repeat(2, 1fr)', 'repeat(3, 1fr)', null, 'repeat(4, 1fr)']}
           alignItems="start"
-        >
+        > */
+        <div>
           {nfts.map((nft) => {
             const { marketData } = nft
 
@@ -39,7 +40,7 @@ const UserNfts: React.FC<{ nfts: NftToken[]; isLoading: boolean }> = ({ nfts, is
               />
             )
           })}
-        </Grid>
+        </div>
       ) : (
         // User NFT data hasn't been fetched
         <GridPlaceholder />

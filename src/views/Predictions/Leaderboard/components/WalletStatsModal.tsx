@@ -3,18 +3,16 @@ import {
   Box,
   CloseIcon,
   Flex,
-  Grid,
   Text,
   IconButton,
   InjectedModalProps,
   LinkExternal,
   ModalContainer,
   ModalHeader,
-  ProfileAvatar,
   useMatchBreakpoints,
   Skeleton,
   Heading,
-} from 'briws-uikit'
+} from 'briws-uikit' // Grid, ProfileAvatar,
 import { useGetProfileAvatar } from 'state/profile/hooks'
 import useTheme from 'hooks/useTheme'
 import styled from 'styled-components'
@@ -68,10 +66,11 @@ const WalletStatsModal: React.FC<WalletStatsModalProps> = ({ account, onDismiss,
       <ModalHeader background={theme.colors.gradients.bubblegum}>
         <Flex alignItems="center" style={{ flex: 1 }}>
           <Box width={['64px', null, null, null, null, null, '96px']} mr="16px">
-            <ProfileAvatar src={profileAvatar.nft?.image?.thumbnail} height={96} width={96} />
+            <div>ProfileAvatar</div> {/* ProfileAvatar src={profileAvatar.nft?.image?.thumbnail} height={96} width={96} */}
           </Box>
           <Box>
             {profileAvatar.username && (
+              /* @ts-ignore */
               <Heading scale="lg" mb="8px">
                 {profileAvatar.username}
               </Heading>
@@ -89,13 +88,14 @@ const WalletStatsModal: React.FC<WalletStatsModalProps> = ({ account, onDismiss,
         </Text>
       ) : (
         <Box maxHeight={['500px', null, null, null, null, null, 'none']} overflowY="auto">
-          <Grid
+          {/* <Grid
             gridTemplateColumns={['1fr', null, null, null, null, null, 'repeat(4, 1fr)']}
             gridGap="16px"
             p="24px"
             borderBottom="1px solid"
             borderColor="cardBorder"
-          >
+          > */}
+            <div>
             <Box>
               <Text as="h6" fontSize="12px" textTransform="uppercase" color="textSubtle" fontWeight="bold" mb="8px">
                 {t('Net Winnings')}
@@ -136,7 +136,7 @@ const WalletStatsModal: React.FC<WalletStatsModalProps> = ({ account, onDismiss,
               </Text>
               {isLoading ? <Skeleton /> : <Text fontWeight="bold">{result?.totalBets?.toLocaleString()}</Text>}
             </Box>
-          </Grid>
+          </div>
           {isDesktop ? <DesktopBetsTable account={address} /> : <MobileBetsTable account={address} />}
         </Box>
       )}

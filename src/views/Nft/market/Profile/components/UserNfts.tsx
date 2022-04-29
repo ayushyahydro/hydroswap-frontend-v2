@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import { Grid, useModal, Text, Flex } from 'briws-uikit'
+import { useModal, Text, Flex } from 'briws-uikit' // Grid,
 import { useUserNfts } from 'state/nftMarket/hooks'
 import { NftLocation, UserNftInitializationState, NftToken } from 'state/nftMarket/types'
 import { useTranslation } from 'contexts/Localization'
@@ -72,11 +72,12 @@ const UserNfts = () => {
         </Flex>
       ) : // User has NFTs and data has been fetched
       nfts.length > 0 ? (
-        <Grid
+        /* <Grid
           gridGap="16px"
           gridTemplateColumns={['1fr', 'repeat(2, 1fr)', 'repeat(3, 1fr)', null, 'repeat(4, 1fr)']}
           alignItems="start"
-        >
+        > */
+          <div>
           {nfts.map((nft) => {
             const { marketData, location } = nft
 
@@ -93,7 +94,7 @@ const UserNfts = () => {
               />
             )
           })}
-        </Grid>
+        </div>
       ) : (
         // User NFT data hasn't been fetched
         <GridPlaceholder />

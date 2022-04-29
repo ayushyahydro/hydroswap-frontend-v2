@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { Token, Currency } from '@pancakeswap/sdk'
-import { Button, Text, ErrorIcon, Flex, Message, Checkbox, Link, Tag, Grid } from 'briws-uikit'
+import { Button, Text, ErrorIcon, Flex, Checkbox, Link, Tag } from 'briws-uikit' // Message, Grid
 import { AutoColumn } from 'components/Layout/Column'
 import { useAddUserToken } from 'state/user/hooks'
 import { getBscScanLink } from 'utils'
@@ -29,7 +29,7 @@ function ImportToken({ tokens, handleCurrencySelect }: ImportProps) {
 
   return (
     <AutoColumn gap="lg">
-      <Message variant="warning">
+      <div> {/* Message variant="warning" */}
         <Text>
           {t(
             'Anyone can create a BEP20 token on BSC with any name, including creating fake versions of existing tokens and tokens that claim to represent projects that do not have a token.',
@@ -38,13 +38,14 @@ function ImportToken({ tokens, handleCurrencySelect }: ImportProps) {
           <br />
           {t('If you purchase an arbitrary token, you may be unable to sell it back.')}
         </Text>
-      </Message>
+      </div>
 
       {tokens.map((token) => {
         const list = chainId && inactiveTokenList?.[chainId]?.[token.address]?.list
         const address = token.address ? `${truncateHash(token.address)}` : null
         return (
-          <Grid key={token.address} gridTemplateRows="1fr 1fr 1fr" gridGap="4px">
+          /* <Grid key={token.address} gridTemplateRows="1fr 1fr 1fr" gridGap="4px">  */
+          <div>
             {list !== undefined ? (
               <Tag
                 variant="success"
@@ -71,7 +72,7 @@ function ImportToken({ tokens, handleCurrencySelect }: ImportProps) {
                 </Link>
               </Flex>
             )}
-          </Grid>
+          </div>
         )
       })}
 

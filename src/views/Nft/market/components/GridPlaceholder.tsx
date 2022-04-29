@@ -1,10 +1,10 @@
 import React from 'react'
-import { Box, BoxProps, Grid, GridProps, Skeleton } from 'briws-uikit'
+import { Box, BoxProps, Skeleton } from 'briws-uikit' // Grid, GridProps,
 import times from 'lodash/times'
 
-interface GridPlaceholderProps extends GridProps {
+/* interface GridPlaceholderProps extends GridProps {
   numItems?: number
-}
+} */
 
 export const GridPlaceholderItem: React.FC<BoxProps> = (props) => (
   <Box {...props}>
@@ -15,12 +15,14 @@ export const GridPlaceholderItem: React.FC<BoxProps> = (props) => (
   </Box>
 )
 
-const GridPlaceholder: React.FC<GridPlaceholderProps> = ({ numItems = 12, ...props }) => (
-  <Grid gridGap="16px" gridTemplateColumns={['1fr', null, null, 'repeat(4, 1fr)']} {...props}>
+// GridPlaceholderProps { numItems = 12, ...props }
+const GridPlaceholder: React.FC = () => (
+  /* <Grid gridGap="16px" gridTemplateColumns={['1fr', null, null, 'repeat(4, 1fr)']} {...props}>
     {times(numItems).map((itemKey) => (
       <GridPlaceholderItem key={itemKey} />
     ))}
-  </Grid>
+  </Grid> */
+  <div>Grid</div>
 )
 
 export default GridPlaceholder
