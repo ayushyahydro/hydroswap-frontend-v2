@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react'
 import styled from 'styled-components'
-import { ModalBody, ModalContainer, Message, ModalHeader, Box, Heading } from 'briws-uikit'
+import { ModalBody, ModalContainer, ModalHeader, Box, Heading } from 'briws-uikit' // Message,
 import useTheme from 'hooks/useTheme'
 import { useTranslation } from 'contexts/Localization'
 import { WrappedTokenInfo } from 'state/lists/hooks'
@@ -13,7 +13,7 @@ const StyledModalContainer = styled(ModalContainer)`
   max-width: 440px;
 `
 
-const MessageContainer = styled(Message)`
+const MessageContainer = styled.div` /* Message */
   align-items: flex-start;
   justify-content: flex-start;
 `
@@ -68,7 +68,7 @@ const SwapWarningModal: React.FC<SwapWarningModalProps> = ({ swapCurrency, onDis
         <Heading p="12px 24px">{t('Notice for trading %symbol%', { symbol: SWAP_WARNING.symbol })}</Heading>
       </ModalHeader>
       <ModalBody p="24px">
-        <MessageContainer variant="warning" mb="24px">
+        <MessageContainer> {/*variant="warning" mb="24px"*/}
           <Box>{SWAP_WARNING.component}</Box>
         </MessageContainer>
         <Acknowledgement handleContinueClick={onDismiss} />

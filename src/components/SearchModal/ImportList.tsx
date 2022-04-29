@@ -1,6 +1,6 @@
 import React, { useState, useCallback } from 'react'
 import styled from 'styled-components'
-import { Button, Text, Link, Flex, Checkbox, Message } from 'briws-uikit'
+import { Button, Text, Link, Flex, Checkbox} from 'briws-uikit' // Message
 import Card from 'components/Card'
 import { AutoColumn } from 'components/Layout/Column'
 import { RowBetween, RowFixed } from 'components/Layout/Row'
@@ -80,10 +80,8 @@ function ImportList({ listURL, list, onImport }: ImportProps) {
                       {list.tokens.length} tokens
                     </Text>
                   </RowFixed>
-                  <Link
-                    small
-                    external
-                    ellipsis
+                  {/* @ts-ignore */}
+                  <Link small external ellipsis
                     maxWidth="90%"
                     href={`https://tokenlists.org/token-list?url=${listURL}`}
                   >
@@ -94,7 +92,7 @@ function ImportList({ listURL, list, onImport }: ImportProps) {
             </RowBetween>
           </Card>
 
-          <Message variant="danger">
+          <div> {/*Message variant="danger"*/}
             <Flex flexDirection="column">
               <Text fontSize="20px" textAlign="center" color={theme.colors.failure} mb="16px">
                 {t('Import at your own risk')}
@@ -120,7 +118,7 @@ function ImportList({ listURL, list, onImport }: ImportProps) {
                 </Text>
               </Flex>
             </Flex>
-          </Message>
+          </div>
 
           <Button disabled={!confirmed} onClick={handleAddList}>
             {t('Import')}

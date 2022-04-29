@@ -7,15 +7,12 @@ import {
   CheckmarkCircleIcon,
   FlexProps,
   HelpIcon,
-  useTooltip,
   Button,
   AutoRenewIcon,
   BunnyPlaceholderIcon,
-  Message,
-  MessageText,
   useModal,
   Link,
-} from 'briws-uikit'
+} from 'briws-uikit' // useTooltip, Message, MessageText,
 import styled from 'styled-components'
 import { useWeb3React } from '@web3-react/core'
 import { Token } from '@pancakeswap/sdk'
@@ -56,7 +53,7 @@ const TokenSection: React.FC<TokenSectionProps> = ({ primaryToken, secondaryToke
         />
       )
     }
-
+    /*@ts-ignore*/
     return <TokenImage token={primaryToken} height={32} width={32} mr="16px" />
   }
 
@@ -125,12 +122,12 @@ const IfoCardTokens: React.FC<IfoCardTokensProps> = ({
 }) => {
   const { account } = useWeb3React()
   const { t } = useTranslation()
-  const { targetRef, tooltip, tooltipVisible } = useTooltip(
+  /*const { targetRef, tooltip, tooltipVisible } = useTooltip(
     t(
       'Sorry, you didn’t contribute enough CAKE to meet the minimum threshold. You didn’t buy anything in this sale, but you can still reclaim your CAKE.',
     ),
     { placement: 'bottom' },
-  )
+  )*/
 
   const publicPoolCharacteristics = publicIfoData[poolId]
   const userPoolCharacteristics = walletIfoData[poolId]
@@ -167,33 +164,37 @@ const IfoCardTokens: React.FC<IfoCardTokensProps> = ({
 
     if (account && !hasProfile) {
       message = (
-        <Message my="24px" p="8px" variant="warning">
+        /*<Message my="24px" p="8px" variant="warning">*/
+        <div>
           <Box>
-            <MessageText display="inline">
+            <div> {/*MessageText display="inline"*/}
               {publicIfoData.status === 'finished'
                 ? t('Activate PancakeSwap Profile to take part in next IFO‘s!')
                 : t('You need an active PancakeSwap Profile to take part in an IFO!')}
-            </MessageText>{' '}
+            </div>{' '}
+            {/* @ts-ignore */}
             <MessageTextLink href="#ifo-how-to" color="#D67E0A" display="inline">
               {t('How does it work?')} »
             </MessageTextLink>
           </Box>
-        </Message>
+        </div>
       )
     }
 
     if (ifo.version === 3 && getBalanceNumber(credit) === 0) {
       message = (
-        <Message my="24px" p="8px" variant="danger">
+        /*<Message my="24px" p="8px" variant="danger">*/
+        <div>
           <Box>
-            <MessageText display="inline">
+            <div> {/*<MessageText display="inline">*/}
               {t('You don’t have any average CAKE balance available to commit in the IFO CAKE pool.')}
-            </MessageText>{' '}
+            </div>{' '}
+            {/* @ts-ignore */}
             <MessageTextLink display="inline" fontWeight={700} href="#ifo-how-to" color="failure">
               {t('How does it work?')} »
             </MessageTextLink>
           </Box>
-        </Message>
+        </div>
       )
     }
     if (account && !hasProfile) {
@@ -282,6 +283,7 @@ const IfoCardTokens: React.FC<IfoCardTokensProps> = ({
             <Flex alignItems="center">
               <Value>{getBalanceNumber(userPoolCharacteristics.offeringAmountInToken, token.decimals)}</Value>
               {!hasClaimed && userPoolCharacteristics.offeringAmountInToken.isEqualTo(0) && (
+                /*@ts-ignore*/
                 <div ref={targetRef} style={{ display: 'flex', marginLeft: '8px' }}>
                   <HelpIcon />
                 </div>
@@ -290,9 +292,11 @@ const IfoCardTokens: React.FC<IfoCardTokensProps> = ({
             </Flex>
           </TokenSection>
           {hasClaimed && (
-            <Message my="24px" p="8px" variant="success">
-              <MessageText>{t('You’ve successfully claimed tokens back.')}</MessageText>
-            </Message>
+            /*<Message my="24px" p="8px" variant="success">*/
+            <div>
+              <div>{t('You’ve successfully claimed tokens back.')}</div>
+              {/*<MessageText></MessageText>*/}
+            </div>
           )}
         </>
       )
@@ -301,7 +305,7 @@ const IfoCardTokens: React.FC<IfoCardTokensProps> = ({
   }
   return (
     <Box>
-      {tooltipVisible && tooltip}
+      {/*{tooltipVisible && tooltip}*/}
       {renderTokenSection()}
     </Box>
   )

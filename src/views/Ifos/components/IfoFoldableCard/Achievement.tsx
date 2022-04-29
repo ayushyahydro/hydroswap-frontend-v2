@@ -6,13 +6,10 @@ import {
   Text,
   PrizeIcon,
   Skeleton,
-  LanguageIcon,
   SvgProps,
   Svg,
-  TwitterIcon,
   Link,
-  TelegramIcon,
-} from 'briws-uikit'
+} from 'briws-uikit' // LanguageIcon, TwitterIcon, TelegramIcon
 import tokens from 'config/constants/tokens'
 import { useTranslation } from 'contexts/Localization'
 import { PublicIfoData } from 'views/Ifos/types'
@@ -102,19 +99,22 @@ const IfoAchievement: React.FC<Props> = ({ ifo, publicIfoData }) => {
           )}
           <FlexGap gap="16px" pt="24px" pl="4px">
             <Link external href={ifo.articleUrl}>
-              <LanguageIcon color="textSubtle" />
+              {/*<LanguageIcon color="textSubtle" /> */}
+              <div>LanguageIcon</div>
             </Link>
             <Link external href={getBscScanLink(ifo.address, 'address')}>
               <SmartContractIcon color="textSubtle" />
             </Link>
             {ifo.twitterUrl && (
               <Link external href={ifo.twitterUrl}>
-                <TwitterIcon color="textSubtle" />
+                {/*<TwitterIcon color="textSubtle" />*/}
+                <div>TwitterIcon</div>
               </Link>
             )}
             {ifo.telegramUrl && (
               <Link external href={ifo.telegramUrl}>
-                <TelegramIcon color="textSubtle" />
+                {/*<TelegramIcon color="textSubtle" />*/}
+                <div>TelegramIcon</div>
               </Link>
             )}
           </FlexGap>

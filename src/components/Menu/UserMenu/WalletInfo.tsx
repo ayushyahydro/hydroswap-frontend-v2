@@ -1,5 +1,5 @@
 import React from 'react'
-import { Box, Button, Flex, InjectedModalProps, LinkExternal, Message, Skeleton, Text } from 'briws-uikit'
+import { Box, Button, Flex, InjectedModalProps, LinkExternal, Skeleton, Text } from 'briws-uikit' // Message,
 import { useWeb3React } from '@web3-react/core'
 import useTokenBalance, { FetchStatus, useGetBnbBalance } from 'hooks/useTokenBalance'
 import useAuth from 'hooks/useAuth'
@@ -35,12 +35,13 @@ const WalletInfo: React.FC<WalletInfoProps> = ({ hasLowBnbBalance, onDismiss }) 
       </Text>
       <CopyAddress account={account} mb="24px" />
       {hasLowBnbBalance && (
-        <Message variant="warning" mb="24px">
+        /* <Message variant="warning" mb="24px"> */
+        <div>
           <Box>
             <Text fontWeight="bold">{t('BNB Balance Low')}</Text>
             <Text as="p">{t('You need BNB for transaction fees.')}</Text>
           </Box>
-        </Message>
+        </div>
       )}
       <Flex alignItems="center" justifyContent="space-between">
         <Text color="textSubtle">{t('BNB Balance')}</Text>

@@ -1,5 +1,5 @@
 import React from 'react'
-import { Text, Flex, Message, Box, HelpIcon } from 'briws-uikit'
+import { Text, Flex, Box, HelpIcon } from 'briws-uikit' // Message,
 import { Auction, ConnectedBidder } from 'config/constants/types'
 import { useTranslation } from 'contexts/Localization'
 
@@ -13,7 +13,7 @@ const NotWhitelistedNotice: React.FC<{ connectedBidder: ConnectedBidder; auction
   }
   return (
     <Flex mb="24px" justifyContent="center">
-      <Message variant="warning" icon={<HelpIcon width="24px" />}>
+      <div> {/* <Message variant="warning" icon={<HelpIcon width="24px" />}> */}
         <Box maxWidth="800px">
           <Text bold>{t('Notice')}</Text>
           <Text>{t('This page is a functional page, for projects to bid for farms.')}</Text>
@@ -24,7 +24,7 @@ const NotWhitelistedNotice: React.FC<{ connectedBidder: ConnectedBidder; auction
           </Text>
           <Text>{t('Connect a whitelisted project wallet to participate in Auctions.')}</Text>
         </Box>
-      </Message>
+      </div>
     </Flex>
   )
 }

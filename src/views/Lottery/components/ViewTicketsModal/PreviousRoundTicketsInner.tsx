@@ -6,12 +6,9 @@ import {
   Button,
   Skeleton,
   Ticket,
-  PresentWonIcon,
-  TooltipText,
   InfoIcon,
-  useTooltip,
   useModal,
-} from 'briws-uikit'
+} from 'briws-uikit' // PresentWonIcon, TooltipText useTooltip
 import styled from 'styled-components'
 import { useWeb3React } from '@web3-react/core'
 import { LotteryTicket, LotteryTicketClaimData } from 'config/constants/types'
@@ -80,10 +77,10 @@ const PreviousRoundTicketsInner: React.FC<{ roundId: string }> = ({ roundId }) =
     </>
   )
 
-  const { targetRef, tooltip, tooltipVisible } = useTooltip(<TooltipComponent />, {
+  /*const { targetRef, tooltip, tooltipVisible } = useTooltip(<TooltipComponent />, {
     placement: 'bottom-end',
     tooltipOffset: [20, 10],
-  })
+  })*/
 
   useEffect(() => {
     const addWinningTicketInfoToAllTickets = (
@@ -152,10 +149,12 @@ const PreviousRoundTicketsInner: React.FC<{ roundId: string }> = ({ roundId }) =
     }
     if (!userWinningTickets.allWinningTickets) {
       return (
-        <div ref={targetRef}>
+        /*ref={targetRef} */
+        <div>
           <Flex alignItems="center" justifyContent="center" mt="20px">
             <InfoIcon height="20px" width="20px" color="textSubtle" mr="8px" />
-            <TooltipText color="textSubtle">{t("Why didn't I win?")}</TooltipText>
+            {/*<TooltipText color="textSubtle">{t("Why didn't I win?")}</TooltipText>*/}
+            <div>TooltipText</div>
           </Flex>
         </div>
       )
@@ -165,7 +164,8 @@ const PreviousRoundTicketsInner: React.FC<{ roundId: string }> = ({ roundId }) =
 
   return (
     <>
-      {tooltipVisible && tooltip}
+      {/*{tooltipVisible && tooltip}*/}
+      <div>tooltipVisible && tooltip</div>
       <TopBox>
         <Text bold textTransform="uppercase" color="secondary" fontSize="12px" mb="4px">
           {t('Winning number')}
@@ -193,7 +193,8 @@ const PreviousRoundTicketsInner: React.FC<{ roundId: string }> = ({ roundId }) =
         </Flex>
         <Flex mb="24px" justifyContent="space-between">
           <Flex>
-            <PresentWonIcon width="24px" height="24px" mr="8px" />
+            {/*<PresentWonIcon width="24px" height="24px" mr="8px" />*/}
+            <div>PresentWonIcon</div>
             <Text bold color="text">
               {t('Winning tickets')}:
             </Text>

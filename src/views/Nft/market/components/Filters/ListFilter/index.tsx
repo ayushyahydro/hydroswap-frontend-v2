@@ -5,15 +5,13 @@ import {
   Button,
   Text,
   Flex,
-  InlineMenu,
   Input,
-  InputGroup,
   SearchIcon,
   IconButton,
   CloseIcon,
   ArrowUpIcon,
   ArrowDownIcon,
-} from 'briws-uikit'
+} from 'briws-uikit' // InlineMenu, InputGroup,
 import orderBy from 'lodash/orderBy'
 import { useAppDispatch } from 'state'
 import { filterNftsFromCollection } from 'state/nftMarket/reducer'
@@ -139,7 +137,7 @@ export const ListFilter: React.FC<ListFilterProps> = ({ title, traitType, items,
   return (
     <Flex alignItems="center" mr="4px" mb="4px">
       <Box ref={wrapperRef}>
-        <InlineMenu
+        {/*<InlineMenu
           component={
             <TriggerButton
               onClick={handleMenuClick}
@@ -153,12 +151,14 @@ export const ListFilter: React.FC<ListFilterProps> = ({ title, traitType, items,
           }
           isOpen={isOpen}
           options={{ placement: 'bottom' }}
-        >
+        >*/}
+          <div>
           <Box maxWidth="375px" ref={menuRef}>
             <SearchWrapper alignItems="center" p="16px">
-              <InputGroup startIcon={<SearchIcon color="textSubtle" />}>
+              <div>
                 <Input name="query" placeholder={t('Search')} onChange={handleChange} value={query} />
-              </InputGroup>
+              {/*<InputGroup startIcon={<SearchIcon color="textSubtle" />}>*/}
+              </div>
             </SearchWrapper>
             <Flex alignItems="center" p="16px">
               <FilterButton onClick={toggleSort('label')} style={{ flex: 1 }}>
@@ -204,7 +204,7 @@ export const ListFilter: React.FC<ListFilterProps> = ({ title, traitType, items,
               )}
             </Box>
           </Box>
-        </InlineMenu>
+        </div>
       </Box>
       {isTraitSelected && (
         <CloseButton

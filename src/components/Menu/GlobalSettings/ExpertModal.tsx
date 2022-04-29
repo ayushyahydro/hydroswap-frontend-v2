@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { Button, Text, Flex, Message, Modal, InjectedModalProps, Checkbox } from 'briws-uikit'
+import { Button, Text, Flex, Modal, InjectedModalProps, Checkbox } from 'briws-uikit' // Message,
 import { useExpertModeManager } from 'state/user/hooks'
 import { useTranslation } from 'contexts/Localization'
 
@@ -22,13 +22,13 @@ const ExpertModal: React.FC<ExpertModalProps> = ({ setShowConfirmExpertModal, se
       headerBackground="gradients.cardHeader"
       style={{ maxWidth: '360px' }}
     >
-      <Message variant="warning" mb="24px">
+      <div> {/* <Message variant="warning" mb="24px"> */}
         <Text>
           {t(
             "Expert mode turns off the 'Confirm' transaction prompt, and allows high slippage trades that often result in bad rates and lost funds.",
           )}
         </Text>
-      </Message>
+      </div>
       <Text mb="24px">{t('Only use this mode if you know what you’re doing.')}</Text>
       <Flex alignItems="center" mb="24px">
         <Checkbox

@@ -1,5 +1,5 @@
 import React from 'react'
-import { InstagramIcon, TwitterIcon } from 'briws-uikit'
+// import { InstagramIcon, TwitterIcon } from 'briws-uikit'
 import { ContextApi } from 'contexts/Localization/types'
 
 type ArtistConfigType = {
@@ -26,13 +26,13 @@ const artistConfigBuilder = ({ t, isDark }: ArtistConfigType) => ({
       to: 'https://twitter.com/cecymeade',
       text: t('Follow on Twitter'),
       external: true,
-      icon: <TwitterIcon color="white" />,
+      icon: <div>TwitterIcon</div>, /*<TwitterIcon color="white" />*/
     },
     {
       to: 'https://www.instagram.com/cecymeade/',
       text: t('Follow on Instagram'),
       external: true,
-      icon: <InstagramIcon color="white" />,
+      icon: <div>InstagramIcon</div>, /*<InstagramIcon color="white" />*/
     },
   ],
   image: { src: `/images/pancakeSquad/artist${isDark ? '-dark' : ''}.png`, alt: 'Chef Cecy bio' },

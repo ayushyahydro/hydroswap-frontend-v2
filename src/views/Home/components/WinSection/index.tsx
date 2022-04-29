@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import { Flex, Text, TicketFillIcon, PredictionsIcon } from 'briws-uikit'
+import { Flex, Text} from 'briws-uikit' // TicketFillIcon, PredictionsIcon
 import { useTranslation } from 'contexts/Localization'
 import useTheme from 'hooks/useTheme'
 import ColoredWordHeading from '../ColoredWordHeading'
@@ -56,14 +56,14 @@ const TopRightImgWrapper = styled(Flex)`
 `
 
 const PredictionCardData: IconCardData = {
-  icon: <PredictionsIcon width="36px" color="inverseContrast" />,
+  icon: <div>PredictionsIcon</div>, /*<PredictionsIcon width="36px" color="inverseContrast" />*/
   background: 'linear-gradient(180deg, #ffb237 0%, #ffcd51 51.17%, #ffe76a 100%);',
   borderColor: '#ffb237',
   rotation: '-2.36deg',
 }
 
 const LotteryCardData: IconCardData = {
-  icon: <TicketFillIcon color="white" width="36px" />,
+  icon: <div>TicketFillIcon</div>, /*<TicketFillIcon color="white" width="36px" />,*/
   background: ' linear-gradient(180deg, #7645D9 0%, #5121B1 100%);',
   borderColor: '#3C1786',
   rotation: '1.43deg',

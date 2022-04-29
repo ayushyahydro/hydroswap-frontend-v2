@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { useWeb3React } from '@web3-react/core'
-import { Flex, Button, Text, AutoRenewIcon, PresentWonIcon } from 'briws-uikit'
+import { Flex, Button, Text, AutoRenewIcon } from 'briws-uikit' // , PresentWonIcon
 import { useTranslation } from 'contexts/Localization'
 import { LotteryTicket, LotteryTicketClaimData } from 'config/constants/types'
 import { getBalanceAmount } from 'utils/formatBalance'
@@ -94,15 +94,17 @@ const ClaimInnerContainer: React.FC<ClaimInnerProps> = ({ onSuccess, roundsToCla
       if (receipt.status) {
         toastSuccess(
           t('Prizes Collected!'),
-          <ToastDescriptionWithTx txHash={receipt.transactionHash}>
+          /* ToastDescriptionWithTx txHash={receipt.transactionHash}*/
+          <div>
             {t('Your CAKE prizes for round %lotteryId% have been sent to your wallet', { lotteryId })}
-          </ToastDescriptionWithTx>,
+          </div>,
         )
         setPendingTx(false)
         handleProgressToNextClaim()
       }
     } catch (error) {
       console.error(error)
+      // @ts-ignore
       toastError(t('Error'), t('%error% - Please try again.', { error: error.message }))
       setPendingTx(false)
     }
@@ -135,7 +137,8 @@ const ClaimInnerContainer: React.FC<ClaimInnerProps> = ({ onSuccess, roundsToCla
           if (receipts.length !== transactionsToFire) {
             toastSuccess(
               t('Prizes Collected!'),
-              <ToastDescriptionWithTx txHash={receipt.transactionHash}>
+                /*<ToastDescriptionWithTx txHash={receipt.transactionHash}>*/
+              <div>
                 {t(
                   'Claim %claimNum% of %claimTotal% for round %lotteryId% was successful. Please confirm the next transaction',
                   {
@@ -144,13 +147,14 @@ const ClaimInnerContainer: React.FC<ClaimInnerProps> = ({ onSuccess, roundsToCla
                     lotteryId,
                   },
                 )}
-              </ToastDescriptionWithTx>,
+              </div>,
             )
           }
         }
       } catch (error) {
         console.error(error)
         setPendingTx(false)
+        // @ts-ignore
         toastError(t('Error'), t('%error% - Please try again.', { error: error.message }))
         break
       }
@@ -187,7 +191,8 @@ const ClaimInnerContainer: React.FC<ClaimInnerProps> = ({ onSuccess, roundsToCla
             color="secondary"
             unit=" CAKE!"
           />
-          <PresentWonIcon ml={['0', null, '12px']} width="64px" />
+          <div>PresentWonIcon</div>
+          {/*<PresentWonIcon ml={['0', null, '12px']} width="64px" />*/}
         </Flex>
         <Balance
           mt={['12px', null, '0']}

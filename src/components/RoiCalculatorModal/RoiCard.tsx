@@ -1,6 +1,6 @@
 import React, { useRef, useEffect, useState } from 'react'
 import styled from 'styled-components'
-import { Box, Flex, Text, Input, CheckmarkIcon, PencilIcon, IconButton } from 'briws-uikit'
+import { Box, Flex, Text, Input, CheckmarkIcon, IconButton } from 'briws-uikit' // PencilIcon,
 import { useTranslation } from 'contexts/Localization'
 import { CalculatorMode, RoiCalculatorReducerState } from './useRoiCalculatorReducer'
 
@@ -149,7 +149,8 @@ const RoiCard: React.FC<RoiCardProps> = ({ earningTokenSymbol, calculatorState, 
                 </RoiDollarAmount>
               </RoiDisplayContainer>
               <IconButton scale="sm" variant="text" onClick={onEnterEditing}>
-                <PencilIcon color="primary" />
+                {/*<PencilIcon color="primary" />*/}
+                <div>PencilIcon</div>
               </IconButton>
             </>
           )}

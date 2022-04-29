@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import styled from 'styled-components'
-import { Text, PancakeToggle, Toggle, Flex, Modal, InjectedModalProps, ThemeSwitcher } from 'briws-uikit'
+import { Text, Toggle, Flex, Modal, InjectedModalProps } from 'briws-uikit' // PancakeToggle, ThemeSwitcher
 import {
   useAudioModeManager,
   useExpertModeManager,
@@ -70,7 +70,8 @@ const SettingsModal: React.FC<InjectedModalProps> = ({ onDismiss }) => {
           </Text>
           <Flex justifyContent="space-between">
             <Text mb="24px">{t('Dark mode')}</Text>
-            <ThemeSwitcher isDark={isDark} toggleTheme={toggleTheme} />
+            {/*<ThemeSwitcher isDark={isDark} toggleTheme={toggleTheme} />*/}
+            <div>ThemeSwitcher</div>
           </Flex>
           <GasSettings />
         </Flex>
@@ -114,7 +115,8 @@ const SettingsModal: React.FC<InjectedModalProps> = ({ onDismiss }) => {
               ml="4px"
             />
           </Flex>
-          <PancakeToggle checked={audioPlay} onChange={toggleSetAudioMode} scale="md" />
+          {/*<PancakeToggle checked={audioPlay} onChange={toggleSetAudioMode} scale="md" />*/}
+          <div>PancakeToggle</div>
         </Flex>
       </ScrollableContainer>
     </Modal>

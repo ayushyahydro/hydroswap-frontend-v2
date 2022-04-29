@@ -1,5 +1,5 @@
 import React from 'react'
-import { HistoryIcon, Button, useModal } from 'briws-uikit'
+import { Button, useModal } from 'briws-uikit' // HistoryIcon,
 import TransactionsModal from './TransactionsModal'
 
 const Transactions = () => {
@@ -7,7 +7,8 @@ const Transactions = () => {
   return (
     <>
       <Button variant="text" p={0} onClick={onPresentTransactionsModal} ml="16px">
-        <HistoryIcon color="textSubtle" width="24px" />
+        {/* <HistoryIcon color="textSubtle" width="24px" /> */}
+         <div>HistoryIcon</div>
       </Button>
     </>
   )

@@ -1,7 +1,7 @@
 import React from 'react'
 import { useWeb3React } from '@web3-react/core'
 import ConnectWalletButton from 'components/ConnectWalletButton'
-import { Flex, Text, Button, ButtonMenu, ButtonMenuItem, Message, Link } from 'briws-uikit'
+import { Flex, Text, Button, ButtonMenu, ButtonMenuItem, Link } from 'briws-uikit' // Message,
 import { FetchStatus } from 'hooks/useTokenBalance'
 import { useTranslation } from 'contexts/Localization'
 import { NftToken } from 'state/nftMarket/types'
@@ -44,6 +44,7 @@ const ReviewStage: React.FC<ReviewStageProps> = ({
             </Text>
             <Text bold>{nftToBuy.name}</Text>
             <Flex justifyContent="space-between" alignItems="center">
+              {/* @ts-ignore */}
               <Text fontSize="12px" color="textSubtle" p="0px" height="16px" mr="4px">
                 {t('Token ID:')}
               </Text>
@@ -94,13 +95,14 @@ const ReviewStage: React.FC<ReviewStageProps> = ({
           )}
         </BorderedBox>
         {walletFetchStatus === FetchStatus.SUCCESS && notEnoughBnbForPurchase && (
-          <Message p="8px" variant="danger">
+            /*<Message p="8px" variant="danger">*/
+          <div>
             <Text>
               {t('Not enough %symbol% to purchase this NFT', {
                 symbol: paymentCurrency === PaymentCurrency.BNB ? 'BNB' : 'WBNB',
               })}
             </Text>
-          </Message>
+          </div>
         )}
         <Flex alignItems="center">
           <Text my="16px" mr="4px">

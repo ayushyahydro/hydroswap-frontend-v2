@@ -2,7 +2,7 @@ import React, { useCallback, useEffect, useState } from 'react'
 import { BigNumber } from '@ethersproject/bignumber'
 import { TransactionResponse } from '@ethersproject/providers'
 import { Currency, currencyEquals, ETHER, TokenAmount, WETH } from '@pancakeswap/sdk'
-import { Button, Text, Flex, AddIcon, CardBody, Message, useModal } from 'briws-uikit'
+import { Button, Text, Flex, AddIcon, CardBody, useModal } from 'briws-uikit' // Message,
 import { RouteComponentProps } from 'react-router-dom'
 import { useIsTransactionUnsupported } from 'hooks/Trades'
 import { useTranslation } from 'contexts/Localization'
@@ -311,8 +311,8 @@ export default function AddLiquidity({
       currencyToAdd={pair?.liquidityToken}
     />,
     true,
-    true,
-    'addLiquidityModal',
+    /*true,
+    'addLiquidityModal',*/
   )
 
   return (
@@ -330,7 +330,7 @@ export default function AddLiquidity({
           <AutoColumn gap="20px">
             {noLiquidity && (
               <ColumnCenter>
-                <Message variant="warning">
+                <div> {/* Message variant="warning"*/}
                   <div>
                     <Text bold mb="8px">
                       {t('You are the first liquidity provider.')}
@@ -338,7 +338,7 @@ export default function AddLiquidity({
                     <Text mb="8px">{t('The ratio of tokens you add will set the price of this pool.')}</Text>
                     <Text>{t('Once you are happy with the rate click supply to review.')}</Text>
                   </div>
-                </Message>
+                </div>
               </ColumnCenter>
             )}
             <CurrencyInputPanel

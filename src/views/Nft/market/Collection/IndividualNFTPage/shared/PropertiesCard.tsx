@@ -1,5 +1,5 @@
 import React from 'react'
-import { Box, Flex, Text, NftIcon } from 'briws-uikit'
+import { Box, Flex, Text} from 'briws-uikit' // NftIcon
 import { useTranslation } from 'contexts/Localization'
 import { NftAttribute } from 'state/nftMarket/types'
 import ExpandableCard from './ExpandableCard'
@@ -52,7 +52,7 @@ const PropertiesCard: React.FC<PropertiesCardProps> = ({ properties, rarity }) =
       ))}
     </Box>
   )
-  return <ExpandableCard title={t('Properties')} icon={<NftIcon width="24px" height="24px" />} content={content} />
+    return <ExpandableCard title={t('Properties')} icon={<div>NftIcon</div>} content={content} /> // <NftIcon width="24px" height="24px" />
 }
 
 export default PropertiesCard
