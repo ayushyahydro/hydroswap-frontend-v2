@@ -1,5 +1,5 @@
 import React from 'react'
-import { Image, Flex, Text, Td, IconButton, Link, OpenNewIcon, useMatchBreakpoints, useModal } from 'briws-uikit'
+import { Image, Flex, Text, IconButton, Link, OpenNewIcon, useMatchBreakpoints, useModal } from 'briws-uikit' // td, 
 import { Link as RouterLink } from 'react-router-dom'
 import { Activity, NftToken } from 'state/nftMarket/types'
 import { Price } from '@pancakeswap/sdk'
@@ -64,7 +64,7 @@ const ActivityRow: React.FC<ActivityRowProps> = ({
   return (
     <tr {...((isXs || isSm) && { onClick: onPresentMobileModal })}>
       {!isNftActivity ? (
-        <Td
+        <td
           {...((isXs || isSm) && {
             onClick: (event) => {
               event.stopPropagation()
@@ -91,54 +91,54 @@ const ActivityRow: React.FC<ActivityRowProps> = ({
               </Flex>
             </Flex>
           </RouterLink>
-        </Td>
+        </td>
       ) : null}
-      <Td>
+      <td>
         <Flex alignItems="center" justifyContent="flex-end">
           <ActivityEventText marketEvent={activity.marketEvent} />
         </Flex>
         {isXs || isSm ? <ActivityPrice price={priceAsFloat} bnbBusdPrice={bnbBusdPrice} /> : null}
-      </Td>
+      </td>
       {isXs || isSm ? null : (
         <>
-          <Td>
+          <td>
             <ActivityPrice price={priceAsFloat} bnbBusdPrice={bnbBusdPrice} />
-          </Td>
+          </td>
           {isUserActivity ? (
-            <Td>
+            <td>
               <Flex justifyContent="center" alignItems="center">
                 {activity.otherParty ? <ProfileCell accountAddress={activity.otherParty} /> : '-'}
               </Flex>
-            </Td>
+            </td>
           ) : (
             <>
-              <Td>
+              <td>
                 <Flex justifyContent="center" alignItems="center">
                   {activity.seller ? <ProfileCell accountAddress={activity.seller} /> : '-'}
                 </Flex>
-              </Td>
-              <Td>
+              </td>
+              <td>
                 <Flex justifyContent="center" alignItems="center">
                   {activity.buyer ? <ProfileCell accountAddress={activity.buyer} /> : '-'}
                 </Flex>
-              </Td>
+              </td>
             </>
           )}
         </>
       )}
-      <Td>
+      <td>
         <Flex justifyContent="center">
           <Text textAlign="center" fontSize={isXs || isSm ? '12px' : '16px'}>
             {localeTimestamp}
           </Text>
         </Flex>
-      </Td>
+      </td>
       {isXs || isSm ? null : (
-        <Td>
+        <td>
           <IconButton as={Link} external href={getBscScanLink(activity.tx, 'transaction', chainId)}>
             <OpenNewIcon color="textSubtle" width="18px" />
           </IconButton>
-        </Td>
+        </td>
       )}
     </tr>
   )

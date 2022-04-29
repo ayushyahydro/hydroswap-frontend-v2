@@ -1,5 +1,5 @@
 import React from 'react'
-import { Card, CardBody, Flex, Spinner, WaitIcon, TooltipText, useTooltip, InfoIcon } from 'briws-uikit'
+import { Card, CardBody, Flex, Spinner, WaitIcon, InfoIcon } from 'briws-uikit' // TooltipText, useTooltip,
 import { useTranslation } from 'contexts/Localization'
 import { NodeRound, BetPosition } from 'state/types'
 import useTheme from 'hooks/useTheme'
@@ -16,13 +16,14 @@ interface CalculatingCardProps {
 const CalculatingCard: React.FC<CalculatingCardProps> = ({ round, hasEnteredUp, hasEnteredDown }) => {
   const { t } = useTranslation()
   const { theme } = useTheme()
-  const { targetRef, tooltip, tooltipVisible } = useTooltip(
+  /*const { targetRef, tooltip, tooltipVisible } = useTooltip(
     t('This round’s closing transaction has been submitted to the blockchain, and is awaiting confirmation.'),
     { placement: 'bottom' },
-  )
+  )*/
 
   return (
     <>
+      {/* @ts-ignore */}
       <Card borderBackground={getBorderBackground(theme, 'calculating')}>
         <CardHeader
           status="calculating"
@@ -32,11 +33,14 @@ const CalculatingCard: React.FC<CalculatingCardProps> = ({ round, hasEnteredUp, 
         />
         <CardBody p="16px">
           <MultiplierArrow isDisabled hasEntered={hasEnteredUp} />
+          {/* @ts-ignore */}
           <RoundResultBox>
             <Flex alignItems="center" justifyContent="center" flexDirection="column">
               <Spinner size={96} />
+              {/* @ts-ignore */}
               <Flex mt="8px" ref={targetRef}>
-                <TooltipText>{t('Calculating')}</TooltipText>
+                {/*<TooltipText>{t('Calculating')}</TooltipText>*/}
+                <div>{t('Calculating')}</div>
                 <InfoIcon ml="4px" />
               </Flex>
             </Flex>
@@ -44,7 +48,7 @@ const CalculatingCard: React.FC<CalculatingCardProps> = ({ round, hasEnteredUp, 
           <MultiplierArrow betPosition={BetPosition.BEAR} isDisabled hasEntered={hasEnteredDown} />
         </CardBody>
       </Card>
-      {tooltipVisible && tooltip}
+      <div>tooltipVisible && tooltip</div>
     </>
   )
 }

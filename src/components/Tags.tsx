@@ -8,8 +8,7 @@ import {
   TagProps,
   TimerIcon,
   BlockIcon,
-  VoteIcon,
-} from 'briws-uikit'
+} from 'briws-uikit' // VoteIcon
 import { useTranslation } from 'contexts/Localization'
 
 const CoreTag: React.FC<TagProps> = (props) => {
@@ -60,7 +59,8 @@ const CompoundingPoolTag: React.FC<TagProps> = (props) => {
 const VoteNowTag: React.FC<TagProps> = (props) => {
   const { t } = useTranslation()
   return (
-    <Tag variant="success" startIcon={<VoteIcon width="18px" color="success" mr="4px" />} {...props}>
+    /* <VoteIcon width="18px" color="success" mr="4px" /> */
+    <Tag variant="success" startIcon={<div>VoteIcon</div>} {...props}>
       {t('Vote Now')}
     </Tag>
   )

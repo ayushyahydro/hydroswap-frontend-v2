@@ -7,11 +7,9 @@ import {
   Text,
   CardProps,
   HelpIcon,
-  useTooltip,
   LinkExternal,
   Link,
-  TokenPairImage,
-} from 'briws-uikit'
+} from 'briws-uikit' // useTooltip, TokenPairImage,
 import { useTranslation } from 'contexts/Localization'
 import { useWeb3React } from '@web3-react/core'
 import ConnectWalletButton from 'components/ConnectWalletButton'
@@ -48,7 +46,8 @@ const CakeVaultCard: React.FC<CakeVaultProps> = ({ pool, showStakedOnly, default
     pricePerFullShare,
   } = useVaultPoolByKey(pool.vaultKey)
   const creditStartBlock = useIfoPooStartBlock()
-  const { tooltip, tooltipVisible, targetRef } = useTooltip(
+
+  /*const { tooltip, tooltipVisible, targetRef } = useTooltip(
     <>
       <Text>
         {t(
@@ -60,7 +59,7 @@ const CakeVaultCard: React.FC<CakeVaultProps> = ({ pool, showStakedOnly, default
       </LinkExternal>
     </>,
     { placement: 'auto' },
-  )
+  )*/
 
   const { cakeAsBigNumber } = convertSharesToCake(userShares, pricePerFullShare)
 
@@ -73,13 +72,14 @@ const CakeVaultCard: React.FC<CakeVaultProps> = ({ pool, showStakedOnly, default
 
   return (
     <StyledCard isActive {...props}>
-      <PoolCardHeader isStaking={accountHasSharesStaked}>
+      {/*PoolCardHeader*/}
+      {/*<PoolCardHeader isStaking={accountHasSharesStaked}>*/}
+      <div>
         <PoolCardHeaderTitle
           title={t(vaultPoolConfig[pool.vaultKey].name)}
           subTitle={t(vaultPoolConfig[pool.vaultKey].description)}
         />
-        <TokenPairImage {...vaultPoolConfig[pool.vaultKey].tokenImage} width={64} height={64} />
-      </PoolCardHeader>
+      </div>
       <StyledCardBody isLoading={isLoading}>
         <AprRow pool={pool} stakedBalance={cakeAsBigNumber} performanceFee={performanceFeeAsDecimal} />
         {pool.vaultKey === VaultKey.IfoPool && (
@@ -89,11 +89,11 @@ const CakeVaultCard: React.FC<CakeVaultProps> = ({ pool, showStakedOnly, default
               <Link external href={getBscScanLink(creditStartBlock, 'block')} mr="4px" fontSize="14px">
                 {creditStartBlock}
               </Link>
-              <span ref={targetRef}>
+              <span> {/* <span ref={targetRef}> */}
                 <HelpIcon color="textSubtle" />
               </span>
             </Flex>
-            {tooltipVisible && tooltip}
+            <div>tooltipVisible && tooltip</div>
           </Flex>
         )}
         <FlexGap mt="16px" gap="24px" flexDirection={accountHasSharesStaked ? 'column-reverse' : 'column'}>

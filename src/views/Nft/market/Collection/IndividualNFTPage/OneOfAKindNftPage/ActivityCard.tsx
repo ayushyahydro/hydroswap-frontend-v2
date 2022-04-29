@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
-import { Flex, Card, Text, useMatchBreakpoints, Table, Th, ArrowBackIcon, ArrowForwardIcon } from 'briws-uikit'
+import { Flex, Card, Text, useMatchBreakpoints, ArrowBackIcon, ArrowForwardIcon } from 'briws-uikit' // Table, th, 
 import { useTranslation } from 'contexts/Localization'
-import useTheme from 'hooks/useTheme'
+// import usetheme from 'hooks/usetheme' // to much errors inside
 import { Activity, NftToken } from 'state/nftMarket/types'
 import { useBNBBusdPrice } from 'hooks/useBUSDPrice'
 import { useAppDispatch } from '../../../../../../state'
@@ -20,7 +20,7 @@ const MAX_PER_PAGE = 5
 
 const ActivityCard: React.FC<ActivityCardProps> = ({ nft }) => {
   const dispatch = useAppDispatch()
-  const { theme } = useTheme()
+  // const { theme } = usetheme()
   const { t } = useTranslation()
   const [currentPage, setCurrentPage] = useState(1)
   const [maxPage, setMaxPages] = useState(1)
@@ -82,19 +82,19 @@ const ActivityCard: React.FC<ActivityCardProps> = ({ nft }) => {
         </Flex>
       ) : (
         <>
-          <Table>
+          <table>
             <thead>
               <tr>
-                <Th textAlign="center"> {t('Event')}</Th>
+                <th> {t('Event')}</th>
                 {isXs || isSm ? null : (
                   <>
-                    <Th textAlign="right"> {t('Price')}</Th>
-                    <Th textAlign="center"> {t('From')}</Th>
-                    <Th textAlign="center"> {t('To')}</Th>
+                    <th> {t('Price')}</th>
+                    <th> {t('From')}</th>
+                    <th> {t('To')}</th>
                   </>
                 )}
-                <Th textAlign="center"> {t('Date')}</Th>
-                {isXs || isSm ? null : <Th />}
+                <th> {t('Date')}</th>
+                {isXs || isSm ? null : <th />}
               </tr>
             </thead>
 
@@ -115,9 +115,10 @@ const ActivityCard: React.FC<ActivityCardProps> = ({ nft }) => {
                 })
               )}
             </tbody>
-          </Table>
+          </table>
           <Flex
-            borderTop={`1px ${theme.colors.cardBorder} solid`}
+            borderTop={`1px red solid`}
+            // borderTop={`1px ${theme.colors.cardBorder} solid`}
             pt="24px"
             flexDirection="column"
             justifyContent="space-between"

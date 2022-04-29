@@ -1,6 +1,6 @@
 import React, { useEffect, useRef } from 'react'
 import { useCountUp } from 'react-countup'
-import { Card, CardBody, Flex, PlayCircleOutlineIcon, Skeleton, Text, TooltipText, useTooltip } from 'briws-uikit'
+import { Card, CardBody, Flex, PlayCircleOutlineIcon, Skeleton, Text, } from 'briws-uikit' // TooltipText, useTooltip
 import { useTranslation } from 'contexts/Localization'
 import { NodeRound, NodeLedger, BetPosition } from 'state/types'
 import { formatBigNumberToFixed } from 'utils/formatBalance'
@@ -51,9 +51,9 @@ const LiveRoundCard: React.FC<LiveRoundCardProps> = ({
     duration: 1,
     decimals: 3,
   })
-  const { targetRef, tooltip, tooltipVisible } = useTooltip(t('Last price from Chainlink Oracle'), {
+/*  const { targetRef, tooltip, tooltipVisible } = useTooltip(t('Last price from Chainlink Oracle'), {
     placement: 'bottom',
-  })
+  })*/
 
   const updateRef = useRef(update)
 
@@ -77,6 +77,7 @@ const LiveRoundCard: React.FC<LiveRoundCardProps> = ({
         title={t('Live')}
         epoch={round.epoch}
       />
+      {/* @ts-ignore */}
       <RoundProgress variant="flat" scale="sm" lockTimestamp={lockTimestamp} closeTimestamp={closeTimestamp} />
       <CardBody p="16px">
         <MultiplierArrow
@@ -85,15 +86,17 @@ const LiveRoundCard: React.FC<LiveRoundCardProps> = ({
           hasEntered={hasEnteredUp}
           isActive={isBull}
         />
-        <RoundResultBox betPosition={isBull ? BetPosition.BULL : BetPosition.BEAR}>
+        {/*RoundResultBox betPosition={isBull ? BetPosition.BULL : BetPosition.BEAR}*/}
+        <div>
           <Text color="textSubtle" fontSize="12px" bold textTransform="uppercase" mb="8px">
             {t('Last Price')}
           </Text>
           <Flex alignItems="center" justifyContent="space-between" mb="16px" height="36px">
-            <div ref={targetRef}>
-              <TooltipText bold color={priceColor} fontSize="24px" style={{ minHeight: '36px' }}>
+            <div> {/* ref={targetRef} */}
+              {/*<TooltipText bold color={priceColor} fontSize="24px" style={{ minHeight: '36px' }}>*/}
+              <div>
                 {price.gt(0) ? `$${countUp}` : <Skeleton height="36px" width="94px" />}
-              </TooltipText>
+              </div>
             </div>
             <PositionTag betPosition={isBull ? BetPosition.BULL : BetPosition.BEAR}>
               {formatUsdv2(priceDifference)}
@@ -101,7 +104,7 @@ const LiveRoundCard: React.FC<LiveRoundCardProps> = ({
           </Flex>
           {lockPrice && <LockPriceRow lockPrice={lockPrice} />}
           <PrizePoolRow totalAmount={totalAmount} />
-        </RoundResultBox>
+        </div>
         <MultiplierArrow
           betAmount={betAmount}
           multiplier={bearMultiplier}
@@ -110,7 +113,7 @@ const LiveRoundCard: React.FC<LiveRoundCardProps> = ({
           isActive={!isBull}
         />
       </CardBody>
-      {tooltipVisible && tooltip}
+      <div>tooltipVisible && tooltip</div>
     </Card>
   )
 }

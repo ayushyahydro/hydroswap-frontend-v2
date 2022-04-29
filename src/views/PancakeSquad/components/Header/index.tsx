@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import { Box, Flex, lightColors, Spinner, Text, Timeline } from 'briws-uikit'
+import { Box, Flex, lightColors, Spinner, Text } from 'briws-uikit' // Timeline
 import { useTranslation } from 'contexts/Localization'
 import { useGetCakeBalance } from 'hooks/useTokenBalance'
 import useTheme from 'hooks/useTheme'
@@ -96,14 +96,14 @@ const PancakeSquadHeader: React.FC<PancakeSquadHeaderType> = ({
             <Flex flexDirection={['column', null, 'row']}>
               {eventInfos && (
                 <Box mr={['0', null, null, '100px']}>
-                  <Timeline
+                  {/*<Timeline
                     events={nftSaleConfigBuilder({
                       t,
                       saleStatus,
                       startTimestamp,
                     })}
                     useDark={false}
-                  />
+                  />*/}
                 </Box>
               )}
               <Flex flexDirection="column">

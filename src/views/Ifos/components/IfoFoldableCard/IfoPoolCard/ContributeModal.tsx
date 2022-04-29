@@ -11,11 +11,9 @@ import {
   Button,
   BalanceInput,
   Flex,
-  useTooltip,
-  TooltipText,
   Box,
   Link,
-} from 'briws-uikit'
+} from 'briws-uikit' // useTooltip, TooltipText,
 import { PoolIds, Ifo } from 'config/constants/types'
 import { WalletIfoData, PublicIfoData } from 'views/Ifos/types'
 import { useTranslation } from 'contexts/Localization'
@@ -120,7 +118,7 @@ const ContributeModal: React.FC<Props> = ({
     return maximumTokenEntry.isLessThanOrEqualTo(userCurrencyBalance) ? maximumTokenEntry : userCurrencyBalance
   }, [maximumTokenEntry, userCurrencyBalance])
 
-  const { targetRef, tooltip, tooltipVisible } = useTooltip(
+/*  const { targetRef, tooltip, tooltipVisible } = useTooltip(
     poolId === PoolIds.poolBasic
       ? t(
           'For the basic sale, Max CAKE entry is capped by minimum between your average CAKE balance in the IFO CAKE pool, or the pool’s hard cap. To increase the max entry, Stake more CAKE into the IFO CAKE pool',
@@ -129,7 +127,7 @@ const ContributeModal: React.FC<Props> = ({
           'For the unlimited sale, Max CAKE entry is capped by your average CAKE balance in the IFO CAKE pool. To increase the max entry, Stake more CAKE into the IFO CAKE pool',
         ),
     {},
-  )
+  )*/
 
   const isWarning =
     valueWithTokenDecimals.isGreaterThan(userCurrencyBalance) || valueWithTokenDecimals.isGreaterThan(maximumTokenEntry)
@@ -139,8 +137,10 @@ const ContributeModal: React.FC<Props> = ({
       <ModalBody maxWidth="360px">
         <Box p="2px">
           <Flex justifyContent="space-between" mb="16px">
-            {tooltipVisible && tooltip}
-            <TooltipText ref={targetRef}>{label}:</TooltipText>
+            {/*{tooltipVisible && tooltip}*/}
+            <div>tooltipVisible && tooltip</div>
+            {/*<TooltipText ref={targetRef}>{label}:</TooltipText>*/}
+            <div>{label}</div>
             <Text>{`${formatNumber(getBalanceAmount(maximumTokenEntry, currency.decimals).toNumber(), 3, 3)} ${
               ifo.currency.symbol
             }`}</Text>
@@ -159,11 +159,8 @@ const ContributeModal: React.FC<Props> = ({
               />
               <Text ml="4px">{currency.symbol}</Text>
             </Flex>
-          </Flex>
-          <BalanceInput
-            value={value}
-            currencyValue={`${publicIfoData.currencyPriceInUSD.times(value || 0).toFixed(2)} USD`}
-            onUserInput={setValue}
+          </Flex> {/*@ts-ignore*/}
+          <BalanceInput value={value} currencyValue={`${publicIfoData.currencyPriceInUSD.times(value || 0).toFixed(2)} USD`} onUserInput={setValue}
             isWarning={isWarning}
             decimals={currency.decimals}
             onBlur={() => {
@@ -208,9 +205,8 @@ const ContributeModal: React.FC<Props> = ({
             {t(
               'If you don’t commit enough CAKE, you may not receive any IFO tokens at all and will only receive a full refund of your CAKE.',
             )}
-            <Link
-              fontSize="12px"
-              display="inline"
+            {/* @ts-ignore */}
+            <Link fontSize="12px" display="inline"
               href="https://docs.pancakeswap.finance/products/ifo-initial-farm-offering"
               external
             >

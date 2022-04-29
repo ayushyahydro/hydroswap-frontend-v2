@@ -1,5 +1,5 @@
 import React from 'react'
-import { Text, TooltipText, useTooltip } from 'briws-uikit'
+import { Text } from 'briws-uikit' // TooltipText, useTooltip
 import { useTranslation } from 'contexts/Localization'
 import Balance from 'components/Balance'
 
@@ -16,7 +16,7 @@ const RecentCakeProfitBalance: React.FC<RecentCakeProfitBalanceProps> = ({
 }) => {
   const { t } = useTranslation()
 
-  const { targetRef, tooltip, tooltipVisible } = useTooltip(
+/*  const { targetRef, tooltip, tooltipVisible } = useTooltip(
     <>
       <Balance fontSize="16px" value={cakeToDisplay} decimals={3} bold unit=" CAKE" />
       <Balance fontSize="16px" value={dollarValueToDisplay} decimals={2} bold prefix="~$" />
@@ -26,14 +26,17 @@ const RecentCakeProfitBalance: React.FC<RecentCakeProfitBalanceProps> = ({
     {
       placement: 'bottom-end',
     },
-  )
+  )*/
 
   return (
     <>
-      {tooltipVisible && tooltip}
-      <TooltipText ref={targetRef} small>
-        <Balance fontSize="14px" value={cakeToDisplay} />
-      </TooltipText>
+      <div>tooltipVisible && tooltip</div>
+{/*      <TooltipText ref={targetRef} small>
+
+      </TooltipText> */}
+      <div>
+          <Balance fontSize="14px" value={cakeToDisplay} />
+      </div>
     </>
   )
 }

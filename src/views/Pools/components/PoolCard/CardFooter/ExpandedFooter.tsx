@@ -7,15 +7,13 @@ import {
   Flex,
   MetamaskIcon,
   Text,
-  TooltipText,
   LinkExternal,
   TimerIcon,
   Skeleton,
-  useTooltip,
   Button,
   Link,
   HelpIcon,
-} from 'briws-uikit'
+} from 'briws-uikit' // TooltipText, useTooltip,
 import { BASE_BSC_SCAN_URL } from 'config'
 import { useBlock } from 'state/block/hooks'
 import { useVaultPoolByKey, useVaultPools } from 'state/pools/hooks'
@@ -74,10 +72,10 @@ const ExpandedFooter: React.FC<ExpandedFooterProps> = ({ pool, account }) => {
   const { shouldShowBlockCountdown, blocksUntilStart, blocksRemaining, hasPoolStarted, blocksToDisplay } =
     getPoolBlockInfo(pool, currentBlock)
 
-  const { targetRef, tooltip, tooltipVisible } = useTooltip(
+/*  const { targetRef, tooltip, tooltipVisible } = useTooltip(
     t('Subtracted automatically from each yield harvest and burned.'),
     { placement: 'bottom-start' },
-  )
+  )*/
 
   const getTotalStakedBalance = () => {
     if (vaultKey) {
@@ -90,13 +88,13 @@ const ExpandedFooter: React.FC<ExpandedFooterProps> = ({ pool, account }) => {
     return getBalanceNumber(totalStaked, stakingToken.decimals)
   }
 
-  const {
+/*  const {
     targetRef: totalStakedTargetRef,
     tooltip: totalStakedTooltip,
     tooltipVisible: totalStakedTooltipVisible,
   } = useTooltip(t('Total amount of %symbol% staked in this pool', { symbol: stakingToken.symbol }), {
     placement: 'bottom',
-  })
+  })*/
 
   return (
     <ExpandedWrapper flexDirection="column">
@@ -106,14 +104,15 @@ const ExpandedFooter: React.FC<ExpandedFooterProps> = ({ pool, account }) => {
           {totalStaked && totalStaked.gte(0) ? (
             <>
               <Balance small value={getTotalStakedBalance()} decimals={0} unit={` ${stakingToken.symbol}`} />
-              <span ref={totalStakedTargetRef}>
+              <span> {/* <span ref={totalStakedTargetRef}> */}
                 <HelpIcon color="textSubtle" width="20px" ml="6px" mt="4px" />
               </span>
             </>
           ) : (
             <Skeleton width="90px" height="21px" />
           )}
-          {totalStakedTooltipVisible && totalStakedTooltip}
+          <div>totalStakedTooltipVisible && totalStakedTooltip</div>
+          {/*{totalStakedTooltipVisible && totalStakedTooltip}*/}
         </Flex>
       </Flex>
       {stakingLimit && stakingLimit.gt(0) && (
@@ -142,10 +141,12 @@ const ExpandedFooter: React.FC<ExpandedFooterProps> = ({ pool, account }) => {
       )}
       {vaultKey && (
         <Flex mb="2px" justifyContent="space-between" alignItems="center">
-          {tooltipVisible && tooltip}
-          <TooltipText ref={targetRef} small>
+          <div>tooltipVisible && tooltip</div>
+          {/*<TooltipText ref={targetRef} small>
+          </TooltipText>*/}
+          <div>
             {t('Performance Fee')}
-          </TooltipText>
+          </div>
           <Flex alignItems="center">
             {performanceFee ? (
               <Text ml="4px" small>

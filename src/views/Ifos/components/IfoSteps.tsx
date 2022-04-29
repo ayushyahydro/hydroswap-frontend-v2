@@ -13,13 +13,11 @@ import {
   Box,
   CheckmarkIcon,
   Flex,
-  useTooltip,
-  TooltipText,
   PancakeRoundIcon,
   Skeleton,
   useModal,
   Link,
-} from 'briws-uikit'
+} from 'briws-uikit' // useTooltip, TooltipText,
 import { Link as RouterLink } from 'react-router-dom'
 import { useWeb3React } from '@web3-react/core'
 import { Ifo } from 'config/constants/types'
@@ -73,7 +71,7 @@ const Step1 = ({ hasProfile }: { hasProfile: boolean }) => {
   const ifoPoolVault = useIfoPoolVault()
   const credit = useIfoPoolCredit()
   const { pool } = useIfoWithApr()
-  const { targetRef, tooltip, tooltipVisible } = useTooltip(
+/*  const { targetRef, tooltip, tooltipVisible } = useTooltip(
     <Box>
       <span>
         {t(
@@ -88,7 +86,7 @@ const Step1 = ({ hasProfile }: { hasProfile: boolean }) => {
       </InlineLink>
     </Box>,
     {},
-  )
+  )*/
 
   const creditDollarValue = useBUSDCakeAmount(getBalanceNumber(credit))
 
@@ -106,7 +104,7 @@ const Step1 = ({ hasProfile }: { hasProfile: boolean }) => {
 
   return (
     <CardBody>
-      {tooltipVisible && tooltip}
+      <div>tooltipVisible && tooltip</div>
       <Heading as="h4" color="secondary" mb="16px">
         {t('Stake CAKE in IFO pool')}
       </Heading>
@@ -116,9 +114,12 @@ const Step1 = ({ hasProfile }: { hasProfile: boolean }) => {
             'The maximum amount of CAKE user can commit to all the sales combined, is equal to the average CAKE balance in the IFO CAKE pool prior to the IFO. Stake more CAKE to increase the maximum CAKE you can commit to the sale. Missed this IFO? You can keep staking in the IFO CAKE Pool to join the next IFO sale.',
           )}
         </Text>
-        <TooltipText as="span" fontWeight={700} ref={targetRef} color="textSubtle" small>
-          {t('How does the average balance calculated?')}
-        </TooltipText>
+        <div>
+            {t('How does the average balance calculated?')}
+        </div>
+        {/*<TooltipText as="span" fontWeight={700} ref={targetRef} color="textSubtle" small>
+
+        </TooltipText>*/}
       </Box>
       {hasProfile && (
         <SmallStakePoolCard borderRadius="default" p="16px">
@@ -260,16 +261,16 @@ const IfoSteps: React.FC<Props> = ({ ifo, walletIfoData, isLive }) => {
 
   return (
     <Wrapper>
-      <Heading id="ifo-how-to" as="h2" scale="xl" color="secondary" mb="24px" textAlign="center">
+      {/*<Heading id="ifo-how-to" as="h2" scale="xl" color="secondary" mb="24px" textAlign="center">
         {t('How to Take Part')}
-      </Heading>
+      </Heading>*/}
+      <div>
+          {t('How to Take Part')}
+      </div>
       <Stepper>
         {stepsValidationStatus.map((_, index) => (
-          <Step
-            // eslint-disable-next-line react/no-array-index-key
-            key={index}
-            index={index}
-            statusFirstPart={getStatusProp(index)}
+          <Step // @ts-ignore
+            key={index} index={index} statusFirstPart={getStatusProp(index)}
             statusSecondPart={getStatusProp(index + 1)}
           >
             <Card>{renderCardBody(index)}</Card>

@@ -1,5 +1,5 @@
 import React from 'react'
-import { Td, Text } from 'briws-uikit'
+import { Text } from 'briws-uikit' // td, 
 import { PredictionUser } from 'state/types'
 import ResultAvatar from './ResultAvatar'
 import { NetWinnings } from './styles'
@@ -12,32 +12,32 @@ interface DesktopRowProps {
 const DesktopRow: React.FC<DesktopRowProps> = ({ rank, user, ...props }) => (
   <tr {...props}>
     {rank ? (
-      <Td>
+      <td>
         <Text textAlign="center" fontWeight="bold" color="secondary">{`#${rank}`}</Text>
-      </Td>
+      </td>
     ) : (
-      <Td />
+      <td />
     )}
-    <Td>
+    <td>
       <ResultAvatar user={user} />
-    </Td>
-    <Td>
+    </td>
+    <td>
       <NetWinnings
         amount={user.netBNB}
         textPrefix={user.netBNB > 0 ? '+' : ''}
         textColor={user.netBNB > 0 ? 'success' : 'failure'}
       />
-    </Td>
-    <Td textAlign="center">
+    </td>
+    <td>
       {`${user.winRate.toLocaleString(undefined, {
         minimumFractionDigits: 0,
         maximumFractionDigits: 2,
       })}%`}
-    </Td>
-    <Td textAlign="center">
+    </td>
+    <td>
       <strong>{user.totalBetsClaimed.toLocaleString()}</strong>
-    </Td>
-    <Td textAlign="center">{user.totalBets.toLocaleString()}</Td>
+    </td>
+    <td>{user.totalBets.toLocaleString()}</td>
   </tr>
 )
 

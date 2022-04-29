@@ -1,5 +1,5 @@
 import React from 'react'
-import { Text, Flex, TooltipText, useTooltip, Skeleton, Heading } from 'briws-uikit'
+import { Text, Flex, Skeleton, Heading } from 'briws-uikit' // TooltipText, useTooltip,
 import { useWeb3React } from '@web3-react/core'
 import { getCakeVaultEarnings } from 'views/Pools/helpers'
 import { useTranslation } from 'contexts/Localization'
@@ -39,10 +39,10 @@ const AutoHarvestAction: React.FunctionComponent<AutoHarvestActionProps> = ({
   const earningTokenDollarBalance = autoUsdToDisplay
   const hasEarnings = hasAutoEarnings
 
-  const { targetRef, tooltip, tooltipVisible } = useTooltip(
+/*  const { targetRef, tooltip, tooltipVisible } = useTooltip(
     t('Subtracted automatically from each yield harvest and burned.'),
     { placement: 'bottom-start' },
-  )
+  )*/
 
   const actionTitle = (
     <Text fontSize="12px" bold color="secondary" as="span" textTransform="uppercase">
@@ -82,8 +82,8 @@ const AutoHarvestAction: React.FunctionComponent<AutoHarvestActionProps> = ({
               <>
                 <Balance lineHeight="1" bold fontSize="20px" decimals={5} value={earningTokenBalance} />
                 {earningTokenPrice > 0 && (
-                  <Balance
-                    display="inline"
+                  /* @ts-ignore */
+                  <Balance display="inline"
                     fontSize="12px"
                     color="textSubtle"
                     decimals={2}
@@ -106,10 +106,10 @@ const AutoHarvestAction: React.FunctionComponent<AutoHarvestActionProps> = ({
         <Flex flex="1.3" flexDirection="column" alignSelf="flex-start" alignItems="flex-start">
           <UnstakingFeeCountdownRow vaultKey={vaultKey} isTableVariant />
           <Flex mb="2px" justifyContent="space-between" alignItems="center">
-            {tooltipVisible && tooltip}
-            <TooltipText ref={targetRef} small>
+            <div>tooltipVisible && tooltip</div>
+{/*            <TooltipText ref={targetRef} small>
               {t('Performance Fee')}
-            </TooltipText>
+            </TooltipText>*/}
             <Flex alignItems="center">
               <Text ml="4px" small>
                 {performanceFee / 100}%

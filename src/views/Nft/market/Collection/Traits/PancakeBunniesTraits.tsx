@@ -1,5 +1,5 @@
 import React, { useEffect, useMemo, useState } from 'react'
-import { Skeleton,  Flex, ArrowUpIcon, ArrowDownIcon } from 'briws-uikit' // Table, Td, Th,
+import { Skeleton,  Flex, ArrowUpIcon, ArrowDownIcon } from 'briws-uikit' // Table, td, th,
 import { useHistory } from 'react-router'
 import times from 'lodash/times'
 import sum from 'lodash/sum'
@@ -69,20 +69,20 @@ const PancakeBunniesTraits: React.FC<PancakeBunniesTraitsProps> = ({ collectionA
       {tokenApiResponse ? (
         <CollapsibleCard title={t('Bunny Id')}>
           <TableWrapper>
-            <Table>
+            <table>
               <thead>
                 <tr>
-                  <Th textAlign="left">{t('Name')}</Th>
-                  <Th>{t('Count')}</Th>
-                  <Th>
+                  <th>{t('Name')}</th>
+                  <th>{t('Count')}</th>
+                  <th>
                     <StyledSortButton type="button" onClick={toggleRaritySort}>
                       <Flex alignItems="center">
                         {t('Rarity')}
                         {raritySort === 'asc' ? <ArrowUpIcon color="secondary" /> : <ArrowDownIcon color="secondary" />}
                       </Flex>
                     </StyledSortButton>
-                  </Th>
-                  <Th textAlign="right">{t('Lowest')}</Th>
+                  </th>
+                  <th>{t('Lowest')}</th>
                 </tr>
               </thead>
               <tbody>
@@ -100,51 +100,51 @@ const PancakeBunniesTraits: React.FC<PancakeBunniesTraitsProps> = ({ collectionA
 
                   return (
                     <ClickableRow key={bunnyId} onClick={handleClick} title={t('Click to view NFT')}>
-                      <Td>
+                      <td>
                         <NftName thumbnailSrc={nft.image.thumbnail} name={nft.name} />
-                      </Td>
-                      <Td textAlign="center">{formatNumber(count, 0, 0)}</Td>
-                      <Td textAlign="center">{`${formatNumber(percentage, 0, 2)}%`}</Td>
-                      <Td textAlign="right" width="100px">
+                      </td>
+                      <td>{formatNumber(count, 0, 0)}</td>
+                      <td>{`${formatNumber(percentage, 0, 2)}%`}</td>
+                      <td>
                         <LowestPriceCell bunnyId={bunnyId} />
-                      </Td>
+                      </td>
                     </ClickableRow>
                   )
                 })}
               </tbody>
-            </Table>
+            </table>
           </TableWrapper>
         </CollapsibleCard>
       ) : (
         <CollapsibleCard title={t('Loading...')}>
-          <Table>
+          <table>
             <thead>
               <tr>
-                <Th textAlign="left">{t('Name')}</Th>
-                <Th>{t('Count')}</Th>
-                <Th>{t('Rarity')}</Th>
-                <Th>{t('Lowest')}</Th>
+                <th>{t('Name')}</th>
+                <th>{t('Count')}</th>
+                <th>{t('Rarity')}</th>
+                <th>{t('Lowest')}</th>
               </tr>
             </thead>
             <tbody>
               {times(19).map((bunnyCnt) => (
                 <tr key={bunnyCnt}>
-                  <Td>
+                  <td>
                     <Flex alignItems="center">
                       <Skeleton height="48px" width="48px" mr="8px" />
                       <Skeleton width="100px" />
                     </Flex>
-                  </Td>
-                  <Td>
+                  </td>
+                  <td>
                     <Skeleton />
-                  </Td>
-                  <Td>
+                  </td>
+                  <td>
                     <Skeleton />
-                  </Td>
+                  </td>
                 </tr>
               ))}
             </tbody>
-          </Table>
+          </table>
         </CollapsibleCard>
       )}
     </>

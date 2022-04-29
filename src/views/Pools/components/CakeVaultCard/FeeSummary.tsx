@@ -1,5 +1,5 @@
 import React from 'react'
-import { Text, Flex, useTooltip, TooltipText } from 'briws-uikit'
+import { Text, Flex} from 'briws-uikit' // , useTooltip, TooltipText
 import { useTranslation } from 'contexts/Localization'
 import { VaultKey } from 'state/types'
 import { useVaultPoolByKey } from 'state/pools/hooks'
@@ -22,7 +22,7 @@ const FeeSummary: React.FC<FeeSummaryProps> = ({ stakingTokenSymbol, stakeAmount
   const feeAsDecimal = withdrawalFee / 100
   const feeInCake = (parseFloat(stakeAmount) * (feeAsDecimal / 100)).toFixed(4)
   const withdrawalDayPeriod = withdrawalFeePeriod ? secondsToDay(withdrawalFeePeriod) : '-'
-  const { targetRef, tooltip, tooltipVisible } = useTooltip(
+  /*const { targetRef, tooltip, tooltipVisible } = useTooltip(
     <>
       <Text bold mb="4px">
         {t('Unstaking fee: %fee%%', { fee: feeAsDecimal })}
@@ -37,17 +37,20 @@ const FeeSummary: React.FC<FeeSummaryProps> = ({ stakingTokenSymbol, stakeAmount
       </Text>
     </>,
     { placement: 'top-start' },
-  )
+  )*/
 
   const hasFeeToPay = lastDepositedTime && getHasWithdrawFee(parseInt(lastDepositedTime, 10), withdrawalFeePeriod)
 
   return (
     <>
       <Flex mt="24px" alignItems="center" justifyContent="space-between">
-        {tooltipVisible && tooltip}
-        <TooltipText ref={targetRef} small>
-          {t('Unstaking Fee')}
-        </TooltipText>
+         <div>tooltipVisible && tooltip</div>
+{/*        <TooltipText ref={targetRef} small>
+
+        </TooltipText>*/}
+        <div>
+            {t('Unstaking Fee')}
+        </div>
         <Text fontSize="14px">
           {stakeAmount && hasFeeToPay ? feeInCake : '-'} {stakingTokenSymbol}
         </Text>

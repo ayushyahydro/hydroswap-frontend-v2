@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from 'react'
 import times from 'lodash/times'
 import orderBy from 'lodash/orderBy'
-import { Skeleton, Table, Td, Th } from 'briws-uikit'
+import { Skeleton} from 'briws-uikit' // Table, td, th 
 import { useTranslation } from 'contexts/Localization'
-import { getBetHistory, transformBetResponse } from 'state/predictions/helpers'
+import { transformBetResponse } from 'state/predictions/helpers' // getBethistory,
 import { Bet } from 'state/types'
 import PositionLabel from './PositionLabel'
 import { NetWinnings } from './Results/styles'
@@ -20,10 +20,10 @@ const PreviousBetsTable: React.FC<PreviousBetsTableProps> = ({ numberOfBets = 5,
   const orderedBets = orderBy(bets, ['round.epoch'], ['desc'])
 
   useEffect(() => {
-    const fetchBetHistory = async () => {
+    /*const fetchBethistory = async () => {
       setIsFetching(true)
       try {
-        const response = await getBetHistory(
+        const response = await getBethistory(
           {
             user: account.toLowerCase(),
           },
@@ -34,33 +34,33 @@ const PreviousBetsTable: React.FC<PreviousBetsTableProps> = ({ numberOfBets = 5,
       } finally {
         setIsFetching(false)
       }
-    }
+    }*/
 
-    fetchBetHistory()
+    // fetchBethistory()
   }, [account, numberOfBets, setIsFetching, setBets])
 
   return (
-    <Table>
+    <table>
       <thead>
         <tr>
-          <Th>{t('Round')}</Th>
-          <Th>{t('Direction')}</Th>
-          <Th textAlign="right">{t('Winnings (BNB)')}</Th>
+          <th>{t('Round')}</th>
+          <th>{t('Direction')}</th>
+          <th>{t('Winnings (BNB)')}</th>
         </tr>
       </thead>
       <tbody>
         {isFetching
           ? times(numberOfBets).map((num) => (
               <tr key={num}>
-                <Td>
+                <td>
                   <Skeleton width="80px" />
-                </Td>
-                <Td>
+                </td>
+                <td>
                   <Skeleton width="60px" height="32px" />
-                </Td>
-                <Td>
+                </td>
+                <td>
                   <Skeleton width="80px" />
-                </Td>
+                </td>
               </tr>
             ))
           : orderedBets.map((bet) => {
@@ -68,24 +68,24 @@ const PreviousBetsTable: React.FC<PreviousBetsTableProps> = ({ numberOfBets = 5,
 
               return (
                 <tr key={bet.id}>
-                  <Td textAlign="center" fontWeight="bold">
+                  <td>
                     {bet.round.epoch.toLocaleString()}
-                  </Td>
-                  <Td textAlign="center">
+                  </td>
+                  <td>
                     <PositionLabel position={bet.position} />
-                  </Td>
-                  <Td textAlign="right">
+                  </td>
+                  <td>
                     <NetWinnings
                       amount={isWinner ? bet.claimedNetBNB : bet.amount}
                       textPrefix={isWinner ? '+' : '-'}
                       textColor={isWinner ? 'success' : 'failure'}
                     />
-                  </Td>
+                  </td>
                 </tr>
               )
             })}
       </tbody>
-    </Table>
+    </table>
   )
 }
 

@@ -1,6 +1,6 @@
 import React, { ReactNode } from 'react'
 import styled from 'styled-components'
-import { ArrowUpIcon, ArrowDownIcon, Flex, FlexProps, Text, useTooltip, TooltipText, InfoIcon } from 'briws-uikit'
+import { ArrowUpIcon, ArrowDownIcon, Flex, FlexProps, Text, InfoIcon } from 'briws-uikit' // useTooltip, TooltipText,
 import { BetPosition } from 'state/types'
 import { useTranslation } from 'contexts/Localization'
 
@@ -45,7 +45,7 @@ const PositionTag: React.FC<PositionTagProps> = ({ betPosition, children, ...pro
   const { t } = useTranslation()
   const isUpPosition = betPosition === BetPosition.BULL
   const icon = isUpPosition ? <ArrowUpIcon color="white" /> : <ArrowDownIcon color="white" />
-  const { targetRef, tooltip, tooltipVisible } = useTooltip(
+  /*const { targetRef, tooltip, tooltipVisible } = useTooltip(
     <>
       <Text bold mb="4px">
         {t('Neither side wins this round')}
@@ -57,18 +57,20 @@ const PositionTag: React.FC<PositionTagProps> = ({ betPosition, children, ...pro
       </Text>
     </>,
     { placement: 'right' },
-  )
+  )*/
 
   if (betPosition === BetPosition.HOUSE) {
     return (
       <>
-        {tooltipVisible && tooltip}
-        <TooltipText ref={targetRef} color="secondary" fontWeight="300" textTransform="uppercase">
+        {/*{tooltipVisible && tooltip}*/}
+        <div>tooltipVisible && tooltip</div>
+        {/* <TooltipText ref={targetRef} color="secondary" fontWeight="300" textTransform="uppercase"> */}
+        <div>
           <Flex alignItems="center">
             {t('To Burn')}
             <InfoIcon width="16px" ml="4px" color="secondary" />
           </Flex>
-        </TooltipText>
+        </div>
       </>
     )
   }

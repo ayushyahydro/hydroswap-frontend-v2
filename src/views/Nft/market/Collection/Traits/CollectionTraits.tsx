@@ -3,7 +3,7 @@ import times from 'lodash/times'
 import capitalize from 'lodash/capitalize'
 import sum from 'lodash/sum'
 import orderBy from 'lodash/orderBy'
-import { ArrowDownIcon, ArrowUpIcon, Flex, Skeleton, Table, Td, Th } from 'briws-uikit'
+import { ArrowDownIcon, ArrowUpIcon, Flex, Skeleton} from 'briws-uikit' // Table, td, th 
 import { formatNumber } from 'utils/formatBalance'
 import CollapsibleCard from 'components/CollapsibleCard'
 import { useTranslation } from 'contexts/Localization'
@@ -23,30 +23,30 @@ const CollectionTraits: React.FC<CollectionTraitsProps> = ({ collectionAddress }
   if (isFetching) {
     return (
       <CollapsibleCard title={t('Loading...')}>
-        <Table>
+        <table>
           <thead>
             <tr>
-              <Th textAlign="left">{t('Name')}</Th>
-              <Th width="100px">{t('Count')}</Th>
-              <Th width="160px">{t('Rarity')}</Th>
+              <th>{t('Name')}</th>
+              <th>{t('Count')}</th>
+              <th>{t('Rarity')}</th>
             </tr>
           </thead>
           <tbody>
             {times(19).map((bunnyCnt) => (
               <tr key={bunnyCnt}>
-                <Td>
+                <td>
                   <Skeleton width="100px" />
-                </Td>
-                <Td>
+                </td>
+                <td>
                   <Skeleton />
-                </Td>
-                <Td>
+                </td>
+                <td>
                   <Skeleton />
-                </Td>
+                </td>
               </tr>
             ))}
           </tbody>
-        </Table>
+        </table>
       </CollapsibleCard>
     )
   }
@@ -88,12 +88,12 @@ const CollectionTraits: React.FC<CollectionTraitsProps> = ({ collectionAddress }
           return (
             <CollapsibleCard key={traitType} title={capitalize(traitType)} initialOpenState={index <= 1} mb="32px">
               <TableWrapper>
-                <Table>
+                <table>
                   <thead>
                     <tr>
-                      <Th textAlign="left">{t('Name')}</Th>
-                      <Th width="100px">{t('Count')}</Th>
-                      <Th width="160px">
+                      <th>{t('Name')}</th>
+                      <th>{t('Count')}</th>
+                      <th>
                         <StyledSortButton type="button" onClick={toggleRaritySort}>
                           <Flex alignItems="center">
                             {t('Rarity')}
@@ -104,21 +104,21 @@ const CollectionTraits: React.FC<CollectionTraitsProps> = ({ collectionAddress }
                             )}
                           </Flex>
                         </StyledSortButton>
-                      </Th>
+                      </th>
                     </tr>
                   </thead>
                   <tbody>
                     {orderBy(traitValues, 'rarity', sortType).map(({ value, count, rarity }) => {
                       return (
                         <tr key={value}>
-                          <Td>{capitalize(value)}</Td>
-                          <Td textAlign="center">{formatNumber(count, 0, 0)}</Td>
-                          <Td textAlign="center">{`${formatNumber(rarity, 0, 2)}%`}</Td>
+                          <td>{capitalize(value)}</td>
+                          <td>{formatNumber(count, 0, 0)}</td>
+                          <td>{`${formatNumber(rarity, 0, 2)}%`}</td>
                         </tr>
                       )
                     })}
                   </tbody>
-                </Table>
+                </table>
               </TableWrapper>
             </CollapsibleCard>
           )

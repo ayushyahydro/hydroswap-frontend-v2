@@ -1,6 +1,6 @@
 import React, { ReactNode } from 'react'
 import tokens from 'config/constants/tokens'
-import { Text, Flex, Box, Skeleton, TooltipText, useTooltip } from 'briws-uikit'
+import { Text, Flex, Box, Skeleton } from 'briws-uikit' // , TooltipText, useTooltip
 import { PublicIfoData, WalletIfoData } from 'views/Ifos/types'
 import { useTranslation } from 'contexts/Localization'
 import { Ifo, PoolIds } from 'config/constants/types'
@@ -52,7 +52,7 @@ const MaxTokenEntry = ({ maxToken, ifo, poolId }: { maxToken: number; ifo: Ifo; 
           'For the unlimited sale, Max CAKE entry is capped by your average CAKE balance in the IFO CAKE pool. To increase the max entry, Stake more CAKE into the IFO CAKE pool',
         )
 
-  const { targetRef, tooltip, tooltipVisible } = useTooltip(tooltipContent, { placement: 'bottom-start' })
+  /*const { targetRef, tooltip, tooltipVisible } = useTooltip(tooltipContent, { placement: 'bottom-start' })*/
   const label = isCurrencyCake ? t('Max. CAKE entry') : t('Max. token entry')
   const price = useBUSDPrice(ifo.currency)
 
@@ -60,13 +60,16 @@ const MaxTokenEntry = ({ maxToken, ifo, poolId }: { maxToken: number; ifo: Ifo; 
 
   return (
     <>
-      {isV3 && tooltipVisible && tooltip}
+      <div>isV3 && tooltipVisible && tooltip</div>
       <FooterEntry
         label={
           isV3 ? (
-            <TooltipText small color="textSubtle" ref={targetRef}>
-              {label}
-            </TooltipText>
+            /*<TooltipText small color="textSubtle" ref={targetRef}>
+
+            </TooltipText>*/
+            <div>
+                {label}
+            </div>
           ) : (
             label
           )

@@ -1,5 +1,5 @@
 import React from 'react'
-import { Flex, Text, TooltipText, useTooltip } from 'briws-uikit'
+import { Flex, Text} from 'briws-uikit' // , TooltipText, useTooltip
 import { useTranslation } from 'contexts/Localization'
 import { useWeb3React } from '@web3-react/core'
 import useWithdrawalFeeTimer from 'views/Pools/hooks/useWithdrawalFeeTimer'
@@ -23,7 +23,7 @@ const UnstakingFeeCountdownRow: React.FC<UnstakingFeeCountdownRowProps> = ({ isT
   } = useVaultPoolByKey(vaultKey)
   const feeAsDecimal = withdrawalFee / 100 || '-'
   const withdrawalDayPeriod = withdrawalFeePeriod ? secondsToDay(withdrawalFeePeriod) : '-'
-  const { targetRef, tooltip, tooltipVisible } = useTooltip(
+/*  const { targetRef, tooltip, tooltipVisible } = useTooltip(
     <>
       <Text bold mb="4px">
         {t('Unstaking fee: %fee%%', { fee: feeAsDecimal })}
@@ -38,7 +38,7 @@ const UnstakingFeeCountdownRow: React.FC<UnstakingFeeCountdownRowProps> = ({ isT
       </Text>
     </>,
     { placement: 'bottom-start' },
-  )
+  )*/
 
   const { secondsRemaining, hasUnstakingFee } = useWithdrawalFeeTimer(
     parseInt(lastDepositedTime, 10),
@@ -70,10 +70,10 @@ const UnstakingFeeCountdownRow: React.FC<UnstakingFeeCountdownRowProps> = ({ isT
       justifyContent="space-between"
       flexDirection={isTableVariant ? 'column' : 'row'}
     >
-      {tooltipVisible && tooltip}
-      <TooltipText ref={targetRef} small textTransform="lowercase">
+      <div>tooltipVisible && tooltip</div>
+      <div> {/*<TooltipText ref={targetRef} small textTransform="lowercase"> */}
         {noFeeToPay ? '0' : feeAsDecimal}% {getRowText()}
-      </TooltipText>
+      </div>
       {shouldShowTimer && <WithdrawalFeeTimer secondsRemaining={secondsRemaining} />}
     </Flex>
   )
