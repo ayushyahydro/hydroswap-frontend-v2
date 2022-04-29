@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import { Modal, Grid, Flex, Text, BinanceIcon, Skeleton } from 'briws-uikit'
+import { Modal, Flex, Text, BinanceIcon, Skeleton } from 'briws-uikit' //Grid,
 import { useBNBBusdPrice } from 'hooks/useBUSDPrice'
 import { multiplyPriceByAmount } from 'utils/prices'
 import { BuyingStage } from './types'
@@ -23,7 +23,7 @@ export const StyledModal = styled(Modal)<{ stage: BuyingStage }>`
   }
 `
 
-export const BorderedBox = styled(Grid)`
+export const BorderedBox = styled.div` /*Grid*/
   margin: 16px 0;
   padding: 16px;
   background-color: ${({ theme }) => theme.colors.background};

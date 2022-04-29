@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import uniqBy from 'lodash/uniqBy'
-import { AutoRenewIcon, Button, Flex, Grid, Text } from 'briws-uikit'
+import { AutoRenewIcon, Button, Flex, Text } from 'briws-uikit' // Grid,
 import { useAppDispatch } from 'state'
 import {
   useGetNftFilterLoadingState,
@@ -132,11 +132,12 @@ const CollectionNfts: React.FC<CollectionNftsProps> = ({ collection }) => {
           {resultsAmount} {t('Results')}
         </Text>
       </Flex>
-      <Grid
+      {/* <Grid
         gridGap="16px"
         gridTemplateColumns={['1fr', null, 'repeat(3, 1fr)', null, 'repeat(4, 1fr)']}
         alignItems="start"
-      >
+      > */}
+      <div>
         {nftsToShow.map((nft) => {
           const currentAskPriceAsNumber = nft.marketData && parseFloat(nft.marketData.currentAskPrice)
 
@@ -148,7 +149,7 @@ const CollectionNfts: React.FC<CollectionNftsProps> = ({ collection }) => {
             />
           )
         })}
-      </Grid>
+      </div>
       <Flex mt="60px" mb="12px" justifyContent="center">
         {isNotLastPage && (
           <Button

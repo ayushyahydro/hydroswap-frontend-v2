@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import orderBy from 'lodash/orderBy'
-import { BunnyPlaceholderIcon, Button, Flex, Grid, Text } from 'briws-uikit'
+import { BunnyPlaceholderIcon, Button, Flex, Text } from 'briws-uikit' // Grid,
 import {
   useGetNftFilterLoadingState,
   useGetNftOrdering,
@@ -71,11 +71,12 @@ const FilteredCollectionNfts: React.FC<FilteredCollectionNftsProps> = ({ collect
       </Flex>
       {nftsToShow.length > 0 ? (
         <>
-          <Grid
+          {/* <Grid
             gridGap="16px"
             gridTemplateColumns={['1fr', null, 'repeat(3, 1fr)', null, 'repeat(4, 1fr)']}
             alignItems="start"
-          >
+          > */}
+          <div>
             {nftsToShow.map((nft) => {
               const currentAskPriceAsNumber = nft.marketData && parseFloat(nft.marketData.currentAskPrice)
 
@@ -87,7 +88,7 @@ const FilteredCollectionNfts: React.FC<FilteredCollectionNftsProps> = ({ collect
                 />
               )
             })}
-          </Grid>
+          </div>
           <Flex mt="60px" mb="12px" justifyContent="center">
             {collectionNfts.length > numToShow && (
               <Button onClick={handleLoadMore} scale="sm">

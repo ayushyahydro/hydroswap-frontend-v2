@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { Box, BoxProps, Button, Grid, InlineMenu, TextField } from 'briws-uikit'
+import { Box, BoxProps, Button} from 'briws-uikit' // Grid, InlineMenu, TextField
 import { useTranslation } from 'contexts/Localization'
 import FilterFooter from '../FilterFooter'
 
@@ -53,20 +53,28 @@ export const MinMaxFilter: React.FC<MinMaxFilterProps> = ({ onApply, onClear, ma
   }, [currentMin, currentMax, setIsError])
 
   return (
-    <InlineMenu
+    /*<InlineMenu
       component={
         <Button variant="light" scale="sm">
           {t('Price')}
         </Button>
       }
       {...props}
-    >
+    >*/
+      <div>
+        {/* @ts-ignore */}
+        <Button variant="light" scale="sm">
+          {t('Price')}
+        </Button>
+
       <Box width="320px">
         <Box px="24px" py="16px">
-          <Grid gridGap="16px" gridTemplateColumns="repeat(2, 1fr)">
-            <TextField label={t('Min')} value={currentMin} onUserInput={handleMinChange} isWarning={isError} />
-            <TextField label={t('Max')} value={currentMax} onUserInput={handleMaxChange} isWarning={isError} />
-          </Grid>
+          <div> {/*<Grid gridGap="16px" gridTemplateColumns="repeat(2, 1fr)">*/}
+            {/*<TextField label={t('Min')} value={currentMin} onUserInput={handleMinChange} isWarning={isError} />
+            <TextField label={t('Max')} value={currentMax} onUserInput={handleMaxChange} isWarning={isError} />*/}
+            <div>TextField</div>
+            <div>TextField</div>
+          </div>
         </Box>
         <FilterFooter>
           <Button variant="secondary" onClick={handleClear}>
@@ -77,6 +85,6 @@ export const MinMaxFilter: React.FC<MinMaxFilterProps> = ({ onApply, onClear, ma
           </Button>
         </FilterFooter>
       </Box>
-    </InlineMenu>
+    </div>
   )
 }

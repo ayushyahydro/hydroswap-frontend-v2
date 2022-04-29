@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import { Flex, Card, Grid, SellIcon, Text, useModal, Box, BinanceIcon, Skeleton, Button } from 'briws-uikit'
+import { Flex, Card, Text, useModal, Box, BinanceIcon, Skeleton, Button } from 'briws-uikit' // Grid, SellIcon,
 import { useTranslation } from 'contexts/Localization'
 import useTheme from 'hooks/useTheme'
 import { NftToken } from 'state/nftMarket/types'
@@ -21,7 +21,7 @@ const StyledCard = styled(Card)`
   }
 `
 
-const OwnerRow = styled(Grid)`
+const OwnerRow = styled.div` /*Grid*/
   grid-template-columns: 2fr 2fr 1fr;
   grid-row-gap: 16px;
   margin-top: 16px;
@@ -51,19 +51,23 @@ const OwnerCard: React.FC<OwnerCardProps> = ({ nft, isOwnNft, nftIsProfilePic })
 
   return (
     <StyledCard>
-      <Grid
+      {/* <Grid
         flex="0 1 auto"
         gridTemplateColumns="34px 1fr"
         alignItems="center"
         height="72px"
         px="24px"
         borderBottom={`1px solid ${theme.colors.cardBorder}`}
-      >
-        <SellIcon width="24px" height="24px" />
+      > */}
+      <div>
+      <div>Grid</div>
+        {/*<SellIcon width="24px" height="24px" />*/}
+        <div>SellIcon</div>
         <Text bold>{t('Owner')}</Text>
-      </Grid>
+      </div>
       {owner && (
         <>
+          {/* @ts-ignore */}
           <TableHeading flex="0 1 auto" gridTemplateColumns="2fr 2fr 1fr" py="12px">
             <Flex alignItems="center">
               <Text textTransform="uppercase" color="textSubtle" bold fontSize="12px" px="24px">

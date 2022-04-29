@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import styled from 'styled-components'
-import { Box, ButtonMenu, ButtonMenuItem, Flex, Grid, Text } from 'briws-uikit'
+import { Box, ButtonMenu, ButtonMenuItem, Flex, Text } from 'briws-uikit' // Grid,
 import capitalize from 'lodash/capitalize'
 import isEmpty from 'lodash/isEmpty'
 import { useGetNftFilters, useGetNftShowOnlyOnSale } from 'state/nftMarket/hooks'
@@ -17,7 +17,7 @@ interface FiltersProps {
   collection: Collection
 }
 
-const GridContainer = styled(Grid)`
+const GridContainer = styled.div` /* Grid */
   margin-bottom: 16px;
   padding: 0 16px;
   grid-gap: 8px 16px;

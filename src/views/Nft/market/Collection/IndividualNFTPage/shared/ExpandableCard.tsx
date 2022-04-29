@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import styled, { keyframes, css } from 'styled-components'
-import { Grid, Text, Card, Box, ChevronUpIcon, ChevronDownIcon, IconButton } from 'briws-uikit'
+import { Text, Card, Box, ChevronUpIcon, ChevronDownIcon, IconButton } from 'briws-uikit' // Grid,
 import useTheme from 'hooks/useTheme'
 
 const expandAnimation = keyframes`
@@ -47,13 +47,14 @@ const ExpandableCard: React.FC<ExpandableCardProps> = ({ icon, title, content })
   const { theme } = useTheme()
   return (
     <FullWidthCard>
-      <Grid
+      {/*<Grid
         gridTemplateColumns="1fr 8fr 1fr"
         alignItems="center"
         height="72px"
         px="24px"
         borderBottom={`1px solid ${theme.colors.cardBorder}`}
-      >
+      >*/}
+      <div>
         {icon}
         <Text bold>{title}</Text>
         <IconButton
@@ -69,7 +70,7 @@ const ExpandableCard: React.FC<ExpandableCardProps> = ({ icon, title, content })
             <ChevronDownIcon width="24px" height="24px" color="textSubtle" />
           )}
         </IconButton>
-      </Grid>
+      </div>
       <ExpandableCardBody expanded={expanded}>{content}</ExpandableCardBody>
     </FullWidthCard>
   )

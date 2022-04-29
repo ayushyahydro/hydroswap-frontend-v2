@@ -1,5 +1,5 @@
 import React from 'react'
-import { InjectedModalProps, Modal, Flex, Text, Button, useModal, Link, Grid, LinkExternal } from 'briws-uikit'
+import { InjectedModalProps, Modal, Flex, Text, Button, useModal, Link, LinkExternal } from 'briws-uikit' // Grid,
 import useTheme from 'hooks/useTheme'
 import styled from 'styled-components'
 import { NftToken } from 'state/nftMarket/types'
@@ -35,13 +35,14 @@ const ProfileNftModal: React.FC<ProfileNftModalProps> = ({ nft, onDismiss }) => 
       <Flex flexDirection="column" maxWidth="350px">
         <Flex p="16px">
           <RoundedImage src={nft.image.thumbnail} height={68} width={68} mr="16px" />
-          <Grid flex="1" gridTemplateColumns="1fr 1fr" alignItems="center">
+          {/* <Grid flex="1" gridTemplateColumns="1fr 1fr" alignItems="center"> */}
+          <div>
             <Text bold>{nft.name}</Text>
             <Text fontSize="12px" color="textSubtle" textAlign="right">
               {nft.collectionName}
             </Text>
             {/* TODO: Add lowestPrice when available */}
-          </Grid>
+          </div>
         </Flex>
         <Flex justifyContent="space-between" px="16px" mb="16px">
           <Flex flex="2">
@@ -61,6 +62,7 @@ const ProfileNftModal: React.FC<ProfileNftModalProps> = ({ nft, onDismiss }) => 
               {t('View Item')}
             </Button>
             <HorizontalDivider />
+            {/* @ts-ignore */}
             <LinkExternal p="0px" height="16px" href={getBscScanLinkForNft(nft.collectionAddress, nft.tokenId)}>
               BscScan
             </LinkExternal>

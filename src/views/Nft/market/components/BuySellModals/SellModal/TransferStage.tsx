@@ -1,5 +1,5 @@
 import React from 'react'
-import { Flex, Grid, Text, Button, Input, BinanceIcon, ErrorIcon } from 'briws-uikit'
+import { Flex, Text, Button, Input, BinanceIcon, ErrorIcon } from 'briws-uikit' // Grid,
 import { useWeb3React } from '@web3-react/core'
 import { useTranslation } from 'contexts/Localization'
 import { NftToken } from 'state/nftMarket/types'
@@ -42,7 +42,8 @@ const TransferStage: React.FC<TransferStageProps> = ({
       </Text>
       <Flex p="16px">
         <RoundedImage src={nftToSell.image.thumbnail} height={68} width={68} mr="8px" />
-        <Grid flex="1" gridTemplateColumns="1fr 1fr" alignItems="center">
+        {/* <Grid flex="1" gridTemplateColumns="1fr 1fr" alignItems="center"> */}
+        <div>
           <Text bold>{nftToSell.name}</Text>
           <Text fontSize="12px" color="textSubtle" textAlign="right">
             {nftToSell.collectionName}
@@ -58,7 +59,7 @@ const TransferStage: React.FC<TransferStageProps> = ({
               </Flex>
             </>
           )}
-        </Grid>
+        </div>
       </Flex>
       <GreyedOutContainer>
         <Text fontSize="12px" color="secondary" textTransform="uppercase" bold>
@@ -78,14 +79,15 @@ const TransferStage: React.FC<TransferStageProps> = ({
             </Text>
           ))}
       </GreyedOutContainer>
-      <Grid gridTemplateColumns="32px 1fr" p="16px" maxWidth="360px">
+      {/*<Grid gridTemplateColumns="32px 1fr" p="16px" maxWidth="360px">*/}
+      <div>
         <Flex alignSelf="flex-start">
           <ErrorIcon width={24} height={24} color="textSubtle" />
         </Flex>
         <Text small color="textSubtle">
           {t('This action will send your NFT to the address you have indicated above. Make sure it’s the correct')}
         </Text>
-      </Grid>
+      </div>
       <Divider />
       <Flex flexDirection="column" px="16px" pb="16px">
         <Button

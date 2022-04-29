@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 import { Link } from 'react-router-dom'
-import { Box, Flex, Grid, Image } from 'briws-uikit'
+import { Box, Flex, Image } from 'briws-uikit' // Grid,
 
 export const TwoColumnsContainer = styled(Flex)`
   gap: 22px;
@@ -44,7 +44,7 @@ export const CollectionLink = styled(Link)`
   }
 `
 
-export const CollectibleRowContainer = styled(Grid)`
+export const CollectibleRowContainer = styled.div` /* Grid */
   &:hover {
     opacity: 0.5;
     cursor: pointer;
@@ -64,6 +64,6 @@ export const ButtonContainer = styled(Box)`
   padding-right: 24px;
 `
 
-export const TableHeading = styled(Grid)`
+export const TableHeading = styled.div` /* Grid */
   border-bottom: ${({ theme }) => `1px solid ${theme.colors.cardBorder}`};
 `

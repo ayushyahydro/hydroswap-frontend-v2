@@ -1,5 +1,5 @@
 import React, { useEffect, useRef } from 'react'
-import { Flex, Grid, Box, Text, Button, BinanceIcon, ErrorIcon, useTooltip } from 'briws-uikit'
+import { Flex, Box, Text, Button, BinanceIcon, ErrorIcon} from 'briws-uikit' // Grid, useTooltip
 import { multiplyPriceByAmount } from 'utils/prices'
 import { useBNBBusdPrice } from 'hooks/useBUSDPrice'
 import { useTranslation } from 'contexts/Localization'
@@ -46,7 +46,7 @@ const SetPriceStage: React.FC<SetPriceStageProps> = ({
 
   const priceIsOutOfRange = priceAsFloat > MAX_PRICE || priceAsFloat < MIN_PRICE
 
-  const { tooltip, tooltipVisible, targetRef } = useTooltip(
+/*  const { tooltip, tooltipVisible, targetRef } = useTooltip(
     <>
       <Text>
         {t(
@@ -59,7 +59,7 @@ const SetPriceStage: React.FC<SetPriceStageProps> = ({
       <Text>{t('%percentage%% trading fee will be used to buy & burn CAKE', { percentage: tradingFee })}</Text>
     </>,
     { placement: 'auto' },
-  )
+  ) */
 
   useEffect(() => {
     if (inputRef && inputRef.current) {
@@ -123,10 +123,10 @@ const SetPriceStage: React.FC<SetPriceStageProps> = ({
               percentage: creatorFeeAsNumber + tradingFeeAsNumber,
             })}
           </Text>
-          <span ref={targetRef}>
+          <span> {/* <span ref={targetRef}> */}
             <ErrorIcon />
           </span>
-          {tooltipVisible && tooltip}
+          {/* {tooltipVisible && tooltip} */}
         </Flex>
         <Flex justifyContent="space-between" alignItems="center" mt="16px">
           <Text small color="textSubtle">
@@ -143,7 +143,8 @@ const SetPriceStage: React.FC<SetPriceStageProps> = ({
           </Flex>
         )}
       </GreyedOutContainer>
-      <Grid gridTemplateColumns="32px 1fr" p="16px" maxWidth="360px">
+      {/* <Grid gridTemplateColumns="32px 1fr" p="16px" maxWidth="360px"> */}
+      <div>
         <Flex alignSelf="flex-start">
           <ErrorIcon width={24} height={24} color="textSubtle" />
         </Flex>
@@ -155,7 +156,7 @@ const SetPriceStage: React.FC<SetPriceStageProps> = ({
             {t('Sales are in WBNB. You can swap WBNB to BNB 1:1 for free with PancakeSwap.')}
           </Text>
         </Box>
-      </Grid>
+      </div>
       <Divider />
       <Flex flexDirection="column" px="16px" pb="16px">
         <Button

@@ -8,9 +8,8 @@ import {
   ButtonMenuItem,
   Cards,
   ChartIcon,
-  HistoryIcon,
   IconButton,
-} from 'briws-uikit'
+} from 'briws-uikit' // HistoryIcon,
 import { useAppDispatch } from 'state'
 import { PredictionStatus } from 'state/types'
 import { useGetPredictionsStatus, useIsChartPaneOpen, useIsHistoryPaneOpen } from 'state/predictions/hooks'
@@ -91,7 +90,8 @@ const MobileMenu = () => {
             <ChartIcon color="currentColor" />
           </ButtonMenuItem>
           <ButtonMenuItem disabled={!account}>
-            <HistoryIcon color="currentColor" />
+            {/*<HistoryIcon color="currentColor" />*/}
+            <div>HistoryIcon</div>
           </ButtonMenuItem>
         </ButtonMenu>
       </TabNav>

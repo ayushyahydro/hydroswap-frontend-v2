@@ -2,7 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 import { useWeb3React } from '@web3-react/core'
 import { Price } from '@pancakeswap/sdk'
-import { Button, Grid, Text, Flex, Box, BinanceIcon, useModal, Skeleton } from 'briws-uikit'
+import { Button, Text, Flex, Box, BinanceIcon, useModal, Skeleton } from 'briws-uikit' // Grid,
 import { formatNumber } from 'utils/formatBalance'
 import { ContextApi } from 'contexts/Localization/types'
 import { useTranslation } from 'contexts/Localization'
@@ -14,7 +14,7 @@ import SellModal from 'views/Nft/market/components/BuySellModals/SellModal'
 import ProfileCell from 'views/Nft/market/components/ProfileCell'
 import { ButtonContainer } from '../../shared/styles'
 
-const OwnersTableRow = styled(Grid)`
+const OwnersTableRow = styled.div` /*Grid*/
   grid-template-columns: 2fr 2fr 1fr;
   grid-row-gap: 16px;
   margin-top: 16px;

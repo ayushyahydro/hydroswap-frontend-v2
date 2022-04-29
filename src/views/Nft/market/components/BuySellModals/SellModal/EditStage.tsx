@@ -1,5 +1,5 @@
 import React from 'react'
-import { Flex, Grid, Text, Button, Link, LinkExternal, BinanceIcon } from 'briws-uikit'
+import { Flex, Text, Button, Link, LinkExternal, BinanceIcon } from 'briws-uikit' //Grid,
 import { useTranslation } from 'contexts/Localization'
 import { nftsBaseUrl, pancakeBunniesAddress } from 'views/Nft/market/constants'
 import { NftToken } from 'state/nftMarket/types'
@@ -30,7 +30,8 @@ const EditStage: React.FC<EditStageProps> = ({
     <>
       <Flex p="16px">
         <RoundedImage src={nftToSell.image.thumbnail} height={68} width={68} mr="8px" />
-        <Grid flex="1" gridTemplateColumns="1fr 1fr" alignItems="center">
+        {/*<Grid flex="1" gridTemplateColumns="1fr 1fr" alignItems="center">*/}
+        <div>
           <Text bold>{nftToSell.name}</Text>
           <Text fontSize="12px" color="textSubtle" textAlign="right">
             {nftToSell.collectionName}
@@ -54,7 +55,7 @@ const EditStage: React.FC<EditStageProps> = ({
             <BinanceIcon width={16} height={16} mr="4px" />
             <Text small>{nftToSell.marketData.currentAskPrice}</Text>
           </Flex>
-        </Grid>
+        </div>
       </Flex>
       <Flex justifyContent="space-between" px="16px" mt="8px">
         <Flex flex="2">
@@ -74,9 +75,8 @@ const EditStage: React.FC<EditStageProps> = ({
             {t('View Item')}
           </Button>
           <HorizontalDivider />
-          <LinkExternal
-            p="0px"
-            height="16px"
+          {/* @ts-ignore */}
+          <LinkExternal p="0px" height="16px"
             href={getBscScanLinkForNft(nftToSell.collectionAddress, nftToSell.tokenId)}
           >
             BscScan

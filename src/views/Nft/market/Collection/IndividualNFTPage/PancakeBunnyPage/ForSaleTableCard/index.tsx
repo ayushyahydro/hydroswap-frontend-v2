@@ -3,8 +3,6 @@ import styled from 'styled-components'
 import {
   Flex,
   Card,
-  Grid,
-  SellIcon,
   Text,
   ArrowBackIcon,
   ArrowForwardIcon,
@@ -13,7 +11,7 @@ import {
   ArrowDownIcon,
   Button,
   Spinner,
-} from 'briws-uikit'
+} from 'briws-uikit' // Grid, SellIcon,
 import { useTranslation } from 'contexts/Localization'
 import useTheme from 'hooks/useTheme'
 import { NftToken } from 'state/nftMarket/types'
@@ -97,18 +95,20 @@ const ForSaleTableCard: React.FC<ForSaleTableCardProps> = ({
 
   return (
     <StyledCard hasManyPages={maxPage > 1}>
-      <Grid
+      {/* <Grid
         flex="0 1 auto"
         gridTemplateColumns="34px 1fr 48px"
         alignItems="center"
         height="72px"
         px="24px"
         borderBottom={`1px solid ${theme.colors.cardBorder}`}
-      >
-        <SellIcon width="24px" height="24px" />
+      > */}
+      <div>
+        {/* <SellIcon width="24px" height="24px" /> */}
+        <div>SellIcon</div>
         <Text bold>{t('For Sale (%num%)', { num: totalForSale.toLocaleString() })}</Text>
         <UpdateIndicator />
-      </Grid>
+      </div>
       {nftsOnCurrentPage.length > 0 ? (
         <>
           <TableHeading flex="0 1 auto" gridTemplateColumns="2fr 2fr 1fr" py="12px">

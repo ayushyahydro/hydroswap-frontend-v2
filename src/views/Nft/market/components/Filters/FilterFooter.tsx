@@ -1,8 +1,9 @@
-import React from 'react'
-import { Grid, GridProps } from 'briws-uikit'
+import React, {ReactNode} from 'react'
+// import { Grid, GridProps } from 'briws-uikit'
 
-const FilterFooter: React.FC<GridProps> = ({ children, ...props }) => (
-  <Grid
+// GridProps
+const FilterFooter: React.FC<PropsType> = ({ children, ...props }) => (
+  /*<Grid
     gridGap="16px"
     gridTemplateColumns="repeat(2,1fr)"
     {...props}
@@ -10,9 +11,14 @@ const FilterFooter: React.FC<GridProps> = ({ children, ...props }) => (
     py="16px"
     borderTop="1px solid"
     borderTopColor="cardBorder"
-  >
+  >*/
+  <div>
     {children}
-  </Grid>
+  </div>
 )
 
 export default FilterFooter
+
+type PropsType = {
+  children: ReactNode
+}
