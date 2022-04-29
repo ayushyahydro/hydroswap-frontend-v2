@@ -1,22 +1,11 @@
-import React, { useState } from 'react'
+import React, {useState} from 'react'
 import styled from 'styled-components'
 import BigNumber from 'bignumber.js'
-import {
-  Box,
-  BunnyPlaceholderIcon,
-  Button,
-  Flex,
-  LinkExternal,
-  Skeleton,
-  Text,
-  useMatchBreakpoints,
-  useModal,
-} from 'briws-uikit' // EllipsisIcon, SubMenu, SubMenuItem,
-import { getBscScanLink } from 'utils'
-import { getBalanceNumber } from 'utils/formatBalance'
-import { useTranslation } from 'contexts/Localization'
-import { usePriceCakeBusd } from 'state/farms/hooks'
-import { Bidder } from 'config/constants/types'
+import {Box, BunnyPlaceholderIcon, Button, Flex, Skeleton, Text, useMatchBreakpoints, useModal,} from 'briws-uikit' // EllipsisIcon, SubMenu, SubMenuItem,
+import {getBalanceNumber} from 'utils/formatBalance'
+import {useTranslation} from 'contexts/Localization'
+import {usePriceCakeBusd} from 'state/farms/hooks'
+import {Bidder} from 'config/constants/types'
 import WhitelistedBiddersModal from '../WhitelistedBiddersModal'
 
 const LeaderboardContainer = styled.div`
@@ -45,6 +34,7 @@ const LeaderboardRow: React.FC<LeaderboardRowProps> = ({ bidder, cakePriceBusd, 
   const { t } = useTranslation()
   const { isTopPosition, position, samePositionAsAbove, farmName, tokenName, amount, projectSite, lpAddress, account } =
     bidder
+
   return (
     <>
       <GridCell isTopPosition={isTopPosition} pl={['12px', '24px']}>
@@ -69,7 +59,7 @@ const LeaderboardRow: React.FC<LeaderboardRowProps> = ({ bidder, cakePriceBusd, 
       </GridCell>
       <GridCell isTopPosition={isTopPosition}>
         <Flex flexDirection="column" width="100%" justifyContent="flex-end" pr={[null, null, '24px']}>
-          <Text bold textTransform="uppercase" width="100%" textAlign="right">
+          <Text bold textTransform="uppercase" textAlign="right"> {/* width="100%"  */}
             {getBalanceNumber(amount).toLocaleString()}
           </Text>
           {cakePriceBusd.gt(0) ? (
@@ -84,23 +74,28 @@ const LeaderboardRow: React.FC<LeaderboardRowProps> = ({ bidder, cakePriceBusd, 
         </Flex>
       </GridCell>
       <GridCell isTopPosition={isTopPosition}>
-        <SubMenu component={<EllipsisIcon height="16px" width="16px" />}>
-          {projectSite && (
-            <SubMenuItem as={LinkExternal} href={projectSite} bold={false} color="text">
+        {/* <SubMenuItem as={LinkExternal} href={projectSite} bold={false} color="text">
               {t('Project Site')}
-            </SubMenuItem>
+            </SubMenuItem> */}
+        {/* <SubMenuItem as={LinkExternal} href={`/info/pool/${lpAddress}`} bold={false} color="text">
+              {t('LP Info')}
+            </SubMenuItem> */}
+        {/* <SubMenuItem as={LinkExternal} href={getBscScanLink(account, 'address')} bold={false} color="text">
+        {t('Bidder Address')}
+      </SubMenuItem> */}
+        <div > {/* <SubMenu component={<EllipsisIcon height="16px" width="16px" />}> */}
+          {projectSite && (
+              <div> SubMenuItem </div>
+
           )}
           {lpAddress && (
-            <SubMenuItem as={LinkExternal} href={`/info/pool/${lpAddress}`} bold={false} color="text">
-              {t('LP Info')}
-            </SubMenuItem>
+              <div>SubMenuItem</div>
           )}
           {account && (
-            <SubMenuItem as={LinkExternal} href={getBscScanLink(account, 'address')} bold={false} color="text">
-              {t('Bidder Address')}
-            </SubMenuItem>
+              <div>SubMenuItem</div>
+
           )}
-        </SubMenu>
+        </div>
       </GridCell>
     </>
   )
