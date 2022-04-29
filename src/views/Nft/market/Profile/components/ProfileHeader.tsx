@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link as ReactRouterLink } from 'react-router-dom'
 import styled from 'styled-components'
-import { Flex, IconButton, Link, Button, useModal } from 'briws-uikit' // BscScanIcon,
+import { BscScanIcon, Flex, IconButton, Link, Button, useModal } from 'briws-uikit'
 import { useTranslation } from 'contexts/Localization'
 import { getBscScanLink } from 'utils'
 import { formatNumber } from 'utils/formatBalance'
@@ -83,7 +83,7 @@ const ProfileHeader: React.FC<HeaderProps> = ({
               href={getBscScanLink(accountPath, 'address')}
               alt={t('View BscScan for user address')}
             >
-              {/* <BscScanIcon width="20px" color="primary" /> */}
+              <BscScanIcon width="20px" color="primary" />
             </StyledIconButton>
           )}
         </Flex>

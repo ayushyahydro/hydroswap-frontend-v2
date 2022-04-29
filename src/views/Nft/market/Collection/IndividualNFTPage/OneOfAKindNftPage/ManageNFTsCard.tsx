@@ -1,5 +1,17 @@
 import React from 'react'
-import { Box, Flex, Text, CogIcon, BinanceIcon, Skeleton, useModal } from 'briws-uikit' // CameraIcon, Grid, SellIcon, WalletFilledIcon,
+import {
+  Box,
+  Flex,
+  Grid,
+  Text,
+  CogIcon,
+  SellIcon,
+  WalletFilledIcon,
+  CameraIcon,
+  BinanceIcon,
+  Skeleton,
+  useModal,
+} from 'briws-uikit'
 import { useWeb3React } from '@web3-react/core'
 import { NftLocation, NftToken } from 'state/nftMarket/types'
 import ConnectWalletButton from 'components/ConnectWalletButton'
@@ -16,9 +28,9 @@ const LocationColors = {
 }
 
 const LocationIcons = {
-  /* [NftLocation.FORSALE]: SellIcon,
+  [NftLocation.FORSALE]: SellIcon,
   [NftLocation.WALLET]: WalletFilledIcon,
-  [NftLocation.PROFILE]: CameraIcon, */
+  [NftLocation.PROFILE]: CameraIcon,
 }
 
 interface CollectibleRowProps {
@@ -39,7 +51,7 @@ const CollectibleRow: React.FC<CollectibleRowProps> = ({ nft }) => {
       onClick={nft.location === NftLocation.PROFILE ? onPresentProfileNftModal : onPresentModal}
     >
       <SmallRoundedImage src={nft.image.thumbnail} width={64} height={64} mx="16px" />
-      {/* <Grid gridTemplateColumns="1fr 1fr">
+      <Grid gridTemplateColumns="1fr 1fr">
         <Text bold>{nft.name}</Text>
         <Text fontSize="12px" color="textSubtle" textAlign="right">
           {nft.collectionName}
@@ -59,7 +71,7 @@ const CollectibleRow: React.FC<CollectibleRowProps> = ({ nft }) => {
             {t('Not on sale')}
           </Text>
         )}
-      </Grid> */}
+      </Grid>
     </CollectibleRowContainer>
   )
 }
@@ -73,12 +85,12 @@ const CollectibleByLocation: React.FC<CollectibleByLocationProps> = ({ nft }) =>
   const IconComponent = LocationIcons[nft.location]
   return (
     <Flex flexDirection="column">
-      {/* <Grid gridTemplateColumns="32px 1fr" px="16px" pb="8px">
+      <Grid gridTemplateColumns="32px 1fr" px="16px" pb="8px">
         <IconComponent color={LocationColors[nft.location]} width="24px" height="24px" />
         <Text display="inline" bold color={LocationColors[nft.location]}>
           {t(nft.location)}
         </Text>
-      </Grid> */}
+      </Grid>
       <CollectibleRow key={nft.tokenId} nft={nft} />
     </Flex>
   )

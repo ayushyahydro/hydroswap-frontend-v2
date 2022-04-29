@@ -1,8 +1,7 @@
 import React, { useEffect, useRef } from 'react'
 import { useCountUp } from 'react-countup'
 import styled from 'styled-components'
-import { Box, Flex, PocketWatchIcon, Text } from 'briws-uikit'
-// BnbUsdtPairTokenIcon
+import { BnbUsdtPairTokenIcon, Box, Flex, PocketWatchIcon, Text } from 'briws-uikit'
 import { ROUND_BUFFER } from 'state/predictions/config'
 import { formatBigNumberToFixed } from 'utils/formatBalance'
 import { useGetCurrentRoundLockTimestamp, useGetLastOraclePrice } from 'state/predictions/hooks'
@@ -107,7 +106,9 @@ export const PricePairLabel: React.FC = () => {
 
   return (
     <Box pl="24px" position="relative" display="inline-block">
-      <Token left={0}>{/* <BnbUsdtPairTokenIcon /> */}</Token>
+      <Token left={0}>
+        <BnbUsdtPairTokenIcon />
+      </Token>
       <Label dir="left">
         <Title bold textTransform="uppercase">
           BNBUSDT
