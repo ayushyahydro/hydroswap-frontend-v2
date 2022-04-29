@@ -1,5 +1,5 @@
 import React from 'react'
-import { Box, Button, Text, Heading, ProposalIcon, Flex } from 'briws-uikit'
+import { Box, Button, Text, Heading, Flex } from 'briws-uikit' // ProposalIcon,
 import { Link } from 'react-router-dom'
 import styled from 'styled-components'
 import { useTranslation } from 'contexts/Localization'
@@ -20,9 +20,12 @@ const Footer = () => {
       <Container>
         <Flex alignItems="center" justifyContent="space-between">
           <Box pr="32px">
-            <Heading as="h2" scale="lg" mb="16px">
+            {/*<Heading as="h2" scale="lg" mb="16px">
               {t('Got a suggestion?')}
-            </Heading>
+            </Heading>*/}
+            <div>
+              {t('Got a suggestion?')}
+            </div>
             <Text as="p">
               {t('Community proposals are a great way to see how the community feels about your ideas.')}
             </Text>
@@ -31,9 +34,8 @@ const Footer = () => {
                 "They won't necessarily be implemented if the community votes successful, but suggestions with a lot of community support may be made into Core proposals.",
               )}
             </Text>
-
             <Button
-              startIcon={<ProposalIcon color="currentColor" width="24px" />}
+              startIcon={<div>ProposalIcon</div>} /* <ProposalIcon color="currentColor" width="24px" /> */
               as={Link}
               to="/voting/proposal/create"
             >

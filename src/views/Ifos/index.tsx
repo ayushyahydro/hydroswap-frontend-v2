@@ -1,4 +1,4 @@
-import { SubMenuItems } from 'briws-uikit'
+// import { SubMenuItems } from 'briws-uikit'
 import Container from 'components/Layout/Container'
 import { useTranslation } from 'contexts/Localization'
 import React from 'react'
@@ -16,7 +16,7 @@ const Ifos = () => {
 
   return (
     <>
-      <SubMenuItems
+      {/*<SubMenuItems
         items={[
           {
             label: t('Latest'),
@@ -28,7 +28,8 @@ const Ifos = () => {
           },
         ]}
         activeItem={isExact ? '/ifo' : '/ifo/history'}
-      />
+      />*/}
+      <div>SubMenuItems</div>
       <Hero />
       <Container>
         <Route exact path={`${path}`}>

@@ -6,7 +6,7 @@ import useTheme from 'hooks/useTheme'
 import Container from 'components/Layout/Container'
 import { useTranslation } from 'contexts/Localization'
 import { PageMeta } from 'components/Layout/Page'
-import { Flex, Box, Heading, CardBody, CardFooter, Card, Table, LinkExternal } from 'briws-uikit'
+import { Flex, Box, Heading, CardBody, CardFooter, Card, LinkExternal } from 'briws-uikit' // Table,
 import tokens from 'config/constants/tokens'
 import useTokenBalance, { FetchStatus, useGetBnbBalance } from 'hooks/useTokenBalance'
 import { getFullDisplayBalance, formatBigNumber } from 'utils/formatBalance'
@@ -119,7 +119,7 @@ const Portfolio: React.FC = () => {
               <LinkExternal href={getBscScanLink(account, 'address')}>{t('View on BscScan')}</LinkExternal>
             </CardBody>
             <CardFooter>
-              <Table width="100%">
+              <table> {/*Table*/}
                 <thead>
                   <tr>
                     <th>Token</th>
@@ -139,7 +139,7 @@ const Portfolio: React.FC = () => {
                       </tr>
                     ))}
                 </tbody>
-              </Table>
+              </table>
             </CardFooter>
           </Card>
         </Flex>

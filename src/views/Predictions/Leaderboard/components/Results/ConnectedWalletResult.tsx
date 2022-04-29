@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react'
-import { Card, Heading, Table, Th, useMatchBreakpoints } from 'briws-uikit'
+import { Card, Heading,  useMatchBreakpoints } from 'briws-uikit' // Table, Th,
 import { useTranslation } from 'contexts/Localization'
 import { useWeb3React } from '@web3-react/core'
 import Container from 'components/Layout/Container'
@@ -30,26 +30,27 @@ const ConnectedWalletResult = () => {
 
   return (
     <Container mb="48px">
-      <Heading as="h2" scale="md" color="secondary" mb="16px">
+      {/*<Heading as="h2" scale="md" color="secondary" mb="16px">*/}
+      <div>
         {t('My Rankings')}
-      </Heading>
+      </div>
       {isDesktop ? (
         <Card isActive>
-          <Table>
+          <table> {/* <Table> */}
             <thead>
               <tr>
-                <Th width="60px">&nbsp;</Th>
-                <Th textAlign="left">&nbsp;</Th>
-                <Th textAlign="right">{t('Net Winnings (BNB)')}</Th>
-                <Th textAlign="center">{t('Win Rate')}</Th>
-                <Th>{t('Rounds Won')}</Th>
-                <Th>{t('Rounds Played')}</Th>
+                <th>&nbsp;</th> {/*Th*/}
+                <th>&nbsp;</th>
+                <th>{t('Net Winnings (BNB)')}</th>
+                <th>{t('Win Rate')}</th>
+                <th>{t('Rounds Won')}</th>
+                <div>{t('Rounds Played')}</div> {/* Tt*/}
               </tr>
             </thead>
             <tbody>
               <DesktopRow user={accountResult} />
             </tbody>
-          </Table>
+          </table>
         </Card>
       ) : (
         <Card isActive>

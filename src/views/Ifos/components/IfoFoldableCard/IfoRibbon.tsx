@@ -1,4 +1,4 @@
-import { Box, Flex, Heading, Progress, ProgressBar } from 'briws-uikit'
+import { Box, Flex, Heading } from 'briws-uikit' // , Progress, ProgressBar
 import { useTranslation } from 'contexts/Localization'
 import React from 'react'
 import styled from 'styled-components'
@@ -56,13 +56,15 @@ export const IfoRibbon = ({ publicIfoData }: { publicIfoData: PublicIfoData }) =
   return (
     <>
       {status === 'live' && (
-        <Progress variant="flat">
-          <ProgressBar
-            $useDark
-            $background="linear-gradient(273deg, #ffd800 -2.87%, #eb8c00 113.73%)"
-            style={{ width: `${Math.min(Math.max(publicIfoData.progress, 0), 100)}%` }}
-          />
-        </Progress>
+          /*<Progress variant="flat">*/
+        <div>
+            {/*<ProgressBar
+                $useDark
+                $background="linear-gradient(273deg, #ffd800 -2.87%, #eb8c00 113.73%)"
+                style={{ width: `${Math.min(Math.max(publicIfoData.progress, 0), 100)}%` }}
+            />*/}
+            <div>ProgressBar</div>
+        </div>
       )}
       <Flex
         justifyContent="center"
@@ -84,9 +86,10 @@ const IfoRibbonEnd = () => {
     <>
       <BigCurve $status="finished" />
       <Box position="relative">
-        <Heading as="h3" scale="lg" color="textSubtle">
-          {t('Sale Finished!')}
-        </Heading>
+        {/*<Heading as="h3" scale="lg" color="textSubtle">*/}
+        <div>
+            {t('Sale Finished!')}
+        </div>
       </Box>
     </>
   )
@@ -97,9 +100,8 @@ const IfoRibbonSoon = ({ publicIfoData }: { publicIfoData: PublicIfoData }) => {
     <>
       <BigCurve $status="coming_soon" />
       <Box position="relative">
-        <Heading as="h3" scale="lg" color="secondary">
-          <SoonTimer publicIfoData={publicIfoData} />
-        </Heading>
+        {/*<Heading as="h3" scale="lg" color="secondary">*/}
+          <div><SoonTimer publicIfoData={publicIfoData} /></div>
       </Box>
     </>
   )

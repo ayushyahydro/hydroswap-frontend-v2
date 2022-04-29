@@ -1,5 +1,5 @@
 import React from 'react'
-import { Card, Table, Th } from 'briws-uikit'
+import { Card} from 'briws-uikit' // Table, Th
 import { PredictionUser } from 'state/types'
 import Container from 'components/Layout/Container'
 import { useTranslation } from 'contexts/Localization'
@@ -15,15 +15,15 @@ const DesktopResults: React.FC<DesktopResultsProps> = ({ results }) => {
   return (
     <Container mb="24px">
       <Card>
-        <Table>
+        <table> {/*Table*/}
           <thead>
             <tr>
-              <Th width="60px">&nbsp;</Th>
-              <Th textAlign="left">{t('User')}</Th>
-              <Th textAlign="right">{t('Net Winnings (BNB)')}</Th>
-              <Th>{t('Win Rate')}</Th>
-              <Th>{t('Rounds Won')}</Th>
-              <Th>{t('Rounds Played')}</Th>
+              <th>&nbsp;</th> {/*Th*/}
+              <th>{t('User')}</th>
+              <th>{t('Net Winnings (BNB)')}</th>
+              <th>{t('Win Rate')}</th>
+              <th>{t('Rounds Won')}</th>
+              <th>{t('Rounds Played')}</th>
             </tr>
           </thead>
           <tbody>
@@ -31,7 +31,7 @@ const DesktopResults: React.FC<DesktopResultsProps> = ({ results }) => {
               <DesktopRow key={result.id} rank={index + 4} user={result} />
             ))}
           </tbody>
-        </Table>
+        </table>
       </Card>
     </Container>
   )

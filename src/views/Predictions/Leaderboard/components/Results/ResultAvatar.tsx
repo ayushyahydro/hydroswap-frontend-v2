@@ -1,5 +1,5 @@
 import React from 'react'
-import { Box, Flex, FlexProps, Link, ProfileAvatar, SubMenu, SubMenuItem, useModal, Text } from 'briws-uikit'
+import { Box, Flex, FlexProps, Link, useModal, Text } from 'briws-uikit' // ProfileAvatar, SubMenu, SubMenuItem,
 import styled from 'styled-components'
 import { getBscScanLink } from 'utils'
 import { PredictionUser } from 'state/types'
@@ -37,7 +37,12 @@ const ResultAvatar: React.FC<ResultAvatarProps> = ({ user, ...props }) => {
   const [onPresentWalletStatsModal] = useModal(<WalletStatsModal account={user.id} />)
 
   return (
-    <SubMenu
+    /* SubMenu */
+      /*<SubMenu
+          component={
+          options={{ placement: 'bottom-start' }}
+          */
+    /*<SubMenu
       component={
         <Flex alignItems="center" {...props}>
           <UsernameWrapper>
@@ -54,12 +59,16 @@ const ResultAvatar: React.FC<ResultAvatarProps> = ({ user, ...props }) => {
         </Flex>
       }
       options={{ placement: 'bottom-start' }}
-    >
+    >*/
+    <div>
+      {/*
       <SubMenuItem onClick={onPresentWalletStatsModal}>{t('View Stats')}</SubMenuItem>
       <SubMenuItem as={Link} href={getBscScanLink(user.id, 'address')} bold={false} color="text" external>
         {t('View on BscScan')}
-      </SubMenuItem>
-    </SubMenu>
+      </SubMenuItem>*/}
+      <div>{t('View Stats')}</div>
+      <div>{t('View on BscScan')}</div>
+    </div>
   )
 }
 

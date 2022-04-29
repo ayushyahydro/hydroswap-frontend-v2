@@ -5,15 +5,12 @@ import {
   CardBody,
   CardRibbon,
   Flex,
-  ProfileAvatar,
   LaurelLeftIcon,
   LaurelRightIcon,
   Link,
   Text,
-  SubMenu,
-  SubMenuItem,
   useModal,
-} from 'briws-uikit'
+} from 'briws-uikit' // ProfileAvatar, SubMenu, SubMenuItem,
 import { PredictionUser } from 'state/types'
 import { useGetProfileAvatar } from 'state/profile/hooks'
 import styled from 'styled-components'
@@ -54,12 +51,13 @@ const RankingCard: React.FC<RankingCardProps> = ({ rank, user }) => {
   const profileAvatar = useGetProfileAvatar(user.id)
   const [onPresentWalletStatsModal] = useModal(<WalletStatsModal account={user.id} />)
 
-  return (
+  return ( /*@ts-ignore*/
     <Card ribbon={<CardRibbon variantColor={rankColor} text={`#${rank}`} ribbonPosition="left" />}>
       <CardBody p="24px">
         <Flex alignItems="center" justifyContent="center" flexDirection="column" mb="24px">
-          <SubMenu
-            component={
+          {/*SubMenu*/}
+          <div
+            /*component={
               <>
                 <Flex mb="4px">
                   <RotatedLaurelLeftIcon color={rankColor} width="32px" />
@@ -73,13 +71,14 @@ const RankingCard: React.FC<RankingCardProps> = ({ rank, user }) => {
                 </Text>
               </>
             }
-            options={{ placement: 'bottom' }}
+            options={{ placement: 'bottom' }}*/
           >
-            <SubMenuItem onClick={onPresentWalletStatsModal}>{t('View Stats')}</SubMenuItem>
-            <SubMenuItem as={Link} href={getBscScanLink(user.id, 'address')} bold={false} color="text" external>
+            <div onClick={onPresentWalletStatsModal}>{t('View Stats')}</div> {/* SubMenuItem */}
+            {/* SubMenuItem as={Link} href={getBscScanLink(user.id, 'address')} bold={false} color="text" external */}
+            <div>
               {t('View on BscScan')}
-            </SubMenuItem>
-          </SubMenu>
+            </div>
+          </div>
         </Flex>
         <Row mb="4px">
           <Text fontSize="12px" color="textSubtle">

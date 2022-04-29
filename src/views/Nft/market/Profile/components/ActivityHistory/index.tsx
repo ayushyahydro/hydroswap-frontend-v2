@@ -5,7 +5,7 @@ import { isAddress } from 'utils'
 import { fetchUserActivity } from 'state/nftMarket/reducer'
 import { useAppDispatch } from 'state'
 import { useUserNfts } from 'state/nftMarket/hooks'
-import { ArrowBackIcon, ArrowForwardIcon, Card, Flex, Table, Text, Th, useMatchBreakpoints } from 'briws-uikit'
+import { ArrowBackIcon, ArrowForwardIcon, Card, Flex,Text,  useMatchBreakpoints } from 'briws-uikit' //  Table, Th,
 import { getNftsFromDifferentCollectionsApi, getUserActivity } from 'state/nftMarket/helpers'
 import { Activity, NftToken, TokenIdWithCollectionAddress, UserNftInitializationState } from 'state/nftMarket/types'
 import { useTranslation } from 'contexts/Localization'
@@ -126,19 +126,19 @@ const ActivityHistory = () => {
         </Flex>
       ) : (
         <>
-          <Table>
+          <table>
             <thead>
               <tr>
-                <Th textAlign={['center', null, 'left']}> {t('Item')}</Th>
-                <Th textAlign="right"> {t('Event')}</Th>
+                <th> {t('Item')}</th> {/*Th*/}
+                <th> {t('Event')}</th>
                 {isXs || isSm ? null : (
                   <>
-                    <Th textAlign="right"> {t('Price')}</Th>
-                    <Th textAlign="center"> {t('From/To')}</Th>
+                    <th> {t('Price')}</th>
+                    <th> {t('From/To')}</th>
                   </>
                 )}
-                <Th textAlign="center"> {t('Date')}</Th>
-                {isXs || isSm ? null : <Th />}
+                <th> {t('Date')}</th>
+                {isXs || isSm ? null : <th />}
               </tr>
             </thead>
 
@@ -160,7 +160,7 @@ const ActivityHistory = () => {
                 })
               )}
             </tbody>
-          </Table>
+          </table>
           <Flex
             borderTop={`1px ${theme.colors.cardBorder} solid`}
             pt="24px"

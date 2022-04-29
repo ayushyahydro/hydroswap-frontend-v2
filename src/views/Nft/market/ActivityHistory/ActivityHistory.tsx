@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import { uniqBy } from 'lodash'
 import { isAddress } from 'utils'
 import { useAppDispatch } from 'state'
-import { ArrowBackIcon, ArrowForwardIcon, Box, Button, Flex, Table, Text, Th, useMatchBreakpoints } from 'briws-uikit'
+import { ArrowBackIcon, ArrowForwardIcon, Box, Button, Flex, Text, useMatchBreakpoints } from 'briws-uikit' // Table, Th,
 import { getCollectionActivity, getNftsFromDifferentCollectionsApi } from 'state/nftMarket/helpers'
 import Container from 'components/Layout/Container'
 import TableLoader from 'components/TableLoader'
@@ -138,20 +138,20 @@ const ActivityHistory: React.FC<ActivityHistoryProps> = ({ collection }) => {
           </Flex>
         ) : (
           <>
-            <Table>
+            <table> {/* Table */}
               <thead>
                 <tr>
-                  <Th textAlign={['center', null, 'left']}> {t('Item')}</Th>
-                  <Th textAlign="right"> {t('Event')}</Th>
+                  <th> {t('Item')}</th> {/* <Th textAlign={['center', null, 'left']}> */}
+                  <th> {t('Event')}</th>
                   {isXs || isSm ? null : (
                     <>
-                      <Th textAlign="right"> {t('Price')}</Th>
-                      <Th textAlign="center"> {t('From')}</Th>
-                      <Th textAlign="center"> {t('To')}</Th>
+                      <th> {t('Price')}</th> {/* Th textAlign="right" */}
+                      <th> {t('From')}</th>
+                      <th> {t('To')}</th>
                     </>
                   )}
-                  <Th textAlign="center"> {t('Date')}</Th>
-                  {isXs || isSm ? null : <Th />}
+                  <th> {t('Date')}</th>
+                  {isXs || isSm ? null : <th />}
                 </tr>
               </thead>
 
@@ -172,7 +172,7 @@ const ActivityHistory: React.FC<ActivityHistoryProps> = ({ collection }) => {
                   })
                 )}
               </tbody>
-            </Table>
+            </table>
             <Flex
               borderTop={`1px ${theme.colors.cardBorder} solid`}
               pt="24px"

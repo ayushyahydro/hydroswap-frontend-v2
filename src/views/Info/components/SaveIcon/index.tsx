@@ -1,6 +1,6 @@
 import React, { HTMLAttributes } from 'react'
 import styled from 'styled-components'
-import { StarFillIcon, StarLineIcon } from 'briws-uikit'
+// import { StarFillIcon, StarLineIcon } from 'briws-uikit'
 import useTheme from 'hooks/useTheme'
 
 const HoverIcon = styled.div`
@@ -18,9 +18,11 @@ const SaveIcon: React.FC<{ fill: boolean } & HTMLAttributes<HTMLDivElement>> = (
   return (
     <HoverIcon {...rest}>
       {fill ? (
-        <StarFillIcon stroke={theme.colors.warning} color={theme.colors.warning} />
+        /*<StarFillIcon stroke={theme.colors.warning} color={theme.colors.warning} />*/
+          <div>StarFillIcon</div>
       ) : (
-        <StarLineIcon stroke={theme.colors.textDisabled} />
+        /*<StarLineIcon stroke={theme.colors.textDisabled} />*/
+          <div>StarLineIcon</div>
       )}
     </HoverIcon>
   )
