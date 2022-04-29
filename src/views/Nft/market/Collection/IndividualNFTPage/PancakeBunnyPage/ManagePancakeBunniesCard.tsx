@@ -1,18 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import {
-  Box,
-  Flex,
-  Grid,
-  Text,
-  CogIcon,
-  SellIcon,
-  WalletFilledIcon,
-  CameraIcon,
-  BinanceIcon,
-  Skeleton,
-  useModal,
-} from 'briws-uikit'
+import { BinanceIcon, Box, CogIcon, Flex, Skeleton, Text, useModal } from 'briws-uikit' // Grid, SellIcon, WalletFilledIcon, CameraIcon,
 import { useWeb3React } from '@web3-react/core'
 import { useUserNfts } from 'state/nftMarket/hooks'
 import { NftLocation, NftToken, UserNftInitializationState } from 'state/nftMarket/types'
@@ -22,7 +10,7 @@ import ExpandableCard from '../shared/ExpandableCard'
 import useFetchUserNfts from '../../../Profile/hooks/useFetchUserNfts'
 import SellModal from '../../../components/BuySellModals/SellModal'
 import ProfileNftModal from '../../../components/ProfileNftModal'
-import { SmallRoundedImage, CollectibleRowContainer } from '../shared/styles'
+import { CollectibleRowContainer, SmallRoundedImage } from '../shared/styles'
 
 const ScrollableContainer = styled(Box)`
   overflow-y: auto;
@@ -41,9 +29,9 @@ const LocationColors = {
 }
 
 const LocationIcons = {
-  [NftLocation.FORSALE]: SellIcon,
-  [NftLocation.WALLET]: WalletFilledIcon,
-  [NftLocation.PROFILE]: CameraIcon,
+  [NftLocation.FORSALE]: '', // SellIcon
+  [NftLocation.WALLET]: '', // WalletFilledIcon
+  [NftLocation.PROFILE]: '', // CameraIcon
 }
 
 interface CollectibleRowProps {
@@ -65,7 +53,9 @@ const CollectibleRow: React.FC<CollectibleRowProps> = ({ nft, lowestPrice }) => 
       onClick={nft.location === NftLocation.PROFILE ? onPresentProfileNftModal : onPresentModal}
     >
       <SmallRoundedImage src={nft.image.thumbnail} width={64} height={64} mx="16px" />
-      <Grid gridTemplateColumns="1fr 1fr">
+      <div>
+        {' '}
+        {/* Grid gridTemplateColumns="1fr 1fr" */}
         <Text bold>{nft.name}</Text>
         <Text fontSize="12px" color="textSubtle" textAlign="right">
           {nft.collectionName}
@@ -96,7 +86,7 @@ const CollectibleRow: React.FC<CollectibleRowProps> = ({ nft, lowestPrice }) => 
             {t('Not on sale')}
           </Text>
         )}
-      </Grid>
+      </div>
     </CollectibleRowContainer>
   )
 }
@@ -112,12 +102,14 @@ const CollectiblesByLocation: React.FC<CollectiblesByLocationProps> = ({ locatio
   const IconComponent = LocationIcons[location]
   return (
     <Flex flexDirection="column">
-      <Grid gridTemplateColumns="32px 1fr" px="16px" pb="8px">
-        <IconComponent color={LocationColors[location]} width="24px" height="24px" />
+      <div>
+        {' '}
+        {/* Grid gridTemplateColumns="32px 1fr" px="16px" pb="8px" */}
+        {/* <IconComponent color={LocationColors[location]} width="24px" height="24px" /> */} {/* @ts-ignore */}
         <Text display="inline" bold color={LocationColors[location]}>
           {t(location)}
         </Text>
-      </Grid>
+      </div>
       <ScrollableContainer>
         {nfts.map((nft) => (
           <CollectibleRow key={nft.tokenId} nft={nft} lowestPrice={lowestPrice} />

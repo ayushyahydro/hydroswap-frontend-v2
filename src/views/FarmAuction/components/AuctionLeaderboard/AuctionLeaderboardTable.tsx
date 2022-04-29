@@ -2,19 +2,16 @@ import React, { useState } from 'react'
 import styled from 'styled-components'
 import BigNumber from 'bignumber.js'
 import {
-  Text,
-  Flex,
   Box,
   BunnyPlaceholderIcon,
-  Skeleton,
   Button,
+  Flex,
+  LinkExternal,
+  Skeleton,
+  Text,
   useMatchBreakpoints,
   useModal,
-  SubMenu,
-  SubMenuItem,
-  EllipsisIcon,
-  LinkExternal,
-} from 'briws-uikit'
+} from 'briws-uikit' // EllipsisIcon, SubMenu, SubMenuItem,
 import { getBscScanLink } from 'utils'
 import { getBalanceNumber } from 'utils/formatBalance'
 import { useTranslation } from 'contexts/Localization'

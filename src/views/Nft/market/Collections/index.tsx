@@ -1,18 +1,6 @@
 import React, { useCallback, useEffect, useMemo, useState } from 'react'
-import {
-  Table,
-  Th,
-  Td,
-  Card,
-  Flex,
-  BnbUsdtPairTokenIcon,
-  Heading,
-  useMatchBreakpoints,
-  ProfileAvatar,
-  ArrowBackIcon,
-  Text,
-  ArrowForwardIcon,
-} from 'briws-uikit'
+import { ArrowBackIcon, ArrowForwardIcon, Card, Flex, Heading, Text, useMatchBreakpoints } from 'briws-uikit'
+// Table, Th, Td, BnbUsdtPairTokenIcon, ProfileAvatar,
 import styled from 'styled-components'
 import { Link } from 'react-router-dom'
 import { useGetCollections } from 'state/nftMarket/hooks'
@@ -108,30 +96,39 @@ const Collectible = () => {
   return (
     <>
       <PageHeader>
+        {/* @ts-ignore */}
         <Heading as="h1" scale="xxl" color="secondary">
           {t('Collections')}
         </Heading>
       </PageHeader>
       <Page>
         <Card>
-          <Table>
+          <div>
+            {' '}
+            {/* Table */}
             <thead>
               <tr>
-                <Th textAlign="left">{t('Collection')}</Th>
-                <Th textAlign="left" style={{ cursor: 'pointer' }} onClick={() => handleSort(SORT_FIELD.volumeBNB)}>
+                <div>{t('Collection')}</div> {/* <Th textAlign="left">{t('Collection')}</Th>  */}
+                <div>
+                  {' '}
+                  {/* textAlign="left" style={{ cursor: 'pointer' }} onClick={() => handleSort(SORT_FIELD.volumeBNB)} */}
                   {t('Volume')}
                   {arrow(SORT_FIELD.volumeBNB)}
-                </Th>
+                </div>
                 {!isMobile && (
                   <>
-                    <Th textAlign="left" style={{ cursor: 'pointer' }} onClick={() => handleSort(SORT_FIELD.items)}>
+                    <div>
+                      {' '}
+                      {/* Th textAlign="left" style={{ cursor: 'pointer' }} onClick={() => handleSort(SORT_FIELD.items)} */}
                       {t('Items')}
                       {arrow(SORT_FIELD.items)}
-                    </Th>
-                    <Th textAlign="left" style={{ cursor: 'pointer' }} onClick={() => handleSort(SORT_FIELD.supply)}>
+                    </div>
+                    <div>
+                      {' '}
+                      {/* <Th textAlign="left" style={{ cursor: 'pointer' }} onClick={() => handleSort(SORT_FIELD.supply)}> */}
                       {t('Supply')}
                       {arrow(SORT_FIELD.supply)}
-                    </Th>
+                    </div>
                   </>
                 )}
               </tr>
@@ -146,31 +143,35 @@ const Collectible = () => {
                   : '0'
                 return (
                   <tr key={collection.address}>
-                    <Td>
+                    <div>
+                      {' '}
+                      {/* Td */}
                       <Link to={`${nftsBaseUrl}/collections/${collection.address}`}>
                         <Flex alignItems="center">
-                          <ProfileAvatar src={collection.avatar} width={48} height={48} mr="16px" />
+                          {/* <ProfileAvatar src={collection.avatar} width={48} height={48} mr="16px" /> */}
                           {collection.name}
                         </Flex>
                       </Link>
-                    </Td>
-                    <Td>
+                    </div>
+                    <div>
+                      {' '}
+                      {/* Td */}
                       <Flex alignItems="center">
                         {volume}
-                        <BnbUsdtPairTokenIcon ml="8px" />
+                        {/* <BnbUsdtPairTokenIcon ml="8px" /> */}
                       </Flex>
-                    </Td>
+                    </div>
                     {!isMobile && (
                       <>
-                        <Td>{collection.numberTokensListed}</Td>
-                        <Td>{collection.totalSupply}</Td>
+                        <div>{collection.numberTokensListed}</div> {/* Td */}
+                        <div>{collection.totalSupply}</div> {/* Td */}
                       </>
                     )}
                   </tr>
                 )
               })}
             </tbody>
-          </Table>
+          </div>
           <PageButtons>
             <Arrow
               onClick={() => {

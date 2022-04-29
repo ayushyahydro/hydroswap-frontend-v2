@@ -1,5 +1,5 @@
 import React from 'react'
-import { ArrowBackIcon, ArrowForwardIcon, BunnyCardsIcon, Flex, IconButton } from 'briws-uikit'
+import { ArrowBackIcon, ArrowForwardIcon, Flex, IconButton } from 'briws-uikit' // BunnyCardsIcon,
 import styled from 'styled-components'
 import { useGetCurrentEpoch, useGetSortedRounds } from 'state/predictions/hooks'
 import useSwiper from '../hooks/useSwiper'
@@ -53,9 +53,7 @@ const PrevNextNav = () => {
       <IconButton variant="text" scale="sm" onClick={handlePrevSlide}>
         <ArrowBackIcon color="primary" width="24px" />
       </IconButton>
-      <Icon onClick={handleSlideToLive}>
-        <BunnyCardsIcon width="64px" />
-      </Icon>
+      <Icon onClick={handleSlideToLive}>{/* <BunnyCardsIcon width="64px" /> */}</Icon>
       <IconButton variant="text" scale="sm" onClick={handleNextSlide}>
         <ArrowForwardIcon color="primary" width="24px" />
       </IconButton>

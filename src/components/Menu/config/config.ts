@@ -1,8 +1,8 @@
-import { MenuItemsType, DropdownMenuItemType } from 'briws-uikit'
+// import { MenuItemsType, DropdownMenuItemType } from 'briws-uikit'
 import { ContextApi } from 'contexts/Localization/types'
 import { nftsBaseUrl } from 'views/Nft/market/constants'
 
-export type ConfigMenuItemsType = MenuItemsType & { hideSubNav?: boolean }
+export type ConfigMenuItemsType = { hideSubNav?: boolean } // MenuItemsType
 
 const config: (t: ContextApi['t']) => ConfigMenuItemsType[] = (t) => [
   {
@@ -36,25 +36,6 @@ const config: (t: ContextApi['t']) => ConfigMenuItemsType[] = (t) => [
       },
     ],
   },
-  // {
-  //   label: t('Win'),
-  //   href: '/prediction',
-  //   icon: 'Trophy',
-  //   items: [
-  //     {
-  //       label: t('Trading Competition'),
-  //       href: '/competition',
-  //     },
-  //     {
-  //       label: t('Prediction (BETA)'),
-  //       href: '/prediction',
-  //     },
-  //     {
-  //       label: t('Lottery'),
-  //       href: '/lottery',
-  //     },
-  //   ],
-  // },
   {
     label: t('NFTs 🎨'),
     href: `${nftsBaseUrl}`,
@@ -84,33 +65,18 @@ const config: (t: ContextApi['t']) => ConfigMenuItemsType[] = (t) => [
         label: t('Stats'),
         href: '/info',
       },
-      // {
-      //   label: t('IFO'),
-      //   href: '/ifo',
-      // },
-      // {
-      //   label: t('Voting'),
-      //   href: '/voting',
-      // },
-      {
+      /* {
         type: DropdownMenuItemType.DIVIDER,
-      },
-      // {
-      //   label: t('Leaderboard'),
-      //   href: '/teams',
-      // },
-      // {
-      //   type: DropdownMenuItemType.DIVIDER,
-      // },
+      }, */
       {
         label: t('Project Hydro'),
         href: 'https://projecthydro.org',
-        type: DropdownMenuItemType.EXTERNAL_LINK,
+        type: '', // DropdownMenuItemType.EXTERNAL_LINK
       },
       {
         label: t('Docs'),
         href: 'https://docs.pancakeswap.finance',
-        type: DropdownMenuItemType.EXTERNAL_LINK,
+        type: '', //
       },
     ],
   },

@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link as ReactRouterLink } from 'react-router-dom'
 import styled from 'styled-components'
-import { BscScanIcon, Flex, IconButton, Link, Button, useModal } from 'briws-uikit'
+import { Flex, IconButton, Link, Button, useModal } from 'briws-uikit' // BscScanIcon,
 import { useTranslation } from 'contexts/Localization'
 import { getBscScanLink } from 'utils'
 import { formatNumber } from 'utils/formatBalance'
@@ -77,13 +77,14 @@ const ProfileHeader: React.FC<HeaderProps> = ({
         // TODO: Share functionality once user profiles routed by ID
         <Flex display="inline-flex">
           {accountPath && (
+            // @ts-ignore
             <StyledIconButton
               target="_blank"
               as="a"
               href={getBscScanLink(accountPath, 'address')}
               alt={t('View BscScan for user address')}
             >
-              <BscScanIcon width="20px" color="primary" />
+              {/* <BscScanIcon width="20px" color="primary" /> */}
             </StyledIconButton>
           )}
         </Flex>
@@ -152,6 +153,7 @@ const ProfileHeader: React.FC<HeaderProps> = ({
   return (
     <>
       <BannerHeader bannerImage={getBannerImage()} bannerAlt={t('User team banner')} avatar={getAvatar()} />
+      {/* @ts-ignore */}
       <MarketPageTitle pb="48px" title={getTitle()} description={renderDescription()}>
         <StatBox>
           <StatBoxItem title={t('NFT Collected')} stat={numNftCollected} />

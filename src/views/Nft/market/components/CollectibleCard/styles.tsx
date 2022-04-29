@@ -1,17 +1,5 @@
 import React, { ReactElement } from 'react'
-import {
-  Card,
-  BinanceIcon,
-  Box,
-  BoxProps,
-  CameraIcon,
-  Flex,
-  FlexProps,
-  SellIcon,
-  Text,
-  WalletFilledIcon,
-  Skeleton,
-} from 'briws-uikit'
+import { Card, BinanceIcon, Box, BoxProps, Flex, FlexProps, Text, Skeleton } from 'briws-uikit' // CameraIcon, SellIcon, WalletFilledIcon,
 import { Price } from '@pancakeswap/sdk'
 import { useTranslation } from 'contexts/Localization'
 import { multiplyPriceByAmount } from 'utils/prices'
@@ -66,6 +54,7 @@ interface MetaRowProps extends FlexProps {
 
 export const MetaRow: React.FC<MetaRowProps> = ({ title, children, ...props }) => (
   <Flex alignItems="center" justifyContent="space-between" {...props}>
+    {/* @ts-ignore */}
     <Text fontSize="12px" color="textSubtle" maxWidth="120px" ellipsis title={title}>
       {title}
     </Text>
@@ -79,19 +68,21 @@ export interface NftTagProps extends FlexProps {
 }
 
 export const NftTag: React.FC<NftTagProps> = ({ icon, color = 'text', children, ...props }) => (
-  <Flex display="inline-flex" alignItems="center" height="24px" {...props}>
+  <div display="inline-flex" alignItems="center" height="24px" {...props}>
     {icon}
     <Text color={color} fontSize="14px" fontWeight="600">
       {children}
     </Text>
-  </Flex>
+  </div>
 )
 
 export const ProfileNftTag: React.FC<NftTagProps> = (props) => {
   const { t } = useTranslation()
 
   return (
-    <NftTag icon={<CameraIcon mr="4px" width="16px" color="textSubtle" />} color="textSubtle" {...props}>
+    <NftTag icon={<div>blank</div>} color="textSubtle" {...props}>
+      {' '}
+      {/* <CameraIcon mr="4px" width="16px" color="textSubtle" /> */}
       {t('Profile')}
     </NftTag>
   )
@@ -101,7 +92,9 @@ export const WalletNftTag: React.FC<NftTagProps> = (props) => {
   const { t } = useTranslation()
 
   return (
-    <NftTag icon={<WalletFilledIcon mr="4px" width="16px" color="secondary" />} color="secondary" {...props}>
+    <NftTag icon={<div>blank</div>} color="secondary" {...props}>
+      {' '}
+      {/* <WalletFilledIcon mr="4px" width="16px" color="secondary" /> */}
       {t('Wallet')}
     </NftTag>
   )
@@ -111,7 +104,9 @@ export const SellingNftTag: React.FC<NftTagProps> = (props) => {
   const { t } = useTranslation()
 
   return (
-    <NftTag icon={<SellIcon mr="4px" width="16px" color="failure" />} color="failure" {...props}>
+    <NftTag icon={<div>blank</div>} color="failure" {...props}>
+      {' '}
+      {/* <SellIcon mr="4px" width="16px" color="failure" /> */}
       {t('Selling')}
     </NftTag>
   )
