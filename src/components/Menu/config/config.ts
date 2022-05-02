@@ -21,21 +21,21 @@ const config: (t: ContextApi['t']) => ConfigMenuItemsType[] = (t) => [
       },
     ],
   },
-  {
-    label: t('My Portfolio 💼'),
-    href: '/soon',
-    icon: 'Earn',
-    items: [
-      {
-        label: t('My Tokens'),
-        href: '/soon',
-      },
-      {
-        label: t('My NFTs'),
-        href: '/soon',
-      },
-    ],
-  },
+  // {
+  //   label: t('My Portfolio 💼'),
+  //   href: '/soon',
+  //   icon: 'Earn',
+  //   items: [
+  //     {
+  //       label: t('My Tokens'),
+  //       href: '/soon',
+  //     },
+  //     {
+  //       label: t('My NFTs'),
+  //       href: '/soon',
+  //     },
+  //   ],
+  // },
   // {
   //   label: t('Win'),
   //   href: '/prediction',
