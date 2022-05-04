@@ -1386,7 +1386,7 @@
   "The Locked Price & Closed Price are exactly the same (within 8 decimals), so neither side wins. All funds entered into UP and DOWN positions will go to the weekly CAKE burn.": "A zárolt ár és a zárt ár pontosan megegyezik (8 tizedes pontossággal), így egyik fél sem nyer. A FEL és LE pozíciókba bevitt összes pénz a heti CAKE égetésbe kerül.",
   "To Burn": "Elégethető",
   "Account": "Számla",
-  "PancakeSwap Info & Analytics": "PancakeSwap Info & Analitika",
+  "HydroSwap Info& Analytics": "HydroSwap Info& Analitika",
   "Top Tokens": "Vezető zsetonok",
   "Top Pools": "Vezető összevont alapok",
   "Your Watchlist": "A figyelőlistád",

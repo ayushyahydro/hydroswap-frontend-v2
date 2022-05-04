@@ -1386,7 +1386,7 @@
   "The Locked Price & Closed Price are exactly the same (within 8 decimals), so neither side wins. All funds entered into UP and DOWN positions will go to the weekly CAKE burn.": "ロック価格と取引期間終了時の価格が（8桁内で）全く同じであるため、どちらの側も当選しません。UPポジションとDOWNポジションに入れたすべての資金は、毎週のCAKEバーンに投入されます。",
   "To Burn": "バーン",
   "Account": "アカウント",
-  "PancakeSwap Info & Analytics": "PancakeSwap情報と分析",
+  "HydroSwap Info& Analytics": "PancakeSwap情報と分析",
   "Top Tokens": "上位トークン",
   "Top Pools": "上位プール",
   "Your Watchlist": "ウォッチリスト",

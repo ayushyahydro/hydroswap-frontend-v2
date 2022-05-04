@@ -1386,7 +1386,7 @@
   "The Locked Price & Closed Price are exactly the same (within 8 decimals), so neither side wins. All funds entered into UP and DOWN positions will go to the weekly CAKE burn.": "Lukittu hinta ja suljettu hinta ovat täsmälleen samat (kahdeksan desimaalin tarkkuudella), joten kumpikaan puoli ei voita. Kaikki YLÖS- ja ALAS-positioihin lisätyt varat menevät viikoittaiseen CAKE-polttoon.",
   "To Burn": "Poltettava",
   "Account": "Tili",
-  "PancakeSwap Info & Analytics": "PancakeSwapin tiedot ja analytiikka",
+  "HydroSwap Info& Analytics": "PancakeSwapin tiedot ja analytiikka",
   "Top Tokens": "Suosituimmat poletit",
   "Top Pools": "Suosituimmat poolit",
   "Your Watchlist": "Tarkkailulistasi",

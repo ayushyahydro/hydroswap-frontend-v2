@@ -1386,7 +1386,7 @@
   "The Locked Price & Closed Price are exactly the same (within 8 decimals), so neither side wins. All funds entered into UP and DOWN positions will go to the weekly CAKE burn.": "लॉक्ड प्राइस और क्लोज़्ड प्राइस असल में बराबर (8 दशमलव तक) ही है इसलिए कोई भी साइड नहीं जीती। अप और डाउन पोजिशन में शामिल सभी फंड साप्ताहिक CAKE बर्न में जाएंगे।",
   "To Burn": "बर्न करने हेतु",
   "Account": "खाता",
-  "PancakeSwap Info & Analytics": "PancakeSwap जानकारी और एनालिटिक्स",
+  "HydroSwap Info& Analytics": "PancakeSwap जानकारी और एनालिटिक्स",
   "Top Tokens": "शीर्ष टोकन",
   "Top Pools": "शीर्ष पूल",
   "Your Watchlist": "आपका वॉचलिस्ट",

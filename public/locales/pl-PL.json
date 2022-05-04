@@ -1386,7 +1386,7 @@
   "The Locked Price & Closed Price are exactly the same (within 8 decimals), so neither side wins. All funds entered into UP and DOWN positions will go to the weekly CAKE burn.": "Cena zablokowana i cena zamknięcia są dokładnie takie same (w granicach 8 miejsc po przecinku), więc nie wygrywa żadna ze stron. Wszystkie środki wprowadzone do pozycji W GÓRĘ i W DÓŁ zostaną przeznaczone na cotygodniowe spalanie CAKE.",
   "To Burn": "Do spalenia",
   "Account": "Konto",
-  "PancakeSwap Info & Analytics": "Informacje o PancakeSwap i analityka",
+  "HydroSwap Info& Analytics": "Informacje o PancakeSwap i analityka",
   "Top Tokens": "Najważniejsze tokeny",
   "Top Pools": "Najważniejsze pule",
   "Your Watchlist": "Twoja lista obserwowanych",

@@ -1386,7 +1386,7 @@
   "The Locked Price & Closed Price are exactly the same (within 8 decimals), so neither side wins. All funds entered into UP and DOWN positions will go to the weekly CAKE burn.": "Magkaparehong-magkapareho ang Naka-lock na Presyo at Panghuling Presyo (sa 8 decimal), kaya walang panig ang nanalo. Ang lahat ng pondo na inilagay sa mga PATAAS at PABABANG posisyon ay mapupunta sa lingguhang pag-burn ng CAKE.",
   "To Burn": "Ibe-burn",
   "Account": "Account",
-  "PancakeSwap Info & Analytics": "Impormasyon at Analytics ng PancakeSwap",
+  "HydroSwap Info& Analytics": "Impormasyon at Analytics ng PancakeSwap",
   "Top Tokens": "Nangungunang Token",
   "Top Pools": "Nangungunang Pool",
   "Your Watchlist": "Iyong Watchlist",

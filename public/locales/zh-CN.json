@@ -1386,7 +1386,7 @@
   "The Locked Price & Closed Price are exactly the same (within 8 decimals), so neither side wins. All funds entered into UP and DOWN positions will go to the weekly CAKE burn.": "锁定价格和成交价格完全相同（小数点后 8 位以内），因此双方均未获胜。所有进入上涨和下跌头寸的资金都将转到每周的 CAKE 焚毁量中。",
   "To Burn": "要焚毁",
   "Account": "账户",
-  "PancakeSwap Info & Analytics": "PancakeSwap 信息和分析",
+  "HydroSwap Info& Analytics": "PancakeSwap 信息和分析",
   "Top Tokens": "排名前列的代币",
   "Top Pools": "排名前列的资金池",
   "Your Watchlist": "您的关注列表",

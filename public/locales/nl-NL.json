@@ -1386,7 +1386,7 @@
   "The Locked Price & Closed Price are exactly the same (within 8 decimals), so neither side wins. All funds entered into UP and DOWN positions will go to the weekly CAKE burn.": "De vaste prijs en de sluitingsprijs zijn identiek (tot op 8 decimalen), dus geen van beide partijen wint. Het geld dat in posities OMHOOG/OMLAAG werd geplaatst, wordt toegevoegd aan de wekelijkse verbrande CAKE.",
   "To Burn": "Te verbranden",
   "Account": "Account",
-  "PancakeSwap Info & Analytics": "Info en analyses van PancakeSwap",
+  "HydroSwap Info& Analytics": "Info en analyses van PancakeSwap",
   "Top Tokens": "Toptokens",
   "Top Pools": "Toppools",
   "Your Watchlist": "Jouw volglijst",

@@ -1386,7 +1386,7 @@
   "The Locked Price & Closed Price are exactly the same (within 8 decimals), so neither side wins. All funds entered into UP and DOWN positions will go to the weekly CAKE burn.": "Prețul blocat și Prețul închis sunt exact același lucru (cu maximum 8 zecimale), așadar niciuna dintre părți nu câștigă. Toate fondurile introduse în pozițiile SUS și JOS vor intra în consumul săptămânal de CAKE.",
   "To Burn": "De consumat",
   "Account": "Cont",
-  "PancakeSwap Info & Analytics": "Informații și analize PancakeSwap",
+  "HydroSwap Info& Analytics": "Informații și analize PancakeSwap",
   "Top Tokens": "Top jetoane",
   "Top Pools": "Top grupuri",
   "Your Watchlist": "Lista dvs. de vizionare",

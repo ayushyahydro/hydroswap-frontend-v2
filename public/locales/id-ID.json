@@ -1386,7 +1386,7 @@
   "The Locked Price & Closed Price are exactly the same (within 8 decimals), so neither side wins. All funds entered into UP and DOWN positions will go to the weekly CAKE burn.": "Harga Terkunci & Harga Tutup persis sama (dalam 8 desimal), sehingga tidak ada pihak yang menang. Semua dana yang dimasukkan ke dalam posisi NAIK dan TURUN akan dimasukkan ke dalam CAKE hangus mingguan.",
   "To Burn": "Akan Hangus",
   "Account": "Akun",
-  "PancakeSwap Info & Analytics": "Analitik & Info PancakeSwap",
+  "HydroSwap Info& Analytics": "Analitik & Info PancakeSwap",
   "Top Tokens": "Token Top",
   "Top Pools": "Pool Top",
   "Your Watchlist": "Daftar Pantauan Anda",

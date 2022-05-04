@@ -1386,7 +1386,7 @@
   "The Locked Price & Closed Price are exactly the same (within 8 decimals), so neither side wins. All funds entered into UP and DOWN positions will go to the weekly CAKE burn.": "Η κλειδωμένη τιμή και η κλειστή τιμή είναι ακριβώς οι ίδιες (με ακρίβεια 8 δεκαδικών), οπότε καμία από τις δύο πλευρές δεν κερδίζει. Όλα τα κεφάλαια που τοποθετήθηκαν στις κατευθύνσεις ΠΑΝΩ και ΚΑΤΩ θα πάνε στο εβδομαδιαίο κάψιμο CAKE.",
   "To Burn": "Για κάψιμο",
   "Account": "Λογαριασμός",
-  "PancakeSwap Info & Analytics": "Πληροφορίες & Σταατιστικά PancakeSwap",
+  "HydroSwap Info& Analytics": "Πληροφορίες & Σταατιστικά PancakeSwap",
   "Top Tokens": "Κορυφαία νομίσματα",
   "Top Pools": "Κορυφαίες δεξαμενές",
   "Your Watchlist": "Η λίστα παρακολούθησής σας",
