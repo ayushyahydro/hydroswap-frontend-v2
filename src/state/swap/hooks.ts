@@ -393,7 +393,9 @@ export const useFetchPairPrices = ({
         // in that case try to get derived price
         const hasEnoughLiquidity =
           pairId === '0x2207b5e73385e96ee24e30e8f817f91f391e4c09' ||
-          pairId === '0x2aec0b613df9a978f3d95c4188792952ce1a5023'
+          pairId === '0x2aec0b613df9a978f3d95c4188792952ce1a5023' ||
+          pairId === '0xf03d5641ac7e13537c9e75b5c71a99f5c46c6026' ||
+          pairId === '0xe97f0442dd0874690954aff1a73b92d7bbe3e289'
             ? true
             : pairHasEnoughLiquidity(data, timeWindow)
         const newPairData = normalizeChartData(data, timeWindow) || []
