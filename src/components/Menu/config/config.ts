@@ -62,15 +62,7 @@ const config: (t: ContextApi['t']) => ConfigMenuItemsType[] = (t) => [
     items: [
       {
         label: t('Overview'),
-        href: '/soon',
-      },
-      {
-        label: t('Collections'),
-        href: '/soon',
-      },
-      {
-        label: t('Activity'),
-        href: '/soon',
+        href: '/nfts',
       },
     ],
   },

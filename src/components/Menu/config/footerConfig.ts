@@ -3,77 +3,69 @@ import { ContextApi } from 'contexts/Localization/types'
 
 export const footerLinks: (t: ContextApi['t']) => FooterLinkType[] = (t) => [
   {
-    label: t('About'),
+    label: t('Partners'),
     items: [
       {
-        label: t('Contact'),
-        href: 'https://docs.pancakeswap.finance/contact-us',
+        label: t('Hydrogen'),
+        href: 'https://www.hydrogenplatform.com',
       },
       {
-        label: t('Brand'),
-        href: 'https://docs.pancakeswap.finance/brand',
+        label: t('Bloceducare'),
+        href: 'https://www.blocedu.care/',
       },
       {
-        label: t('Blog'),
-        href: 'https://medium.com/pancakeswap',
+        label: t('Vulkania'),
+        href: 'https://vulkania.io/coins/hydro',
       },
       {
-        label: t('Community'),
-        href: 'https://docs.pancakeswap.finance/contact-us/telegram',
+        label: t('SparkPoint'),
+        href: 'https://sparkpoint.io/',
       },
       {
-        label: t('CAKE token'),
-        href: 'https://docs.pancakeswap.finance/tokenomics/cake',
+        label: t('TUSC'),
+        href: 'https://tusc.network/',
       },
       {
-        label: '—',
-      },
-      {
-        label: t('Online Store'),
-        href: 'https://pancakeswap.creator-spring.com/',
-        isHighlighted: true,
+        label: t('OpenDeFi'),
+        href: 'https://opendefi.finance/',
       },
     ],
   },
   {
-    label: t('Help'),
+    label: t('Products'),
     items: [
       {
-        label: t('Customer Support'),
-        href: 'https://docs.pancakeswap.finance/contact-us/customer-support',
+        label: t('Aegir on Android'),
+        href: 'https://play.google.com/store/apps/details?id=com.aegirwallet&amp;hl=en_US&amp;gl=US',
       },
       {
-        label: t('Troubleshooting'),
-        href: 'https://docs.pancakeswap.finance/help/troubleshooting',
+        label: t('Aegir on IOS'),
+        href: 'https://apps.apple.com/se/app/aegir-wallet/id1598353170?l=en',
       },
       {
-        label: t('Guides'),
-        href: 'https://docs.pancakeswap.finance/get-started',
+        label: t('Keresverse'),
+        href: 'https://keresverse.org',
+      },
+      {
+        label: t('Hydro Bridge'),
+        href: 'https://hydro-bridge.org',
+      },
+      {
+        label: t('HydroSwap'),
+        href: 'https://hydroswap.org',
       },
     ],
   },
   {
-    label: t('Developers'),
+    label: t('Resources'),
     items: [
       {
         label: 'Github',
-        href: 'https://github.com/pancakeswap',
+        href: 'https://github.com/HydroBlockchain',
       },
       {
-        label: t('Documentation'),
-        href: 'https://docs.pancakeswap.finance',
-      },
-      {
-        label: t('Bug Bounty'),
-        href: 'https://docs.pancakeswap.finance/code/bug-bounty',
-      },
-      {
-        label: t('Audits'),
-        href: 'https://docs.pancakeswap.finance/help/faq#is-pancakeswap-safe-has-pancakeswap-been-audited',
-      },
-      {
-        label: t('Careers'),
-        href: 'https://docs.pancakeswap.finance/hiring/become-a-chef',
+        label: t('Whitepaper'),
+        href: 'https://github.com/HydroBlockchain/whitepapers',
       },
     ],
   },
