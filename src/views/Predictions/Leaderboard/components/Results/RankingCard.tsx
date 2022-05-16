@@ -13,7 +13,7 @@ import {
   SubMenu,
   SubMenuItem,
   useModal,
-} from 'hydroswap-uikit'
+} from 'hydroswap-uikitv2'
 import { PredictionUser } from 'state/types'
 import { useGetProfileAvatar } from 'state/profile/hooks'
 import styled from 'styled-components'

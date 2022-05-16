@@ -1,5 +1,5 @@
 import React from 'react'
-import { Text, useMatchBreakpoints } from 'hydroswap-uikit'
+import { Text, useMatchBreakpoints } from 'hydroswap-uikitv2'
 import { DeserializedPool } from 'state/types'
 import { useVaultPoolByKey } from 'state/pools/hooks'
 import { useTranslation } from 'contexts/Localization'

@@ -1,5 +1,5 @@
 import React from 'react'
-import { Box, Flex } from 'hydroswap-uikit'
+import { Box, Flex } from 'hydroswap-uikitv2'
 import styled from 'styled-components'
 import HarvestCard from './HarvestCard'
 import UserDetail from './UserDetail'

@@ -1,4 +1,4 @@
-import { Box, Flex, Heading, Progress, ProgressBar } from 'hydroswap-uikit'
+import { Box, Flex, Heading, Progress, ProgressBar } from 'hydroswap-uikitv2'
 import { useTranslation } from 'contexts/Localization'
 import React from 'react'
 import styled from 'styled-components'

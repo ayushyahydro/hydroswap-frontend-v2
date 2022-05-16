@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import { IconButton, ArrowForwardIcon, ArrowBackIcon, ArrowLastIcon, Flex, Heading, Input } from 'hydroswap-uikit'
+import { IconButton, ArrowForwardIcon, ArrowBackIcon, ArrowLastIcon, Flex, Heading, Input } from 'hydroswap-uikitv2'
 import { useTranslation } from 'contexts/Localization'
 
 const StyledInput = styled(Input)`

@@ -1,7 +1,7 @@
 import React from 'react'
 import { useTranslation } from 'contexts/Localization'
 import styled from 'styled-components'
-import { Modal, Text, Button, OpenNewIcon, Link } from 'hydroswap-uikit'
+import { Modal, Text, Button, OpenNewIcon, Link } from 'hydroswap-uikitv2'
 import useTheme from 'hooks/useTheme'
 
 interface NotEnoughTokensModalProps {

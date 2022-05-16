@@ -1,6 +1,6 @@
 import React from 'react'
 import styled, { css, DefaultTheme } from 'styled-components'
-import { Box } from 'hydroswap-uikit'
+import { Box } from 'hydroswap-uikitv2'
 import { ClipFill } from '../types'
 
 interface CurveProps {

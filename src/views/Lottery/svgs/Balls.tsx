@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import { Svg, SvgProps, Text, Flex } from 'hydroswap-uikit'
+import { Svg, SvgProps, Text, Flex } from 'hydroswap-uikitv2'
 
 export const PinkBall: React.FC<SvgProps> = (props) => {
   return (

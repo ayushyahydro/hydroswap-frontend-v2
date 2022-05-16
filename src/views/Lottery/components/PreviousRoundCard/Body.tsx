@@ -12,7 +12,7 @@ import {
   CardRibbon,
   useMatchBreakpoints,
   BunnyPlaceholderIcon,
-} from 'hydroswap-uikit'
+} from 'hydroswap-uikitv2'
 import { LotteryRound } from 'state/types'
 import { useGetUserLotteriesGraphData, useLottery } from 'state/lottery/hooks'
 import { LotteryStatus } from 'config/constants/types'

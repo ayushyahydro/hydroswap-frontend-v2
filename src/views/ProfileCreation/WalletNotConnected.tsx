@@ -1,5 +1,5 @@
 import React from 'react'
-import { Heading, Text } from 'hydroswap-uikit'
+import { Heading, Text } from 'hydroswap-uikitv2'
 import { useTranslation } from 'contexts/Localization'
 import ConnectWalletButton from 'components/ConnectWalletButton'
 

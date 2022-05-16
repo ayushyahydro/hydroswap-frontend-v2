@@ -1,4 +1,4 @@
-import { Flex, Link } from 'hydroswap-uikit'
+import { Flex, Link } from 'hydroswap-uikitv2'
 import styled from 'styled-components'
 
 export const StyledArtistSectionContainer = styled(Flex)<{ $isDark: boolean }>`

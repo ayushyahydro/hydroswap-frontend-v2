@@ -1,5 +1,5 @@
 import React from 'react'
-import { Heading, Text, Flex } from 'hydroswap-uikit'
+import { Heading, Text, Flex } from 'hydroswap-uikitv2'
 import styled from 'styled-components'
 import truncateHash from 'utils/truncateHash'
 import { LeaderboardDataItem } from '../../../types'

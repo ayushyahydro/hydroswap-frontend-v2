@@ -14,7 +14,7 @@ import {
   useMatchBreakpoints,
   Skeleton,
   Heading,
-} from 'hydroswap-uikit'
+} from 'hydroswap-uikitv2'
 import { useGetProfileAvatar } from 'state/profile/hooks'
 import useTheme from 'hooks/useTheme'
 import styled from 'styled-components'

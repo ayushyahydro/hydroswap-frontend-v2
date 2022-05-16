@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { Flex, FlexProps } from 'hydroswap-uikit'
+import { Flex, FlexProps } from 'hydroswap-uikitv2'
 import { random } from 'lodash'
 import uniqueId from 'lodash/uniqueId'
 import { parseRetrievedNumber } from '../helpers'

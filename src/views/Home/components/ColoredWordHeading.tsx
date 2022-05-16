@@ -1,5 +1,5 @@
 import React from 'react'
-import { Colors, Heading, TextProps } from 'hydroswap-uikit'
+import { Colors, Heading, TextProps } from 'hydroswap-uikitv2'
 import useTheme from 'hooks/useTheme'
 
 interface HeadingProps extends TextProps {

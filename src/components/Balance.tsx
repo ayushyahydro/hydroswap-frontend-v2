@@ -1,6 +1,6 @@
 import React, { useEffect, useRef } from 'react'
 import CountUp from 'react-countup'
-import { Text, TextProps } from 'hydroswap-uikit'
+import { Text, TextProps } from 'hydroswap-uikitv2'
 
 interface BalanceProps extends TextProps {
   value: number

@@ -1,6 +1,6 @@
 import React, { useRef, useEffect, useState } from 'react'
 import styled from 'styled-components'
-import { Box, Flex, Text, Input, CheckmarkIcon, PencilIcon, IconButton } from 'hydroswap-uikit'
+import { Box, Flex, Text, Input, CheckmarkIcon, PencilIcon, IconButton } from 'hydroswap-uikitv2'
 import { useTranslation } from 'contexts/Localization'
 import { CalculatorMode, RoiCalculatorReducerState } from './useRoiCalculatorReducer'
 

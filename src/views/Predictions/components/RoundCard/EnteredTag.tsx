@@ -1,6 +1,6 @@
 import React from 'react'
 import { ethers } from 'ethers'
-import { CheckmarkCircleIcon, CheckmarkCircleFillIcon, Tag, useTooltip } from 'hydroswap-uikit'
+import { CheckmarkCircleIcon, CheckmarkCircleFillIcon, Tag, useTooltip } from 'hydroswap-uikitv2'
 import { useTranslation } from 'contexts/Localization'
 import { formatBnbv2 } from '../../helpers'
 

@@ -1,5 +1,5 @@
 import React from 'react'
-import { BunnyPlaceholderIcon, Flex, Heading } from 'hydroswap-uikit'
+import { BunnyPlaceholderIcon, Flex, Heading } from 'hydroswap-uikitv2'
 import { useTranslation } from 'contexts/Localization'
 
 interface ComingSoonProps {

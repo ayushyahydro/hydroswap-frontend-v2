@@ -1,4 +1,4 @@
-import { CheckmarkIcon, Flex, FlexProps, Text } from 'hydroswap-uikit'
+import { CheckmarkIcon, Flex, FlexProps, Text } from 'hydroswap-uikitv2'
 import React from 'react'
 
 type ReadyTextProps = {

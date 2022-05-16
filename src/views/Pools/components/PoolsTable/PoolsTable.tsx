@@ -1,6 +1,6 @@
 import React, { useRef } from 'react'
 import styled from 'styled-components'
-import { Button, ChevronUpIcon } from 'hydroswap-uikit'
+import { Button, ChevronUpIcon } from 'hydroswap-uikitv2'
 import { useTranslation } from 'contexts/Localization'
 import { DeserializedPool } from 'state/types'
 import PoolRow from './PoolRow'

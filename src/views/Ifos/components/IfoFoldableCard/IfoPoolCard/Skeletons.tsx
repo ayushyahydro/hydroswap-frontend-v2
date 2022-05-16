@@ -1,5 +1,5 @@
 import React from 'react'
-import { Flex, Skeleton } from 'hydroswap-uikit'
+import { Flex, Skeleton } from 'hydroswap-uikitv2'
 
 export const SkeletonCardActions = () => {
   return <Skeleton height="48px" />

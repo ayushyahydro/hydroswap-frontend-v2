@@ -12,7 +12,7 @@ import {
   BlockIcon,
   Button,
   useModal,
-} from 'hydroswap-uikit'
+} from 'hydroswap-uikitv2'
 import styled from 'styled-components'
 import { useTranslation } from 'contexts/Localization'
 import { LIVE } from 'config/constants/trading-competition/phases'

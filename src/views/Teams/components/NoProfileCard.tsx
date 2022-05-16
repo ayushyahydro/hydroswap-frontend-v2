@@ -1,5 +1,5 @@
 import React from 'react'
-import { Button, Card, CardBody, Flex, Heading, Text } from 'hydroswap-uikit'
+import { Button, Card, CardBody, Flex, Heading, Text } from 'hydroswap-uikitv2'
 import { useTranslation } from 'contexts/Localization'
 import { Link } from 'react-router-dom'
 

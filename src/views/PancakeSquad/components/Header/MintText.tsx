@@ -1,4 +1,4 @@
-import { Flex, lightColors, Text } from 'hydroswap-uikit'
+import { Flex, lightColors, Text } from 'hydroswap-uikitv2'
 import { ContextApi } from 'contexts/Localization/types'
 import React from 'react'
 import { SaleStatusEnum, UserStatusEnum } from '../../types'

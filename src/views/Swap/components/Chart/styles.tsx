@@ -1,4 +1,4 @@
-import { Box } from 'hydroswap-uikit'
+import { Box } from 'hydroswap-uikitv2'
 import styled from 'styled-components'
 
 export const StyledPriceChart = styled(Box)<{ $isDark: boolean; $isExpanded: boolean }>`

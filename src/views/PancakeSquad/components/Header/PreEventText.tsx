@@ -1,5 +1,5 @@
 import React from 'react'
-import { darkColors, Text } from 'hydroswap-uikit'
+import { darkColors, Text } from 'hydroswap-uikitv2'
 import { ContextApi } from 'contexts/Localization/types'
 import { SaleStatusEnum, UserStatusEnum } from '../../types'
 

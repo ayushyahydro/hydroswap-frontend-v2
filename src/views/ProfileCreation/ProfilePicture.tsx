@@ -1,6 +1,6 @@
 import React, { useContext, useState } from 'react'
 import styled from 'styled-components'
-import { AutoRenewIcon, Button, Card, CardBody, Heading, Text } from 'hydroswap-uikit'
+import { AutoRenewIcon, Button, Card, CardBody, Heading, Text } from 'hydroswap-uikitv2'
 import { useWeb3React } from '@web3-react/core'
 import { Link as RouterLink } from 'react-router-dom'
 import { getPancakeProfileAddress } from 'utils/addressHelpers'

@@ -1,6 +1,6 @@
 import React from 'react'
 import BigNumber from 'bignumber.js'
-import { Text, TextProps } from 'hydroswap-uikit'
+import { Text, TextProps } from 'hydroswap-uikitv2'
 import { useTranslation } from 'contexts/Localization'
 
 interface PercentageOfTotalProps extends TextProps {

@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { InjectedModalProps } from 'hydroswap-uikit'
+import { InjectedModalProps } from 'hydroswap-uikitv2'
 import { useWeb3React } from '@web3-react/core'
 import { parseUnits } from 'ethers/lib/utils'
 import useTheme from 'hooks/useTheme'

@@ -1,5 +1,5 @@
 import React from 'react'
-import { Modal, ModalBody, Text, Image, Button, Link, OpenNewIcon } from 'hydroswap-uikit'
+import { Modal, ModalBody, Text, Image, Button, Link, OpenNewIcon } from 'hydroswap-uikitv2'
 import { Token } from '@pancakeswap/sdk'
 import { useTranslation } from 'contexts/Localization'
 

@@ -1,6 +1,6 @@
 import React, { KeyboardEvent, RefObject, useCallback, useMemo, useRef, useState, useEffect } from 'react'
 import { Currency, ETHER, Token } from '@pancakeswap/sdk'
-import { Text, Input, Box } from 'hydroswap-uikit'
+import { Text, Input, Box } from 'hydroswap-uikitv2'
 import { useTranslation } from 'contexts/Localization'
 import { FixedSizeList } from 'react-window'
 import { useAudioModeManager } from 'state/user/hooks'

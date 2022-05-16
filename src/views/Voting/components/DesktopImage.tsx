@@ -1,4 +1,4 @@
-import { Image } from 'hydroswap-uikit'
+import { Image } from 'hydroswap-uikitv2'
 import styled from 'styled-components'
 
 const DesktopImage = styled(Image)`

@@ -1,5 +1,5 @@
 import React from 'react'
-import { InstagramIcon, TwitterIcon } from 'hydroswap-uikit'
+import { InstagramIcon, TwitterIcon } from 'hydroswap-uikitv2'
 import { ContextApi } from 'contexts/Localization/types'
 
 type ArtistConfigType = {

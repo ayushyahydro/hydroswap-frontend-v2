@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useMemo } from 'react'
 import { useWeb3React } from '@web3-react/core'
-import { Flex } from 'hydroswap-uikit'
+import { Flex } from 'hydroswap-uikitv2'
 import orderBy from 'lodash/orderBy'
 import sum from 'lodash/sum'
 import Page from 'components/Layout/Page'

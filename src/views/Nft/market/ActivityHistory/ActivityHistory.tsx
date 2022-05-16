@@ -12,7 +12,7 @@ import {
   Text,
   Th,
   useMatchBreakpoints,
-} from 'hydroswap-uikit'
+} from 'hydroswap-uikitv2'
 import { getCollectionActivity, getNftsFromDifferentCollectionsApi } from 'state/nftMarket/helpers'
 import Container from 'components/Layout/Container'
 import TableLoader from 'components/TableLoader'

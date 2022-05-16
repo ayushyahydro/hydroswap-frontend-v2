@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import { ChevronRightIcon, Button as UIKitButton, AutoRenewIcon, ChevronDownIcon, Box, Flex } from 'hydroswap-uikit'
+import { ChevronRightIcon, Button as UIKitButton, AutoRenewIcon, ChevronDownIcon, Box, Flex } from 'hydroswap-uikitv2'
 import { useTranslation } from 'contexts/Localization'
 
 export enum ButtonArrangement {

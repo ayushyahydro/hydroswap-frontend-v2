@@ -1,5 +1,5 @@
 import React from 'react'
-import { Card, Heading } from 'hydroswap-uikit'
+import { Card, Heading } from 'hydroswap-uikitv2'
 import { useTranslation } from 'contexts/Localization'
 import Page from 'components/Layout/Page'
 import PageHeader from 'components/PageHeader'

@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import { Button } from 'hydroswap-uikit'
+import { Button } from 'hydroswap-uikitv2'
 import { ContextApi } from 'contexts/Localization/types'
 import { UserStatusEnum } from 'views/PancakeSquad/types'
 

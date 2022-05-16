@@ -1,4 +1,4 @@
-import { Box, Flex, HelpIcon, Skeleton, Text, useMatchBreakpoints, useTooltip } from 'hydroswap-uikit'
+import { Box, Flex, HelpIcon, Skeleton, Text, useMatchBreakpoints, useTooltip } from 'hydroswap-uikitv2'
 import Balance from 'components/Balance'
 import { useTranslation } from 'contexts/Localization'
 import { useBUSDCakeAmount } from 'hooks/useBUSDPrice'

@@ -1,5 +1,5 @@
 import React from 'react'
-import { Flex, Text, Heading, Image } from 'hydroswap-uikit'
+import { Flex, Text, Heading, Image } from 'hydroswap-uikitv2'
 import styled from 'styled-components'
 import { useTranslation } from 'contexts/Localization'
 import useTheme from 'hooks/useTheme'

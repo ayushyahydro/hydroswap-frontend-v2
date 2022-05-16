@@ -15,7 +15,7 @@ import {
   TooltipText,
   Box,
   Link,
-} from 'hydroswap-uikit'
+} from 'hydroswap-uikitv2'
 import { PoolIds, Ifo } from 'config/constants/types'
 import { WalletIfoData, PublicIfoData } from 'views/Ifos/types'
 import { useTranslation } from 'contexts/Localization'

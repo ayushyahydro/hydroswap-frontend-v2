@@ -1,5 +1,5 @@
 import React from 'react'
-import { Text, Heading, Card, CardHeader, CardBody, Box, BoxProps } from 'hydroswap-uikit'
+import { Text, Heading, Card, CardHeader, CardBody, Box, BoxProps } from 'hydroswap-uikitv2'
 import FoldableText from './FoldableText'
 
 interface Props extends BoxProps {

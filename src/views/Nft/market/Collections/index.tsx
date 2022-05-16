@@ -12,7 +12,7 @@ import {
   ArrowBackIcon,
   Text,
   ArrowForwardIcon,
-} from 'hydroswap-uikit'
+} from 'hydroswap-uikitv2'
 import styled from 'styled-components'
 import { Link } from 'react-router-dom'
 import { useGetCollections } from 'state/nftMarket/hooks'
