@@ -15,7 +15,7 @@ import {
   Button,
   Link,
   HelpIcon,
-} from 'hydroswap-uikit'
+} from 'hydroswap-uikitv2'
 import { BASE_BSC_SCAN_URL } from 'config'
 import { useBlock } from 'state/block/hooks'
 import { useVaultPoolByKey, useVaultPools } from 'state/pools/hooks'

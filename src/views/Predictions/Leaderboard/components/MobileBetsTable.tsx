@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { Flex, Text, ChevronUpIcon, ChevronDownIcon } from 'hydroswap-uikit'
+import { Flex, Text, ChevronUpIcon, ChevronDownIcon } from 'hydroswap-uikitv2'
 import { useTranslation } from 'contexts/Localization'
 import PreviousBetsTable from './PreviousBetsTable'
 

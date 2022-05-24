@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import { Box, Flex } from 'hydroswap-uikit'
+import { Box, Flex } from 'hydroswap-uikitv2'
 import Footer from 'components/Menu/Footer'
 import { PageMeta } from 'components/Layout/Page'
 

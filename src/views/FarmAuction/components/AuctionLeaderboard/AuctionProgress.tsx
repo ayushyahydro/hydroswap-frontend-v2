@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import { Progress } from 'hydroswap-uikit'
+import { Progress } from 'hydroswap-uikitv2'
 import { differenceInSeconds } from 'date-fns'
 import { Auction, AuctionStatus } from 'config/constants/types'
 import { useSlowFresh } from 'hooks/useRefresh'

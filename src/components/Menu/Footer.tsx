@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import { ButtonMenu, ButtonMenuItem, LinkExternal, Flex, Svg, Image, Button } from 'hydroswap-uikit'
+import { ButtonMenu, ButtonMenuItem, LinkExternal, Flex, Svg, Image, Button } from 'hydroswap-uikitv2'
 import { useTranslation } from 'contexts/Localization'
 
 const Wrapper = styled.div<{ $isSide: boolean }>`
@@ -43,12 +43,12 @@ const Footer: React.FC<{ variant?: FooterVariant }> = ({ variant = 'default' }) 
   return (
     <Wrapper $isSide={isSide}>
       <Flex flexDirection={isSide ? 'column' : ['column', 'column', 'row']} alignItems="center">
-        <ButtonMenu variant="subtle" scale="sm" activeIndex={0}>
+        {/* <ButtonMenu variant="subtle" scale="sm" activeIndex={0}>
           <ButtonMenuItem>V2</ButtonMenuItem>
           <ButtonMenuItem as="a" href="https://v1exchange.pancakeswap.finance/#/">
             {t('V1 (old)')}
           </ButtonMenuItem>
-        </ButtonMenu>
+        </ButtonMenu> */}
         <LinkExternal
           id="ercBridge"
           href="https://hydro-bridge.org/"
@@ -71,7 +71,7 @@ const Footer: React.FC<{ variant?: FooterVariant }> = ({ variant = 'default' }) 
             id="clickExchangeHelp"
             as="a"
             external
-            href="https://docs.pancakeswap.finance/products/pancakeswap-exchange"
+            href=""
             variant="subtle"
           >
             {t('Need help ?')}
@@ -81,6 +81,7 @@ const Footer: React.FC<{ variant?: FooterVariant }> = ({ variant = 'default' }) 
           </Svg>
         </BubbleWrapper>
         <Image src="/images/help.svg" alt="Get some help" width={1} height={108} style={{ opacity: 0 }} />
+      
       </Flex>
     </Wrapper>
   )

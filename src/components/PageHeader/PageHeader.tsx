@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import { Box } from 'hydroswap-uikit'
+import { Box } from 'hydroswap-uikitv2'
 import Container from '../Layout/Container'
 import { PageHeaderProps } from './types'
 

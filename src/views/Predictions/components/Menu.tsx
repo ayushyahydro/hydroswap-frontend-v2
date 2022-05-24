@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import { Link } from 'react-router-dom'
-import { Flex, HelpIcon, Button, PrizeIcon } from 'hydroswap-uikit'
+import { Flex, HelpIcon, Button, PrizeIcon } from 'hydroswap-uikitv2'
 import FlexRow from './FlexRow'
 import { PricePairLabel, TimerLabel } from './Label'
 import PrevNextNav from './PrevNextNav'

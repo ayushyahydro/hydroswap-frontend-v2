@@ -1,4 +1,4 @@
-import { Box, Flex } from 'hydroswap-uikit'
+import { Box, Flex } from 'hydroswap-uikitv2'
 import styled from 'styled-components'
 
 export const StyledSwapContainer = styled(Flex)<{ $isChartExpanded: boolean }>`
@@ -11,7 +11,7 @@ export const StyledSwapContainer = styled(Flex)<{ $isChartExpanded: boolean }>`
   }
 
   ${({ theme }) => theme.mediaQueries.xxl} {
-    ${({ $isChartExpanded }) => ($isChartExpanded ? 'padding: 0 120px' : 'padding: 0 40px')};
+    ${({ $isChartExpanded }) => ($isChartExpanded ? 'padding: 0 40px' : 'padding: 0 40px')};
   }
 `
 

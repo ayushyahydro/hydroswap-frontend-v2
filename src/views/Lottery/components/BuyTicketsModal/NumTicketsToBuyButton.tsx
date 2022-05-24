@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import { Button } from 'hydroswap-uikit'
+import { Button } from 'hydroswap-uikitv2'
 
 interface NumTicketsToBuyButtonProps {
   onClick: () => void

@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import { ListViewIcon, CardViewIcon, IconButton } from 'hydroswap-uikit'
+import { ListViewIcon, CardViewIcon, IconButton } from 'hydroswap-uikitv2'
 import { ViewMode } from 'state/user/actions'
 
 interface ToggleViewProps {

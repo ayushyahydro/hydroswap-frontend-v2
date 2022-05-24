@@ -1,5 +1,5 @@
 import React from 'react'
-import { BackgroundImage, BoxProps } from 'hydroswap-uikit'
+import { BackgroundImage, BoxProps } from 'hydroswap-uikitv2'
 import PlaceholderImage from './PlaceholderImage'
 
 interface PreviewImageProps extends BoxProps {

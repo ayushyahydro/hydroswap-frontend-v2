@@ -1,4 +1,4 @@
-import { useMatchBreakpoints, useModal } from 'hydroswap-uikit'
+import { useMatchBreakpoints, useModal } from 'hydroswap-uikitv2'
 import { useWeb3React } from '@web3-react/core'
 import { PageMeta } from 'components/Layout/Page'
 import PageLoader from 'components/Loader/PageLoader'

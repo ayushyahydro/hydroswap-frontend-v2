@@ -1,12 +1,14 @@
-import { MenuItemsType, DropdownMenuItemType } from 'hydroswap-uikit'
+import { MenuItemsType, DropdownMenuItemType } from 'hydroswap-uikitv2'
 import { ContextApi } from 'contexts/Localization/types'
 import { nftsBaseUrl } from 'views/Nft/market/constants'
 
 export type ConfigMenuItemsType = MenuItemsType & { hideSubNav?: boolean }
 
+
 const config: (t: ContextApi['t']) => ConfigMenuItemsType[] = (t) => [
   {
-    label: t('Trade 📈'),
+    label: t('Trade'),
+    // label: t('Trade 📈'),
     icon: 'Swap',
     href: '/swap',
     showItemsOnMobile: false,
@@ -22,7 +24,8 @@ const config: (t: ContextApi['t']) => ConfigMenuItemsType[] = (t) => [
     ],
   },
   {
-    label: t('My Portfolio 💼'),
+    label: t('My Portfolio'),
+    // label: t('My Portfolio 💼'),
     href: '/soon',
     icon: 'Earn',
     items: [
@@ -56,7 +59,8 @@ const config: (t: ContextApi['t']) => ConfigMenuItemsType[] = (t) => [
   //   ],
   // },
   {
-    label: t('NFTs 🎨'),
+    label: t('NFTs'),
+    // label: t('NFTs 🎨'),
     href: `${nftsBaseUrl}`,
     icon: 'Nft',
     items: [

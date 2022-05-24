@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import { Flex, Image, Text } from 'hydroswap-uikit'
+import { Flex, Image, Text } from 'hydroswap-uikitv2'
 
 export const StyledSortButton = styled.button`
   border: none;

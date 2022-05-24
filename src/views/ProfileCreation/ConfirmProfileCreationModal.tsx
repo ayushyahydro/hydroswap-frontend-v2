@@ -1,5 +1,5 @@
 import React from 'react'
-import { Modal, Flex, Text } from 'hydroswap-uikit'
+import { Modal, Flex, Text } from 'hydroswap-uikitv2'
 import { ethers } from 'ethers'
 import { formatUnits } from '@ethersproject/units'
 import { useAppDispatch } from 'state'

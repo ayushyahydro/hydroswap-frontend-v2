@@ -1,4 +1,4 @@
-import { Flex, FlexProps, Skeleton, Text } from 'hydroswap-uikit'
+import { Flex, FlexProps, Skeleton, Text } from 'hydroswap-uikitv2'
 import React, { FC } from 'react'
 import { formatAmount, formatAmountNotation } from 'views/Info/utils/formatInfoNumbers'
 

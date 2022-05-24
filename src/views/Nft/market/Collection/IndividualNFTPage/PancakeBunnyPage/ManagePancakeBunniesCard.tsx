@@ -12,7 +12,7 @@ import {
   BinanceIcon,
   Skeleton,
   useModal,
-} from 'hydroswap-uikit'
+} from 'hydroswap-uikitv2'
 import { useWeb3React } from '@web3-react/core'
 import { useUserNfts } from 'state/nftMarket/hooks'
 import { NftLocation, NftToken, UserNftInitializationState } from 'state/nftMarket/types'

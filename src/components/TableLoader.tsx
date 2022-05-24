@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import { Flex, Skeleton, Td, useMatchBreakpoints } from 'hydroswap-uikit'
+import { Flex, Skeleton, Td, useMatchBreakpoints } from 'hydroswap-uikitv2'
 
 const GridItem = styled(Flex)`
   align-items: center;

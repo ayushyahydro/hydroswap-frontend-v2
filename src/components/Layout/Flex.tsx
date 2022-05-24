@@ -1,4 +1,4 @@
-import { Flex } from 'hydroswap-uikit'
+import { Flex } from 'hydroswap-uikitv2'
 import styled from 'styled-components'
 
 const FlexLayout = styled.div`

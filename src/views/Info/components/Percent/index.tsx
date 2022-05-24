@@ -1,5 +1,5 @@
 import React from 'react'
-import { Text, TextProps } from 'hydroswap-uikit'
+import { Text, TextProps } from 'hydroswap-uikitv2'
 
 export interface PercentProps extends TextProps {
   value: number | undefined

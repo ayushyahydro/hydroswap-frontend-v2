@@ -1,6 +1,6 @@
 import React from 'react'
 import ReactDatePicker, { ReactDatePickerProps } from 'react-datepicker'
-import { Input, InputProps } from 'hydroswap-uikit'
+import { Input, InputProps } from 'hydroswap-uikitv2'
 
 import 'react-datepicker/dist/react-datepicker.css'
 

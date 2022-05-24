@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import { Card, Radio } from 'hydroswap-uikit'
+import { Card, Radio } from 'hydroswap-uikitv2'
 
 interface SelectionCardProps {
   name: string

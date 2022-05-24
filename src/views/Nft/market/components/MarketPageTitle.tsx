@@ -1,5 +1,5 @@
 import React, { ReactNode } from 'react'
-import { Box, Grid, GridProps, Heading } from 'hydroswap-uikit'
+import { Box, Grid, GridProps, Heading } from 'hydroswap-uikitv2'
 
 interface MarketPageTitleProps extends GridProps {
   title: string

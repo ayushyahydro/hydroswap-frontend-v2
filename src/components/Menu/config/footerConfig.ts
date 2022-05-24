@@ -1,4 +1,4 @@
-import { FooterLinkType } from 'hydroswap-uikit'
+import { FooterLinkType } from 'hydroswap-uikitv2'
 import { ContextApi } from 'contexts/Localization/types'
 
 export const footerLinks: (t: ContextApi['t']) => FooterLinkType[] = (t) => [
@@ -6,23 +6,15 @@ export const footerLinks: (t: ContextApi['t']) => FooterLinkType[] = (t) => [
     label: t('About'),
     items: [
       {
-        label: t('Contact'),
-        href: 'https://docs.pancakeswap.finance/contact-us',
-      },
-      {
-        label: t('Brand'),
-        href: 'https://docs.pancakeswap.finance/brand',
-      },
-      {
         label: t('Blog'),
         href: 'https://medium.com/pancakeswap',
       },
       {
         label: t('Community'),
-        href: 'https://docs.pancakeswap.finance/contact-us/telegram',
+        href: 'https://t.me/projecthydro',
       },
       {
-        label: t('CAKE token'),
+        label: t('Hydro token'),
         href: 'https://docs.pancakeswap.finance/tokenomics/cake',
       },
       {
@@ -66,14 +58,6 @@ export const footerLinks: (t: ContextApi['t']) => FooterLinkType[] = (t) => [
       {
         label: t('Bug Bounty'),
         href: 'https://docs.pancakeswap.finance/code/bug-bounty',
-      },
-      {
-        label: t('Audits'),
-        href: 'https://docs.pancakeswap.finance/help/faq#is-pancakeswap-safe-has-pancakeswap-been-audited',
-      },
-      {
-        label: t('Careers'),
-        href: 'https://docs.pancakeswap.finance/hiring/become-a-chef',
       },
     ],
   },

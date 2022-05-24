@@ -1,5 +1,5 @@
 import React from 'react'
-import { Heading, Button, Text } from 'hydroswap-uikit'
+import { Heading, Button, Text } from 'hydroswap-uikitv2'
 import history from 'routerHistory'
 import { useTranslation } from 'contexts/Localization'
 import { CompetitionProps } from 'views/TradingCompetition/types'

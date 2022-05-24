@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import { Box, Breadcrumbs, Text } from 'hydroswap-uikit'
+import { Box, Breadcrumbs, Text } from 'hydroswap-uikitv2'
 import { useTranslation } from 'contexts/Localization'
 
 const Crumbs = () => {

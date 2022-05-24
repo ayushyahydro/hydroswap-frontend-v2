@@ -1,4 +1,4 @@
-import { Card, CardBody, Flex, Heading, Image, ProfileAvatar } from 'hydroswap-uikit'
+import { Card, CardBody, Flex, Heading, Image, ProfileAvatar } from 'hydroswap-uikitv2'
 import React from 'react'
 import { Link } from 'react-router-dom'
 import styled, { css } from 'styled-components'

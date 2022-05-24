@@ -1,7 +1,7 @@
 import React, { useMemo } from 'react'
 import styled from 'styled-components'
 import { Pair } from '@pancakeswap/sdk'
-import { Text, Flex, CardBody, CardFooter, Button, AddIcon } from 'hydroswap-uikit'
+import { Text, Flex, CardBody, CardFooter, Button, AddIcon } from 'hydroswap-uikitv2'
 import { Link } from 'react-router-dom'
 import { useTranslation } from 'contexts/Localization'
 import useActiveWeb3React from 'hooks/useActiveWeb3React'
@@ -13,6 +13,10 @@ import Dots from '../../components/Loader/Dots'
 import { AppHeader, AppBody } from '../../components/App'
 import Page from '../Page'
 
+
+const StyledButton = styled(Button)`
+
+`
 const Body = styled(CardBody)`
   background-color: ${({ theme }) => theme.colors.dropdownDeep};
 `
@@ -93,16 +97,18 @@ export default function Pool() {
               <Text color="textSubtle" mb="8px">
                 {t("Don't see a pool you joined?")}
               </Text>
-              <Button id="import-pool-link" variant="secondary" scale="sm" as={Link} to="/find">
+              <StyledButton id="import-pool-link" variant="secondary" scale="sm" as={Link} to="/find">
                 {t('Find other LP tokens')}
-              </Button>
+              </StyledButton>
             </Flex>
           )}
         </Body>
         <CardFooter style={{ textAlign: 'center' }}>
-          <Button id="join-pool-button" as={Link} to="/add" width="100%" startIcon={<AddIcon color="white" />}>
+          <StyledButton id="join-pool-StyledButton" as={Link} to="/add" width="100%" startIcon={<AddIcon color="white" />}
+           style={{ textAlign: 'center' }}
+          >
             {t('Add Liquidity')}
-          </Button>
+          </StyledButton>
         </CardFooter>
       </AppBody>
     </Page>

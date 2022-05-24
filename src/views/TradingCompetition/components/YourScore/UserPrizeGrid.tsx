@@ -1,4 +1,4 @@
-import { BlockIcon, CheckmarkCircleIcon, Flex, Image, Skeleton, Text } from 'hydroswap-uikit'
+import { BlockIcon, CheckmarkCircleIcon, Flex, Image, Skeleton, Text } from 'hydroswap-uikitv2'
 import { useTranslation } from 'contexts/Localization'
 import React from 'react'
 import styled from 'styled-components'

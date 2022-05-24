@@ -12207,12 +12207,23 @@ husky@^7.0.0:
   resolved "https://registry.yarnpkg.com/husky/-/husky-7.0.2.tgz#21900da0f30199acca43a46c043c4ad84ae88dff"
   integrity sha512-8yKEWNX4z2YsofXAMT7KvA1g8p+GxtB1ffV8XtpAEGuXNAbCV5wdNKH+qTpw8SM9fh4aMPDR+yQuKfgnreyZlg==
 
-hydroswap-uikit@^0.0.5:
+hydroswap-uikitv2@^0.0.5:
   version "0.0.5"
-  resolved "https://registry.yarnpkg.com/hydroswap-uikit/-/hydroswap-uikit-0.0.5.tgz#8b8cec31254c339dee88e57b3bd1fdbfa7c90403"
+  resolved "https://registry.yarnpkg.com/hydroswap-uikitv2/-/hydroswap-uikitv2-0.0.5.tgz#8b8cec31254c339dee88e57b3bd1fdbfa7c90403"
   integrity sha512-PdNJpjfZHTt2t8QEFgNh6cVBTrs73aD23UkhP7vk4AzTtvqRBWNicEXNDVJmz6payqNTptGFmp+9rA4YbWLT0A==
   dependencies:
     "@popperjs/core" "^2.9.2"
+    lodash "^4.17.20"
+    react-popper "^2.2.5"
+    styled-system "^5.1.5"
+
+hydroswap-uikitv2@^0.0.7:
+  version "0.0.7"
+  resolved "https://registry.yarnpkg.com/hydroswap-uikitv2/-/hydroswap-uikitv2-0.0.7.tgz#1ad4b1ba7de1bdb87963112a578873e197da9733"
+  integrity sha512-qAp2RKhwfq865BF8Od6kipfq2ThhwkvgwiQZ19ktD4ip6pPHJPSWOM0QJEA0AfGZgT2xh4789UZ0/SuzzbIzsg==
+  dependencies:
+    "@popperjs/core" "^2.9.2"
+    "@types/styled-system" "^5.1.10"
     lodash "^4.17.20"
     react-popper "^2.2.5"
     styled-system "^5.1.5"

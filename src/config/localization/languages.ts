@@ -1,4 +1,4 @@
-import { Language } from 'hydroswap-uikit'
+import { Language } from 'hydroswap-uikitv2'
 
 export const AR: Language = { locale: 'ar-SA', language: 'العربية', code: 'ar' }
 export const BN: Language = { locale: 'bn-BD', language: 'বাংলা', code: 'bn' }

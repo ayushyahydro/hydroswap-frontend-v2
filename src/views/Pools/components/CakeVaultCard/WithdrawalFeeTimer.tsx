@@ -1,5 +1,5 @@
 import React from 'react'
-import { Text } from 'hydroswap-uikit'
+import { Text } from 'hydroswap-uikitv2'
 import getTimePeriods from 'utils/getTimePeriods'
 import { useTranslation } from 'contexts/Localization'
 

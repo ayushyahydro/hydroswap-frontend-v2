@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { AutoRenewIcon, Button, Flex, InjectedModalProps, Text } from 'hydroswap-uikit'
+import { AutoRenewIcon, Button, Flex, InjectedModalProps, Text } from 'hydroswap-uikitv2'
 import { useTranslation } from 'contexts/Localization'
 import { useCake } from 'hooks/useContract'
 import useToast from 'hooks/useToast'

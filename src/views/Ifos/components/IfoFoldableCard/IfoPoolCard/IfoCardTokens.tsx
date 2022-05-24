@@ -15,7 +15,7 @@ import {
   MessageText,
   useModal,
   Link,
-} from 'hydroswap-uikit'
+} from 'hydroswap-uikitv2'
 import styled from 'styled-components'
 import { useWeb3React } from '@web3-react/core'
 import { Token } from '@pancakeswap/sdk'

@@ -1,7 +1,7 @@
 import React, { useEffect, useRef } from 'react'
 import { useCountUp } from 'react-countup'
 import styled from 'styled-components'
-import { BnbUsdtPairTokenIcon, Box, Flex, PocketWatchIcon, Text } from 'hydroswap-uikit'
+import { BnbUsdtPairTokenIcon, Box, Flex, PocketWatchIcon, Text } from 'hydroswap-uikitv2'
 import { ROUND_BUFFER } from 'state/predictions/config'
 import { formatBigNumberToFixed } from 'utils/formatBalance'
 import { useGetCurrentRoundLockTimestamp, useGetLastOraclePrice } from 'state/predictions/hooks'

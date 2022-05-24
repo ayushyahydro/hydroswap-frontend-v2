@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import { Card } from 'hydroswap-uikit'
+import { Card } from 'hydroswap-uikitv2'
 
 export const BodyWrapper = styled(Card)`
   border-radius: 24px;

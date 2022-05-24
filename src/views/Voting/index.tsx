@@ -1,4 +1,4 @@
-import { Flex } from 'hydroswap-uikit'
+import { Flex } from 'hydroswap-uikitv2'
 import { PageMeta } from 'components/Layout/Page'
 import React from 'react'
 import styled from 'styled-components'

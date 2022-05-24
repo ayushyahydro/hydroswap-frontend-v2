@@ -1,4 +1,4 @@
-import { Spinner, Text } from 'hydroswap-uikit'
+import { Spinner, Text } from 'hydroswap-uikitv2'
 import React from 'react'
 import styled, { keyframes } from 'styled-components'
 

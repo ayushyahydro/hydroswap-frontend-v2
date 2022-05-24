@@ -1,6 +1,6 @@
 import React, { useState, useRef, useEffect } from 'react'
 import styled from 'styled-components'
-import { Card, Text, Skeleton, CardHeader, Box } from 'hydroswap-uikit'
+import { Card, Text, Skeleton, CardHeader, Box } from 'hydroswap-uikitv2'
 import { useTranslation } from 'contexts/Localization'
 import { useAppDispatch } from 'state'
 import { useLottery } from 'state/lottery/hooks'

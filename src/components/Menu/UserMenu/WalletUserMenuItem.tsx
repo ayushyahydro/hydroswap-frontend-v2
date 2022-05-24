@@ -1,5 +1,5 @@
 import React from 'react'
-import { Flex, UserMenuItem, WarningIcon } from 'hydroswap-uikit'
+import { Flex, UserMenuItem, WarningIcon } from 'hydroswap-uikitv2'
 import { useTranslation } from 'contexts/Localization'
 
 interface WalletUserMenuItemProps {

@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import { ArrowDownIcon, ArrowUpIcon } from 'hydroswap-uikit'
+import { ArrowDownIcon, ArrowUpIcon } from 'hydroswap-uikitv2'
 import { BetPosition } from 'state/types'
 import { useTranslation } from 'contexts/Localization'
 

@@ -1,5 +1,5 @@
 import React from 'react'
-import { Flex, Text, Button, Spinner } from 'hydroswap-uikit'
+import { Flex, Text, Button, Spinner } from 'hydroswap-uikitv2'
 import { useTranslation } from 'contexts/Localization'
 import { StepIndicator } from './styles'
 

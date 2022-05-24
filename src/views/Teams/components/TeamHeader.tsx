@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import { Heading, Text } from 'hydroswap-uikit'
+import { Heading, Text } from 'hydroswap-uikitv2'
 import { useProfile } from 'state/profile/hooks'
 import { useTranslation } from 'contexts/Localization'
 import NoProfileCard from './NoProfileCard'

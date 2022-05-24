@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import { Text, Flex, Button, ArrowForwardIcon, Heading } from 'hydroswap-uikit'
+import { Text, Flex, Button, ArrowForwardIcon, Heading } from 'hydroswap-uikitv2'
 import { Link } from 'react-router-dom'
 import { useTranslation } from 'contexts/Localization'
 

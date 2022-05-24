@@ -1,4 +1,4 @@
-import { Box, Flex, FlexProps, Link, Text, useMatchBreakpoints } from 'hydroswap-uikit'
+import { Box, Flex, FlexProps, Link, Text, useMatchBreakpoints } from 'hydroswap-uikitv2'
 import { useTranslation } from 'contexts/Localization'
 import useScript from 'hooks/useScript'
 import React, { useEffect, useRef } from 'react'

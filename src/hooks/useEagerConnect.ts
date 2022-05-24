@@ -1,5 +1,5 @@
 import { useEffect } from 'react'
-import { connectorLocalStorageKey, ConnectorNames } from 'hydroswap-uikit'
+import { connectorLocalStorageKey, ConnectorNames } from 'hydroswap-uikitv2'
 import useAuth from 'hooks/useAuth'
 
 const _binanceChainListener = async () =>

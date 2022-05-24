@@ -11,7 +11,7 @@ import {
   Heading,
   Checkbox,
   Box,
-} from 'hydroswap-uikit'
+} from 'hydroswap-uikitv2'
 import styled from 'styled-components'
 import { useTranslation } from 'contexts/Localization'
 import { useUserPredictionChartDisclaimerShow } from 'state/user/hooks'

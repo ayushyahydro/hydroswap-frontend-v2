@@ -1,7 +1,12 @@
 import React from 'react'
-import { Button, useWalletModal } from 'hydroswap-uikit'
+import { Button, useWalletModal } from 'hydroswap-uikitv2'
 import useAuth from 'hooks/useAuth'
 import { useTranslation } from 'contexts/Localization'
+import styled from "styled-components"
+
+const StyledBtn = styled(Button)`
+background-color:#2e2e30cf!important;
+`
 
 const ConnectWalletButton = (props) => {
   const { t } = useTranslation()
@@ -9,9 +14,9 @@ const ConnectWalletButton = (props) => {
   const { onPresentConnectModal } = useWalletModal(login, logout, t)
 
   return (
-    <Button onClick={onPresentConnectModal} {...props}>
+    <StyledBtn onClick={onPresentConnectModal} {...props}>
       {t('Connect Wallet')}
-    </Button>
+    </StyledBtn>
   )
 }
 

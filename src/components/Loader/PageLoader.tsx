@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import { Spinner } from 'hydroswap-uikit'
+import { Spinner } from 'hydroswap-uikitv2'
 import Page from '../Layout/Page'
 
 const Wrapper = styled(Page)`

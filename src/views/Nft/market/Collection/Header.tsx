@@ -1,6 +1,6 @@
 import React from 'react'
 import { useLocation, useParams } from 'react-router'
-import { Text } from 'hydroswap-uikit'
+import { Text } from 'hydroswap-uikitv2'
 import { Collection } from 'state/nftMarket/types'
 import { formatNumber } from 'utils/formatBalance'
 import { useTranslation } from 'contexts/Localization'

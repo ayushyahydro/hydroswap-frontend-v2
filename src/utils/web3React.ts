@@ -2,7 +2,7 @@ import { InjectedConnector } from '@web3-react/injected-connector'
 import { WalletConnectConnector } from '@web3-react/walletconnect-connector'
 import { AbstractConnector } from '@web3-react/abstract-connector'
 import { BscConnector } from '@binance-chain/bsc-connector'
-import { ConnectorNames } from 'hydroswap-uikit'
+import { ConnectorNames } from 'hydroswap-uikitv2'
 import { ethers } from 'ethers'
 import getNodeUrl from './getRpcUrl'
 
@@ -20,7 +20,8 @@ const walletconnect = new WalletConnectConnector({
 
 const bscConnector = new BscConnector({ supportedChainIds: [chainId] })
 
-export const connectorsByName: { [connectorName in ConnectorNames]: any } = {
+// export const connectorsByName: { [connectorName in ConnectorNames]: any } = {
+export const connectorsByName:any = {
   [ConnectorNames.Injected]: injected,
   [ConnectorNames.WalletConnect]: walletconnect,
   [ConnectorNames.BSC]: bscConnector,

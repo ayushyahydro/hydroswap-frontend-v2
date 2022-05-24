@@ -1,5 +1,5 @@
 import { useEffect } from 'react'
-import { useParticleBurst } from 'hydroswap-uikit'
+import { useParticleBurst } from 'hydroswap-uikitv2'
 import { useLocation } from 'react-router-dom'
 
 const disableWhenNotChristmas = () => {

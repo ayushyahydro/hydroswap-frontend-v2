@@ -13,7 +13,7 @@ import {
   Button,
   CheckmarkCircleIcon,
   useModal,
-} from 'hydroswap-uikit'
+} from 'hydroswap-uikitv2'
 import { useTranslation } from 'contexts/Localization'
 import { Auction, AuctionStatus, ConnectedBidder } from 'config/constants/types'
 import { getBalanceNumber } from 'utils/formatBalance'

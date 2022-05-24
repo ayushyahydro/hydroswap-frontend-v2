@@ -1,5 +1,5 @@
 import React, { ReactNode } from 'react'
-import { Flex, Box, FlexProps } from 'hydroswap-uikit'
+import { Flex, Box, FlexProps } from 'hydroswap-uikitv2'
 import BannerImage from './BannerImage'
 
 interface BannerHeaderProps extends FlexProps {

@@ -1,5 +1,5 @@
 import React from 'react'
-import { HistoryIcon, Button, useModal } from 'hydroswap-uikit'
+import { HistoryIcon, Button, useModal } from 'hydroswap-uikitv2'
 import TransactionsModal from './TransactionsModal'
 
 const Transactions = () => {

@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import { Flex, Skeleton, Text } from 'hydroswap-uikit'
+import { Flex, Skeleton, Text } from 'hydroswap-uikitv2'
 import Balance from 'components/Balance'
 import { useTranslation } from 'contexts/Localization'
 

@@ -1,4 +1,4 @@
-import { AddIcon, Button, Heading, IconButton, MinusIcon, Skeleton, Text, useModal } from 'hydroswap-uikit'
+import { AddIcon, Button, Heading, IconButton, MinusIcon, Skeleton, Text, useModal } from 'hydroswap-uikitv2'
 import { useWeb3React } from '@web3-react/core'
 import { BigNumber } from 'bignumber.js'
 import Balance from 'components/Balance'

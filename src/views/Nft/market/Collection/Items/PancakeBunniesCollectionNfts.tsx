@@ -1,5 +1,5 @@
 import React from 'react'
-import { Grid } from 'hydroswap-uikit'
+import { Grid } from 'hydroswap-uikitv2'
 import orderBy from 'lodash/orderBy'
 import { Collection } from 'state/nftMarket/types'
 import { CollectibleLinkCard } from '../../components/CollectibleCard'

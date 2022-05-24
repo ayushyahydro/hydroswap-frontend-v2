@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { Button, Box, InjectedModalProps, Text } from 'hydroswap-uikit'
+import { Button, Box, InjectedModalProps, Text } from 'hydroswap-uikitv2'
 import { useWeb3React } from '@web3-react/core'
 import { useAppDispatch } from 'state'
 import { useProfile } from 'state/profile/hooks'

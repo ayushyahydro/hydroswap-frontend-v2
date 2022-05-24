@@ -13,7 +13,7 @@ import {
   CloseIcon,
   ArrowUpIcon,
   ArrowDownIcon,
-} from 'hydroswap-uikit'
+} from 'hydroswap-uikitv2'
 import orderBy from 'lodash/orderBy'
 import { useAppDispatch } from 'state'
 import { filterNftsFromCollection } from 'state/nftMarket/reducer'

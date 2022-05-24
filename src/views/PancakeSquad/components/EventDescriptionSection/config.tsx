@@ -1,5 +1,5 @@
 import React from 'react'
-import { Text } from 'hydroswap-uikit'
+import { Text } from 'hydroswap-uikitv2'
 import { ContextApi } from 'contexts/Localization/types'
 import { Link } from 'react-router-dom'
 

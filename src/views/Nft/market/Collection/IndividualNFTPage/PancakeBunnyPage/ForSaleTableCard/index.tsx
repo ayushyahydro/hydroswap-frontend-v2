@@ -13,7 +13,7 @@ import {
   ArrowDownIcon,
   Button,
   Spinner,
-} from 'hydroswap-uikit'
+} from 'hydroswap-uikitv2'
 import { useTranslation } from 'contexts/Localization'
 import useTheme from 'hooks/useTheme'
 import { NftToken } from 'state/nftMarket/types'

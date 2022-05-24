@@ -12,7 +12,7 @@ import {
   BottomDrawer,
   useMatchBreakpoints,
   ArrowUpDownIcon,
-} from 'hydroswap-uikit'
+} from 'hydroswap-uikitv2'
 import { useIsTransactionUnsupported } from 'hooks/Trades'
 import UnsupportedCurrencyFooter from 'components/UnsupportedCurrencyFooter'
 import Footer from 'components/Menu/Footer'
@@ -91,7 +91,7 @@ export default function Swap({ history }: RouteComponentProps) {
   const loadedUrlParams = useDefaultsFromURLSearch()
   const { t } = useTranslation()
   const { isMobile } = useMatchBreakpoints()
-  const [isChartExpanded, setIsChartExpanded] = useState(false)
+  const [isChartExpanded, setIsChartExpanded] = useState(true)
   const [userChartPreference, setUserChartPreference] = useExchangeChartManager(isMobile)
   const [isChartDisplayed, setIsChartDisplayed] = useState(userChartPreference)
 
@@ -388,7 +388,7 @@ export default function Swap({ history }: RouteComponentProps) {
         />
         <Flex flexDirection="column">
           <StyledSwapContainer $isChartExpanded={isChartExpanded}>
-            <StyledInputCurrencyWrapper mt={isChartExpanded ? '24px' : '0'}>
+            <StyledInputCurrencyWrapper mt={isChartExpanded ? '24px' : '0'}>      
               <AppBody>
                 <CurrencyInputHeader
                   title={t('Swap')}
@@ -593,7 +593,7 @@ export default function Swap({ history }: RouteComponentProps) {
                     {isExpertMode && swapErrorMessage ? <SwapCallbackError error={swapErrorMessage} /> : null}
                   </Box>
                 </Wrapper>
-              </AppBody>
+              </AppBody>   
               {!swapIsUnsupported ? (
                 trade && <AdvancedSwapDetailsDropdown trade={trade} />
               ) : (

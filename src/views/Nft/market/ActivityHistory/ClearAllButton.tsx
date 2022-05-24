@@ -1,5 +1,5 @@
 import React from 'react'
-import { Button, ButtonProps } from 'hydroswap-uikit'
+import { Button, ButtonProps } from 'hydroswap-uikitv2'
 import { useTranslation } from 'contexts/Localization'
 import { useAppDispatch } from 'state'
 import { removeAllActivityFilters } from 'state/nftMarket/reducer'

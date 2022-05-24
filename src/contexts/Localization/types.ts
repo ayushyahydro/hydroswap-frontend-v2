@@ -1,5 +1,5 @@
 import { ReactText } from 'react'
-import { Language } from 'hydroswap-uikit'
+import { Language } from 'hydroswap-uikitv2'
 
 export type ContextData = {
   [key: string]: ReactText
