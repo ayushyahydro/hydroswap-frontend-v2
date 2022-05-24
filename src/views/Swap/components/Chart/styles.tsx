@@ -11,8 +11,9 @@ export const StyledPriceChart = styled(Box)<{ $isDark: boolean; $isExpanded: boo
     background: ${({ $isDark }) => ($isDark ? 'rgba(39, 38, 44, 0.5)' : 'rgba(255, 255, 255, 0.5)')};
     border: ${({ theme }) => `1px solid ${theme.colors.cardBorder}`};
     border-radius: ${({ $isExpanded }) => ($isExpanded ? '0' : '16px')};
-    width: ${({ $isExpanded }) => ($isExpanded ? '100%' : '50%')};
-    height: ${({ $isExpanded }) => ($isExpanded ? 'calc(100vh - 100px)' : '484px')};
+    width: ${({ $isExpanded }) => ($isExpanded ? 'calc(100% - 3rem)' : '50%')};
+    height: ${({ $isExpanded }) => ($isExpanded ? 'calc(100vh - 160px)' : '484px')};
+    margin: ${({ $isExpanded }) => ($isExpanded ? '1rem 0  0 2rem' : 'auto')};
   }
 `
 

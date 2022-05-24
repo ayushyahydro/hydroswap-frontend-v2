@@ -1,4 +1,5 @@
 import { Box, ButtonMenu, ButtonMenuItem, Flex, Text } from 'hydroswap-uikitv2'
+import styled from 'styled-components'
 import { useTranslation } from 'contexts/Localization'
 import React, { lazy, Suspense, useState } from 'react'
 import { useFetchPairPrices } from 'state/swap/hooks'
@@ -9,6 +10,11 @@ import TokenDisplay from './TokenDisplay'
 import { getTimeWindowChange } from './utils'
 
 const SwapLineChart = lazy(() => import('./SwapLineChart'))
+
+
+const ButtonWrap = styled(ButtonMenuItem)`
+background-color: ${({ $active, theme }) => !$active && `${theme.colors.background} `};
+`
 
 const BasicChart = ({
   token0Address,
@@ -32,7 +38,7 @@ const BasicChart = ({
   const valueToDisplay = hoverValue || pairPrices[pairPrices.length - 1]?.value
   const { changePercentage, changeValue } = getTimeWindowChange(pairPrices)
   const isChangePositive = changeValue >= 0
-  const chartHeight = isChartExpanded ? 'calc(100% - 120px)' : '310px'
+  const chartHeight = isChartExpanded ? 'calc(70vh - 120px)' : '310px'
   const {
     t,
     currentLanguage: { locale },
@@ -89,7 +95,8 @@ const BasicChart = ({
         </Flex>
         <Box>
           <ButtonMenu activeIndex={timeWindow} onItemClick={setTimeWindow} scale="sm">
-            <ButtonMenuItem>{t('24H')}</ButtonMenuItem>
+
+            <ButtonMenuItem >{t('24H')}</ButtonMenuItem>
             <ButtonMenuItem>{t('1W')}</ButtonMenuItem>
             <ButtonMenuItem>{t('1M')}</ButtonMenuItem>
             <ButtonMenuItem>{t('1Y')}</ButtonMenuItem>
