@@ -237,7 +237,9 @@ const Pools: React.FC = () => {
     <CardLayout>
       {chosenPools.map((pool) =>
         pool.vaultKey ? (
-          <CakeVaultCard key={pool.vaultKey} pool={pool} showStakedOnly={stakedOnly} />
+         <>
+          {/* <CakeVaultCard key={pool.vaultKey} pool={pool} showStakedOnly={stakedOnly} /> */}
+          </>
         ) : (
           <PoolCard key={pool.sousId} pool={pool} account={account} />
         ),
@@ -245,7 +247,8 @@ const Pools: React.FC = () => {
     </CardLayout>
   )
 
-  const tableLayout = <PoolsTable pools={chosenPools} account={account} userDataLoaded={userDataLoaded} />
+  const tableLayout = <PoolsTable pools={chosenPools?.filter(i=>!i?.vaultKey)} account={account} userDataLoaded={userDataLoaded} />
+
 
   return (
     <>
@@ -253,7 +256,7 @@ const Pools: React.FC = () => {
         <Flex justifyContent="space-between" flexDirection={['column', null, null, 'row']}>
           <Flex flex="1" flexDirection="column" mr={['8px', 0]}>
             <Heading as="h1" scale="xxl" color="secondary" mb="24px">
-              {t('Syrup Pools')}
+              {t('Hydro Pools')}
             </Heading>
             <Heading scale="md" color="text">
               {t('Just stake some tokens to earn.')}
@@ -262,10 +265,10 @@ const Pools: React.FC = () => {
               {t('High APR, low risk.')}
             </Heading>
           </Flex>
-          <Flex flex="1" height="fit-content" justifyContent="center" alignItems="center" mt={['24px', null, '0']}>
+          {/* <Flex flex="1" height="fit-content" justifyContent="center" alignItems="center" mt={['24px', null, '0']}>
             <HelpButton />
             <BountyCard />
-          </Flex>
+          </Flex> */}
         </Flex>
       </PageHeader>
       <Page>
@@ -277,7 +280,7 @@ const Pools: React.FC = () => {
             viewMode={viewMode}
             setViewMode={setViewMode}
           />
-          <FilterContainer>
+          {/* <FilterContainer>
             <LabelWrapper>
               <Text fontSize="12px" bold color="textSubtle" textTransform="uppercase">
                 {t('Sort by')}
@@ -312,7 +315,7 @@ const Pools: React.FC = () => {
               </Text>
               <SearchInput onChange={handleChangeSearchQuery} placeholder="Search Pools" />
             </LabelWrapper>
-          </FilterContainer>
+          </FilterContainer> */}
         </PoolControls>
         {showFinishedPools && (
           <Text fontSize="20px" color="failure" pb="32px">
@@ -325,15 +328,16 @@ const Pools: React.FC = () => {
           </Flex>
         )}
         {viewMode === ViewMode.CARD ? cardLayout : tableLayout}
+      
         <div ref={observerRef} />
-        <Image
+        {/* <Image
           mx="auto"
           mt="12px"
           src="/images/decorations/3d-syrup-bunnies.png"
           alt="Pancake illustration"
           width={192}
           height={184.5}
-        />
+        /> */}
       </Page>
     </>
   )

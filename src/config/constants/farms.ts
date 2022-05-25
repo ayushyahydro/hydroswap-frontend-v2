@@ -40,17 +40,17 @@ const farms: SerializedFarmConfig[] = [
   /**
    * V3 by order of release (some may be out of PID order due to multiplier boost)
    */
-  {
-    pid: 492,
-    lpSymbol: 'SDAO-BNB LP',
-    lpAddresses: {
-      97: '',
-      56: '0x43b95976cF0929478bC13332C9cd2D63Bf060976',
-    },
-    token: serializedTokens.sdao,
-    quoteToken: serializedTokens.wbnb,
-    isCommunity: true,
-  },
+  // {
+  //   pid: 492,
+  //   lpSymbol: 'SDAO-BNB LP',
+  //   lpAddresses: {
+  //     97: '',
+  //     56: '0x43b95976cF0929478bC13332C9cd2D63Bf060976',
+  //   },
+  //   token: serializedTokens.sdao,
+  //   quoteToken: serializedTokens.wbnb,
+  //   isCommunity: true,
+  // },
   // {
   //   pid: 493,
   //   lpSymbol: 'ANTEX-BUSD LP',

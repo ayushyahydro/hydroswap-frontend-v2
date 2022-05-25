@@ -96,11 +96,7 @@ const ViewControls = styled.div`
   }
 `
 
-const StyledImage = styled(Image)`
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 58px;
-`
+
 const NUMBER_OF_FARMS_VISIBLE = 12
 
 const getDisplayApr = (cakeRewardsApr?: number, lpRewardsApr?: number) => {
@@ -123,7 +119,6 @@ const Farms: React.FC = () => {
   const [viewMode, setViewMode] = useUserFarmsViewMode()
   const { account } = useWeb3React()
   const [sortOption, setSortOption] = useState('hot')
-  const { observerRef, isIntersecting } = useIntersectionObserver()
   const chosenFarmsLength = useRef(0)
 
   const isArchived = pathname.includes('archived')
@@ -179,9 +174,6 @@ const Farms: React.FC = () => {
     [cakePrice, query, isActive],
   )
 
-  const handleChangeQuery = (event: React.ChangeEvent<HTMLInputElement>) => {
-    setQuery(event.target.value)
-  }
 
   const [numberOfFarmsVisible, setNumberOfFarmsVisible] = useState(NUMBER_OF_FARMS_VISIBLE)
 
@@ -240,16 +232,7 @@ const Farms: React.FC = () => {
 
   chosenFarmsLength.current = chosenFarmsMemoized.length
 
-  useEffect(() => {
-    if (isIntersecting) {
-      setNumberOfFarmsVisible((farmsCurrentlyVisible) => {
-        if (farmsCurrentlyVisible <= chosenFarmsLength.current) {
-          return farmsCurrentlyVisible + NUMBER_OF_FARMS_VISIBLE
-        }
-        return farmsCurrentlyVisible
-      })
-    }
-  }, [isIntersecting])
+
 
   const rowData = chosenFarmsMemoized.map((farm) => {
     const { token, quoteToken } = farm
@@ -400,7 +383,7 @@ const Farms: React.FC = () => {
             </ToggleWrapper>
             <FarmTabButtons hasStakeInFinishedFarms={stakedInactiveFarms.length > 0} />
           </ViewControls>
-          <FilterContainer>
+          {/* <FilterContainer>
             <LabelWrapper>
               <Text textTransform="uppercase">{t('Sort by')}</Text>
               <Select
@@ -433,7 +416,7 @@ const Farms: React.FC = () => {
               <Text textTransform="uppercase">{t('Search')}</Text>
               <SearchInput onChange={handleChangeQuery} placeholder="Search Farms" />
             </LabelWrapper>
-          </FilterContainer>
+          </FilterContainer> */}
         </ControlContainer>
         {renderContent()}
         {account && !userDataLoaded && stakedOnly && (
@@ -441,8 +424,7 @@ const Farms: React.FC = () => {
             <Loading />
           </Flex>
         )}
-        <div ref={observerRef} />
-        <StyledImage src="/images/decorations/3dpan.png" alt="Pancake illustration" width={120} height={103} />
+       
       </Page>
     </>
   )
