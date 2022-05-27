@@ -67,13 +67,7 @@ const Footer: React.FC<{ variant?: FooterVariant }> = ({ variant = 'default' }) 
         justifyContent={['center', 'center', 'center', 'flex-end']}
       >
         <BubbleWrapper>
-          <Button
-            id="clickExchangeHelp"
-            as="a"
-            external
-            href=""
-            variant="subtle"
-          >
+          <Button id="clickExchangeHelp" as="a" external href="" variant="subtle">
             {t('Need help ?')}
           </Button>
           <Svg viewBox="0 0 16 16">
@@ -81,7 +75,6 @@ const Footer: React.FC<{ variant?: FooterVariant }> = ({ variant = 'default' }) 
           </Svg>
         </BubbleWrapper>
         <Image src="/images/help.svg" alt="Get some help" width={1} height={108} style={{ opacity: 0 }} />
-      
       </Flex>
     </Wrapper>
   )

@@ -1,5 +1,16 @@
 import React, { useState, useEffect } from 'react'
-import { Card, CardFooter, CardHeader, Heading, Text, TabMenu, Tab, Box, Flex, ExpandableLabel } from 'hydroswap-uikitv2'
+import {
+  Card,
+  CardFooter,
+  CardHeader,
+  Heading,
+  Text,
+  TabMenu,
+  Tab,
+  Box,
+  Flex,
+  ExpandableLabel,
+} from 'hydroswap-uikitv2'
 import { useTranslation } from 'contexts/Localization'
 import { TeamRanksProps } from '../../../types'
 import TopTradersGrid from './TopTradersGrid'

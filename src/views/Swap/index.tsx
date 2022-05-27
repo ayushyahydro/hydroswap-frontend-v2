@@ -388,7 +388,7 @@ export default function Swap({ history }: RouteComponentProps) {
         />
         <Flex flexDirection="column">
           <StyledSwapContainer $isChartExpanded={isChartExpanded}>
-            <StyledInputCurrencyWrapper mt={isChartExpanded ? '24px' : '0'}>      
+            <StyledInputCurrencyWrapper mt={isChartExpanded ? '24px' : '0'}>
               <AppBody>
                 <CurrencyInputHeader
                   title={t('Swap')}
@@ -593,7 +593,7 @@ export default function Swap({ history }: RouteComponentProps) {
                     {isExpertMode && swapErrorMessage ? <SwapCallbackError error={swapErrorMessage} /> : null}
                   </Box>
                 </Wrapper>
-              </AppBody>   
+              </AppBody>
               {!swapIsUnsupported ? (
                 trade && <AdvancedSwapDetailsDropdown trade={trade} />
               ) : (

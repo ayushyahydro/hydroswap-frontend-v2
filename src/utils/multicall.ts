@@ -19,9 +19,8 @@ const multicall = async <T = any>(abi: any[], calls: Call[]): Promise<T> => {
 
     const calldata = calls.map((call) => [call.address.toLowerCase(), itf.encodeFunctionData(call.name, call.params)])
     const { returnData } = await multi.aggregate(calldata)
-
     const res = returnData.map((call, i) => itf.decodeFunctionResult(calls[i].name, call))
-
+    console.log(res, 'res')
     return res
   } catch (error) {
     throw new Error(error)

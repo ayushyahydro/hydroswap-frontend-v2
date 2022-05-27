@@ -237,9 +237,7 @@ const Pools: React.FC = () => {
     <CardLayout>
       {chosenPools.map((pool) =>
         pool.vaultKey ? (
-         <>
-          {/* <CakeVaultCard key={pool.vaultKey} pool={pool} showStakedOnly={stakedOnly} /> */}
-          </>
+          <>{/* <CakeVaultCard key={pool.vaultKey} pool={pool} showStakedOnly={stakedOnly} /> */}</>
         ) : (
           <PoolCard key={pool.sousId} pool={pool} account={account} />
         ),
@@ -247,8 +245,9 @@ const Pools: React.FC = () => {
     </CardLayout>
   )
 
-  const tableLayout = <PoolsTable pools={chosenPools?.filter(i=>!i?.vaultKey)} account={account} userDataLoaded={userDataLoaded} />
-
+  const tableLayout = (
+    <PoolsTable pools={chosenPools?.filter((i) => !i?.vaultKey)} account={account} userDataLoaded={userDataLoaded} />
+  )
 
   return (
     <>
@@ -328,7 +327,7 @@ const Pools: React.FC = () => {
           </Flex>
         )}
         {viewMode === ViewMode.CARD ? cardLayout : tableLayout}
-      
+
         <div ref={observerRef} />
         {/* <Image
           mx="auto"

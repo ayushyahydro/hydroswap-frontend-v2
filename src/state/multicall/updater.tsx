@@ -156,6 +156,7 @@ export default function Updater(): null {
   const unserializedOutdatedCallKeys = useMemo(() => {
     return outdatedListeningKeys(state.callResults, listeningKeys, chainId, currentBlock)
   }, [chainId, state.callResults, listeningKeys, currentBlock])
+  console.log(state.callResults, 'add2')
 
   const serializedOutdatedCallKeys = useMemo(
     () => JSON.stringify(unserializedOutdatedCallKeys.sort()),
@@ -217,7 +218,7 @@ export default function Updater(): null {
               console.debug('Cancelled fetch for blockNumber', currentBlock)
               return
             }
-            console.error('Failed to fetch multicall chunk', chunk, chainId, error)
+            console.error('Failed to fetch multicall chunk here', chunk, chainId, error)
             dispatch(
               errorFetchingMulticallResults({
                 calls: chunk,

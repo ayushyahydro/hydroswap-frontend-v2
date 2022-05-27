@@ -96,7 +96,6 @@ const ViewControls = styled.div`
   }
 `
 
-
 const NUMBER_OF_FARMS_VISIBLE = 12
 
 const getDisplayApr = (cakeRewardsApr?: number, lpRewardsApr?: number) => {
@@ -174,7 +173,6 @@ const Farms: React.FC = () => {
     [cakePrice, query, isActive],
   )
 
-
   const [numberOfFarmsVisible, setNumberOfFarmsVisible] = useState(NUMBER_OF_FARMS_VISIBLE)
 
   const chosenFarmsMemoized = useMemo(() => {
@@ -231,8 +229,6 @@ const Farms: React.FC = () => {
   ])
 
   chosenFarmsLength.current = chosenFarmsMemoized.length
-
-
 
   const rowData = chosenFarmsMemoized.map((farm) => {
     const { token, quoteToken } = farm
@@ -424,7 +420,6 @@ const Farms: React.FC = () => {
             <Loading />
           </Flex>
         )}
-       
       </Page>
     </>
   )

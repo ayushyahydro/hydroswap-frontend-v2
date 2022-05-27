@@ -13,10 +13,7 @@ import Dots from '../../components/Loader/Dots'
 import { AppHeader, AppBody } from '../../components/App'
 import Page from '../Page'
 
-
-const StyledButton = styled(Button)`
-
-`
+const StyledButton = styled(Button)``
 const Body = styled(CardBody)`
   background-color: ${({ theme }) => theme.colors.dropdownDeep};
 `
@@ -104,8 +101,13 @@ export default function Pool() {
           )}
         </Body>
         <CardFooter style={{ textAlign: 'center' }}>
-          <StyledButton id="join-pool-StyledButton" as={Link} to="/add" width="100%" startIcon={<AddIcon color="white" />}
-           style={{ textAlign: 'center' }}
+          <StyledButton
+            id="join-pool-StyledButton"
+            as={Link}
+            to="/add"
+            width="100%"
+            startIcon={<AddIcon color="white" />}
+            style={{ textAlign: 'center' }}
           >
             {t('Add Liquidity')}
           </StyledButton>

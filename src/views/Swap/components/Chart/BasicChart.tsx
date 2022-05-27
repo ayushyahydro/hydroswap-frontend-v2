@@ -11,9 +11,8 @@ import { getTimeWindowChange } from './utils'
 
 const SwapLineChart = lazy(() => import('./SwapLineChart'))
 
-
 const ButtonWrap = styled(ButtonMenuItem)`
-background-color: ${({ $active, theme }) => !$active && `${theme.colors.background} `};
+  background-color: ${({ $active, theme }) => !$active && `${theme.colors.background} `};
 `
 
 const BasicChart = ({
@@ -95,8 +94,7 @@ const BasicChart = ({
         </Flex>
         <Box>
           <ButtonMenu activeIndex={timeWindow} onItemClick={setTimeWindow} scale="sm">
-
-            <ButtonMenuItem >{t('24H')}</ButtonMenuItem>
+            <ButtonMenuItem>{t('24H')}</ButtonMenuItem>
             <ButtonMenuItem>{t('1W')}</ButtonMenuItem>
             <ButtonMenuItem>{t('1M')}</ButtonMenuItem>
             <ButtonMenuItem>{t('1Y')}</ButtonMenuItem>

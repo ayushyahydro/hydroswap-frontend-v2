@@ -1886,6 +1886,14 @@ export const mainnetTokens = defineTokens({
     'BitBook',
     'https://www.bitbook.network/',
   ),
+  hydro: new Token(
+    MAINNET,
+    '0x5B387f4886F043f603f7d0cb55DBd727D6649C73',
+    18,
+    'HYDRO',
+    'HYDRO TOKEN',
+    'http://hydro-bridge.org/',
+  ),
 } as const)
 
 export const testnetTokens = defineTokens({
@@ -1897,9 +1905,17 @@ export const testnetTokens = defineTokens({
     'Wrapped BNB',
     'https://www.binance.com/',
   ),
+  // cake: new Token(
+  //   TESTNET,
+  //   '0xa35062141Fa33BCA92Ce69FeD37D0E8908868AAe',
+  //   18,
+  //   'CAKE',
+  //   'PancakeSwap Token',
+  //   'https://pancakeswap.finance/',
+  // ),
   cake: new Token(
     TESTNET,
-    '0xa35062141Fa33BCA92Ce69FeD37D0E8908868AAe',
+    '0x5B387f4886F043f603f7d0cb55DBd727D6649C73',
     18,
     'CAKE',
     'PancakeSwap Token',
@@ -1912,6 +1928,14 @@ export const testnetTokens = defineTokens({
     'BUSD',
     'Binance USD',
     'https://www.paxos.com/busd/',
+  ),
+  hydro: new Token(
+    TESTNET,
+    '0x5B387f4886F043f603f7d0cb55DBd727D6649C73',
+    18,
+    'HYDRO',
+    'HYDRO TOKEN',
+    'http://hydro-bridge.org/',
   ),
   syrup: new Token(
     TESTNET,

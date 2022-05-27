@@ -30,10 +30,11 @@ export const vaultPoolConfig = {
 const pools: SerializedPoolConfig[] = [
   {
     sousId: 0,
-    stakingToken: serializedTokens.cake,
+    stakingToken: serializedTokens.hydro,
     earningToken: serializedTokens.cake,
     contractAddress: {
-      97: '0xd3af5fe61dbaf8f73149bfcfa9fb653ff096029a',
+      // 97: '0xd3af5fe61dbaf8f73149bfcfa9fb653ff096029a',
+      97: '0x75095AEB0F89A63d2Bbc7e9bF6715B50f8a25A0C',
       56: '0x73feaa1eE314F8c655E354234017bE2193C9E24E',
     },
     poolCategory: PoolCategory.CORE,
