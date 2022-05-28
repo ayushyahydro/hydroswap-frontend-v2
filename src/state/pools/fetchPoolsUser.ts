@@ -2,7 +2,7 @@ import poolsConfig from 'config/constants/pools'
 import sousChefABI from 'config/abi/sousChef.json'
 import erc20ABI from 'config/abi/erc20.json'
 import multicall from 'utils/multicall'
-import { getMasterchefContract } from 'utils/contractHelpers'
+import { getMasterchefContract, getBep20Contract } from 'utils/contractHelpers'
 import { getAddress } from 'utils/addressHelpers'
 import { simpleRpcProvider } from 'utils/providers'
 import BigNumber from 'bignumber.js'
@@ -15,14 +15,24 @@ const nonMasterPools = poolsConfig.filter((pool) => pool.sousId !== 0)
 const masterChefContract = getMasterchefContract()
 
 export const fetchPoolsAllowance = async (account) => {
+  let allowances
   const calls = nonBnbPools.map((pool) => ({
     address: pool.stakingToken.address,
     name: 'allowance',
     params: [account, getAddress(pool.contractAddress)],
+    
   }))
+  
+  // nonBnbPools.map( async (pool) => {
+  //   const ERC20 = getBep20Contract(pool.stakingToken.address)
+  //   console.log(ERC20, "contract")
+  //   allowances = await ERC20.allowance(account, pool.contractAddress)
+  // })
 
-  const allowances = await multicall(erc20ABI, calls)
-  console.log(calls, 'called')
+  
+
+  console.log(allowances)
+ 
   return nonBnbPools.reduce(
     (acc, pool, index) => ({ ...acc, [pool.sousId]: new BigNumber(allowances[index]).toJSON() }),
     {},
@@ -36,7 +46,8 @@ export const fetchUserBalances = async (account) => {
     name: 'balanceOf',
     params: [account],
   }))
-  const tokenBalancesRaw = await multicall(erc20ABI, calls)
+  let tokenBalancesRaw 
+  // = await multicall(erc20ABI, calls)
   const tokenBalances = nonBnbPools.reduce(
     (acc, pool, index) => ({ ...acc, [pool.sousId]: new BigNumber(tokenBalancesRaw[index]).toJSON() }),
     {},
@@ -58,7 +69,8 @@ export const fetchUserStakeBalances = async (account) => {
     name: 'userInfo',
     params: [account],
   }))
-  const userInfo = await multicall(sousChefABI, calls)
+   let userInfo
+    // = await multicall(sousChefABI, calls)
   const stakedBalances = nonMasterPools.reduce(
     (acc, pool, index) => ({
       ...acc,

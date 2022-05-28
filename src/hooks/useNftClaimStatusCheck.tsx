@@ -12,21 +12,21 @@ const useNftClaimStatusCheck = () => {
   const [onPresentNftClaimModal] = useModal(<ClaimNftModal />)
 
   useEffect(() => {
-    const checkClaimStatus = async () => {
-      try {
-        const canClaim = await getBunnySpecialXmasContract(simpleRpcProvider).canClaim(account)
-        if (canClaim) {
-          onPresentNftClaimModal()
-          setHasDisplayedModal(true)
-        }
-      } catch (error) {
-        // User not registered throws here
-        noop()
-      }
-    }
-    if (account && !hasDisplayedModal) {
-      checkClaimStatus()
-    }
+    // const checkClaimStatus = async () => {
+    //   try {
+    //     const canClaim = await getBunnySpecialXmasContract(simpleRpcProvider).canClaim(account)
+    //     if (canClaim) {
+    //       onPresentNftClaimModal()
+    //       setHasDisplayedModal(true)
+    //     }
+    //   } catch (error) {
+    //     // User not registered throws here
+    //     noop()
+    //   }
+    // }
+    // if (account && !hasDisplayedModal) {
+    //   checkClaimStatus()
+    // }
   }, [account, hasDisplayedModal, onPresentNftClaimModal])
 
   // Reset when account changes
