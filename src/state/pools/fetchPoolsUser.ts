@@ -15,7 +15,7 @@ const nonMasterPools = poolsConfig.filter((pool) => pool.sousId !== 0)
 const masterChefContract = getMasterchefContract()
 
 export const fetchPoolsAllowance = async (account) => {
-  let allowances
+  
   const calls = nonBnbPools.map((pool) => ({
     address: pool.stakingToken.address,
     name: 'allowance',
@@ -23,15 +23,15 @@ export const fetchPoolsAllowance = async (account) => {
     
   }))
   
-  // nonBnbPools.map( async (pool) => {
+  // nonBnbPools.map((pool) => {
   //   const ERC20 = getBep20Contract(pool.stakingToken.address)
   //   console.log(ERC20, "contract")
-  //   allowances = await ERC20.allowance(account, pool.contractAddress)
+  //   return allowances;
   // })
 
   
 
-  console.log(allowances)
+  const allowances = await multicall(erc20ABI, calls)
  
   return nonBnbPools.reduce(
     (acc, pool, index) => ({ ...acc, [pool.sousId]: new BigNumber(allowances[index]).toJSON() }),
@@ -46,8 +46,7 @@ export const fetchUserBalances = async (account) => {
     name: 'balanceOf',
     params: [account],
   }))
-  let tokenBalancesRaw 
-  // = await multicall(erc20ABI, calls)
+  const tokenBalancesRaw = await multicall(erc20ABI, calls)
   const tokenBalances = nonBnbPools.reduce(
     (acc, pool, index) => ({ ...acc, [pool.sousId]: new BigNumber(tokenBalancesRaw[index]).toJSON() }),
     {},
@@ -69,8 +68,7 @@ export const fetchUserStakeBalances = async (account) => {
     name: 'userInfo',
     params: [account],
   }))
-   let userInfo
-    // = await multicall(sousChefABI, calls)
+  const userInfo = await multicall(sousChefABI, calls)
   const stakedBalances = nonMasterPools.reduce(
     (acc, pool, index) => ({
       ...acc,
