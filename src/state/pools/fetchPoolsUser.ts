@@ -1,54 +1,80 @@
+
+/* eslint-disable no-console */
 import poolsConfig from 'config/constants/pools'
 import sousChefABI from 'config/abi/sousChef.json'
 import erc20ABI from 'config/abi/erc20.json'
 import multicall from 'utils/multicall'
-import { getMasterchefContract, getBep20Contract } from 'utils/contractHelpers'
+import { getMasterchefContract, getBep20Contract, getKvsStakingContract} from 'utils/contractHelpers'
 import { getAddress } from 'utils/addressHelpers'
 import { simpleRpcProvider } from 'utils/providers'
 import BigNumber from 'bignumber.js'
+import { ethers } from 'ethers'
+import { useERC20 } from 'hooks/useContract'
 
 // Pool 0, Cake / Cake is a different kind of contract (master chef)
 // BNB pools use the native BNB token (wrapping ? unwrapping is done at the contract level)
 const nonBnbPools = poolsConfig.filter((pool) => pool.stakingToken.symbol !== 'BNB')
 const bnbPools = poolsConfig.filter((pool) => pool.stakingToken.symbol === 'BNB')
 const nonMasterPools = poolsConfig.filter((pool) => pool.sousId !== 0)
-const masterChefContract = getMasterchefContract()
+// const masterChefContract = getMasterchefContract()
+const kvsStakingContract = getKvsStakingContract()
+
 
 export const fetchPoolsAllowance = async (account) => {
-  
-  const calls = nonBnbPools.map((pool) => ({
-    address: pool.stakingToken.address,
-    name: 'allowance',
-    params: [account, getAddress(pool.contractAddress)],
-    
-  }))
-  
-  // nonBnbPools.map((pool) => {
-  //   const ERC20 = getBep20Contract(pool.stakingToken.address)
-  //   console.log(ERC20, "contract")
-  //   return allowances;
-  // })
 
-  
+  // const calls = nonBnbPools.map((pool) => ({
+  //   address: pool.stakingToken.address,
+  //   name: 'allowance',
+  //   params: [account, getAddress(pool.contractAddress)],
+  // }))
 
-  const allowances = await multicall(erc20ABI, calls)
+
+
+const allowances = nonBnbPools.map(async (pool) => {
+  let allowance
+  const provider = new ethers.providers.Web3Provider(window.ethereum)
+  const token = getBep20Contract(pool.stakingToken.address, provider)
+  console.log(token, "token")
+  try {
+    allowance  = await token.allowance(account, getAddress(pool.contractAddress))
+    console.log( allowance.toString(), "allowance")
+   
+  }  catch(error){
+    console.log(error, 'allowance error')
+  }
+  return allowance
+})
+
+
  
   return nonBnbPools.reduce(
-    (acc, pool, index) => ({ ...acc, [pool.sousId]: new BigNumber(allowances[index]).toJSON() }),
+    async (acc, pool, index) => ({ ...acc, [pool.sousId]: new BigNumber(await allowances[index]).toJSON() }),
     {},
   )
 }
 
 export const fetchUserBalances = async (account) => {
   // Non BNB pools
-  const calls = nonBnbPools.map((pool) => ({
-    address: pool.stakingToken.address,
-    name: 'balanceOf',
-    params: [account],
-  }))
-  const tokenBalancesRaw = await multicall(erc20ABI, calls)
+  // const calls = nonBnbPools.map((pool) => ({
+  //   address: pool.stakingToken.address,
+  //   name: 'balanceOf',
+  //   params: [account],
+  // }))
+  // const tokenBalancesRaw = await multicall(erc20ABI, calls)
+  const tokenBalancesRaw = nonBnbPools.map(async (pool) => {
+    let balance
+    const provider = new ethers.providers.Web3Provider(window.ethereum)
+    const token = getBep20Contract(pool.stakingToken.address, provider)
+    try {
+      balance  = await token.balanceOf(account)
+      console.log( balance.toString(), "balance")
+    }  catch(error){
+      console.log(error, 'balance error')
+    }
+    return balance
+  })
   const tokenBalances = nonBnbPools.reduce(
-    (acc, pool, index) => ({ ...acc, [pool.sousId]: new BigNumber(tokenBalancesRaw[index]).toJSON() }),
+    async (acc, pool, index) => ({ ...acc, [pool.sousId]: new BigNumber(await tokenBalancesRaw[index]).toJSON() }),
     {},
   )
 
@@ -68,7 +94,7 @@ export const fetchUserStakeBalances = async (account) => {
     name: 'userInfo',
     params: [account],
   }))
-  const userInfo = await multicall(sousChefABI, calls)
+  const userInfo = await kvsStakingContract.viewUser(account)
   const stakedBalances = nonMasterPools.reduce(
     (acc, pool, index) => ({
       ...acc,
@@ -76,30 +102,48 @@ export const fetchUserStakeBalances = async (account) => {
     }),
     {},
   )
+  
 
-  // Cake / Cake pool
-  const { amount: masterPoolAmount } = await masterChefContract.userInfo('0', account)
+  // // Cake / Cake pool
+   const {amount: masterPoolAmount } = await kvsStakingContract.viewUser(account)
 
-  return { ...stakedBalances, 0: new BigNumber(masterPoolAmount.toString()).toJSON() }
+   return { ...stakedBalances, 0: new BigNumber(masterPoolAmount.toString()).toJSON() }
 }
 
 export const fetchUserPendingRewards = async (account) => {
-  const calls = nonMasterPools.map((p) => ({
-    address: getAddress(p.contractAddress),
-    name: 'pendingReward',
-    params: [account],
-  }))
-  const res = await multicall(sousChefABI, calls)
+  const provider = new ethers.providers.Web3Provider(window.ethereum)
+ 
+  // const calls = nonMasterPools.map((p) => ({
+  //   address: getAddress(p.contractAddress),
+  //   name: 'pendingReward',
+  //   params: [account],
+  // }))
+  // const res = await multicall(sousChefABI, calls)
+
+  const res = nonBnbPools.map(async (pool) => {
+    let balance
+    
+    try {
+      balance  =  kvsStakingContract.checkCurrentRewards(account)
+      console.log( balance.toString(), "balance")
+    }  catch(error){
+      console.log(error, 'balance error')
+    }
+    return balance
+  })
   const pendingRewards = nonMasterPools.reduce(
-    (acc, pool, index) => ({
+    async (acc, pool, index) => ({
       ...acc,
-      [pool.sousId]: new BigNumber(res[index]).toJSON(),
+      [pool.sousId]: new BigNumber(await res[index]).toJSON(),
     }),
     {},
   )
 
   // Cake / Cake pool
-  const pendingReward = await masterChefContract.pendingCake('0', account)
+  const pendingReward = await kvsStakingContract.checkCurrentRewards(account)
+  console.log(kvsStakingContract, 'kvs')
+  console.log(pendingReward, "pending")
+
 
   return { ...pendingRewards, 0: new BigNumber(pendingReward.toString()).toJSON() }
 }

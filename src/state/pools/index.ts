@@ -1,3 +1,4 @@
+/* eslint-disable no-console */
 import { createAsyncThunk, createSlice, PayloadAction } from '@reduxjs/toolkit'
 import BigNumber from 'bignumber.js'
 import poolsConfig from 'config/constants/pools'
@@ -199,6 +200,7 @@ export const updateUserAllowance =
   (sousId: number, account: string): AppThunk =>
   async (dispatch) => {
     const allowances = await fetchPoolsAllowance(account)
+    console.log(allowances, "please")
     dispatch(updatePoolsUserData({ sousId, field: 'allowance', value: allowances[sousId] }))
   }
 

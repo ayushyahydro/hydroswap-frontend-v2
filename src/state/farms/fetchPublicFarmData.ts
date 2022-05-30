@@ -1,9 +1,11 @@
+import { getBep20Contract } from 'utils/contractHelpers';
 import BigNumber from 'bignumber.js'
 import masterchefABI from 'config/abi/masterchef.json'
 import erc20 from 'config/abi/erc20.json'
 import { getAddress, getMasterChefAddress } from 'utils/addressHelpers'
 import { BIG_TEN, BIG_ZERO } from 'utils/bigNumber'
 import multicall from 'utils/multicall'
+import {ethers} from 'ethers'
 import { SerializedFarm, SerializedBigNumber } from '../types'
 
 type PublicFarmData = {
@@ -17,6 +19,8 @@ type PublicFarmData = {
 
 const fetchFarm = async (farm: SerializedFarm): Promise<PublicFarmData> => {
   const { pid, lpAddresses, token, quoteToken } = farm
+  const provider = new ethers.providers.Web3Provider(window.ethereum)
+ 
   const lpAddress = getAddress(lpAddresses)
   const calls = [
     // Balance of token in the LP contract
@@ -53,9 +57,19 @@ const fetchFarm = async (farm: SerializedFarm): Promise<PublicFarmData> => {
       name: 'decimals',
     },
   ]
+  const token1 = getBep20Contract(token.address, provider)
+  const tokenBalanceLP = await token1.balanceOf(lpAddress)
+  const tokenDecimals = await token1.decimals()
 
-  const [tokenBalanceLP, quoteTokenBalanceLP, lpTokenBalanceMC, lpTotalSupply, tokenDecimals, quoteTokenDecimals] =
-    await multicall(erc20, calls)
+  const quoteTokens = getBep20Contract(quoteToken.address, provider)
+  const quoteTokenBalanceLP = await quoteTokens.balanceOf(lpAddress)
+  const quoteTokenDecimals = await quoteTokens.decimals()
+
+  const LpTokens = getBep20Contract(lpAddress, provider)
+  const lpTokenBalanceMC = await LpTokens.balanceOf(getMasterChefAddress())
+  const lpTotalSupply = await LpTokens.totalSupply()
+
+  
 
   // Ratio in % of LP tokens that are staked in the MC, vs the total number in circulation
   const lpTokenRatio = new BigNumber(lpTokenBalanceMC).div(new BigNumber(lpTotalSupply))

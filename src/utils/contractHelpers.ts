@@ -32,6 +32,7 @@ import {
   getPancakeSquadAddress,
   getTradingCompetitionAddressV2,
   getBunnySpecialXmasAddress,
+  getKvsStakingAddress
 } from 'utils/addressHelpers'
 
 // ABI
@@ -70,11 +71,20 @@ import nftMarketAbi from 'config/abi/nftMarket.json'
 import nftSaleAbi from 'config/abi/nftSale.json'
 import pancakeSquadAbi from 'config/abi/pancakeSquad.json'
 import erc721CollectionAbi from 'config/abi/erc721collection.json'
+import kvsStakingAbi from 'config/abi/kvsStakingabi.json'
 import { ChainLinkOracleContract, FarmAuctionContract, PancakeProfileContract, PredictionsContract } from './types'
 
 const getContract = (abi: any, address: string, signer?: ethers.Signer | ethers.providers.Provider) => {
   const signerOrProvider = signer ?? simpleRpcProvider
   return new ethers.Contract(address, abi, signerOrProvider)
+}
+
+export const getKvsStakingContract = (signer?: ethers.Signer | ethers.providers.Provider ) => {
+  return getContract(kvsStakingAbi, getKvsStakingAddress(), signer)
+}
+
+export const getMasterchefContract = (signer?: ethers.Signer | ethers.providers.Provider) => {
+  return getContract(masterChef, getMasterChefAddress(), signer)
 }
 
 export const getBep20Contract = (address: string, signer?: ethers.Signer | ethers.providers.Provider) => {
@@ -122,9 +132,7 @@ export const getBunnySpecialContract = (signer?: ethers.Signer | ethers.provider
 export const getLotteryV2Contract = (signer?: ethers.Signer | ethers.providers.Provider) => {
   return getContract(lotteryV2Abi, getLotteryV2Address(), signer)
 }
-export const getMasterchefContract = (signer?: ethers.Signer | ethers.providers.Provider) => {
-  return getContract(masterChef, getMasterChefAddress(), signer)
-}
+
 export const getClaimRefundContract = (signer?: ethers.Signer | ethers.providers.Provider) => {
   return getContract(claimRefundAbi, getClaimRefundAddress(), signer)
 }
